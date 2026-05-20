@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import type { Testimonial } from "@/types"
 
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     id: 1,
     quote: "Após o atendimento da equipe Mundo365, sempre muito atenciosos e rápidos conforme a urgência de cada situação. A implementação de segurança foi impecável e o suporte técnico superou todas as expectativas.",

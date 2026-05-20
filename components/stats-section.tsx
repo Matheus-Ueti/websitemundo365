@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import type { Stat } from "@/types"
 
-const stats = [
+const stats: Stat[] = [
   { value: 5000, label: "Clientes beneficiados", suffix: "+" },
   { value: 150, label: "Projetos concluídos", suffix: "+" },
   { value: 100, label: "Prêmios ganhos", suffix: "" },
@@ -96,7 +97,8 @@ export function StatsSection() {
                       alt="Mundo365"
                       width={120}
                       height={40}
-                      className="brightness-0 invert w-full h-auto"
+                      style={{ width: "auto", height: "auto" }}
+                      className="brightness-0 invert max-w-full"
                     />
                   </div>
                 </div>

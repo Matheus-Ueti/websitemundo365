@@ -1,48 +1,32 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Space_Grotesk } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from "next"
+import { Geist, Space_Grotesk } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-export const spaceGrotesk = Space_Grotesk({
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
-});
+})
 
 export const metadata: Metadata = {
-  title: 'Mundo365 | Soluções Microsoft para sua Empresa',
-  description: 'Maior Revendedora Gold Microsoft do Brasil. Backup gerenciado, Business Intelligence, Migração para Nuvem e muito mais.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  title: "Mundo365 | Soluções Microsoft para sua Empresa",
+  description:
+    "Maior Revendedora Gold Microsoft do Brasil. Backup gerenciado, Business Intelligence, Migração para Nuvem e muito mais.",
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className="bg-background">
-      <body className={`font-sans antialiased ${spaceGrotesk.variable}`}>
+    <html lang="pt-BR" className={`${geist.variable} ${spaceGrotesk.variable}`}>
+      <body className="bg-background text-foreground antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )

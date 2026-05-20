@@ -1,14 +1,4 @@
-// ─── Types ───────────────────────────────────────────────────────────────────
-
-type Competency = {
-  label: string
-  achieved: boolean
-}
-
-type CertBadge = {
-  acronym: string
-  title: string
-}
+import type { Competency, CertBadge } from "@/types"
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -101,8 +91,6 @@ function Trophy() {
     </div>
   )
 }
-
-// ─── Competency Card ─────────────────────────────────────────────────────────
 
 function CompetencyCard({ label, achieved }: Competency) {
   return (
