@@ -140,36 +140,33 @@ export function SolutionsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
             <span className="relative inline-block">
               Nossas soluções
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-cyan-400 rounded-full" />
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
             </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-6 text-pretty">
+          <p className="text-gray-500 max-w-2xl mx-auto mt-6 text-pretty">
             Conheça nossos produtos, serviços, jornadas de desenvolvimento tecnológico e nossa equipe de especialistas!
           </p>
         </div>
 
         {/* Tabs */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex bg-[#f0eff4] rounded-full p-1.5 gap-1">
+          <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
             {solutions.map((solution) => (
               <button
                 key={solution.id}
                 onClick={() => setActiveTab(solution.id)}
                 className={`
                   relative px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
-                  ${activeTab === solution.id 
-                    ? "bg-[#1a1a2e] text-white shadow-lg" 
-                    : "text-gray-600 hover:text-gray-900"
+                  ${activeTab === solution.id
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20"
+                    : "text-gray-500 hover:text-gray-800"
                   }
                 `}
               >
                 {solution.tabTitle}
-                {activeTab === solution.id && (
-                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-1 bg-cyan-400 rounded-full" />
-                )}
               </button>
             ))}
           </div>
@@ -187,17 +184,15 @@ export function SolutionsSection() {
                 {activeSolution.subDescription}
               </p>
             )}
-            <button className="bg-[#6b5b95] hover:bg-[#5a4a84] text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5">
               {activeSolution.buttonText}
             </button>
           </div>
 
           {/* Right side - Image with floating elements */}
           <div className="relative flex justify-center lg:justify-end">
-            {/* Purple circle background */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-200 to-purple-300 rounded-full opacity-60" />
-            
-            {/* Person image */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-100 to-blue-100 rounded-full" />
+
             <div className="relative z-10">
               <div className="relative w-[350px] h-[450px]">
                 <Image
@@ -208,8 +203,6 @@ export function SolutionsSection() {
                   sizes="350px"
                 />
               </div>
-              
-              {/* Floating UI Elements */}
               <FloatingCard type="security" position="bottom-left" />
               <FloatingCard type="notification" position="top-right" />
               <FloatingCard type="dashboard" position="middle-right" />

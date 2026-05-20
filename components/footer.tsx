@@ -94,13 +94,14 @@ export function Footer() {
 
           {/* Logo & Description */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">M</span>
-              </div>
-              <span className="text-xl font-bold text-white">
-                Mundo<span className="text-primary">365</span>
-              </span>
+            <Link href="/" className="flex items-center mb-4">
+              <Image
+                src="/mundo365-logo.png"
+                alt="Mundo365"
+                width={140}
+                height={44}
+                className="brightness-0 invert"
+              />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               Há mais de 11 anos transformando empresas com soluções Microsoft de ponta. 

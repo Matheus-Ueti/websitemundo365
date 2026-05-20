@@ -1,34 +1,110 @@
-import { Award, Sparkles } from "lucide-react"
-
 export function PartnerBanner() {
   return (
-    <section className="py-12 bg-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Left - Microsoft Partner */}
-          <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
-              <Award className="w-8 h-8 text-primary-foreground" />
+    <section className="py-10 relative overflow-hidden bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600">
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)`,
+            backgroundSize: "28px 28px",
+          }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
+
+          {/* Left - Microsoft branding */}
+          <div className="flex items-center gap-6 lg:flex-1">
+            {/* Microsoft logo */}
+            <div className="flex-shrink-0">
+              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 drop-shadow-lg">
+                <path fill="#f35325" d="M1 1h10v10H1z"/>
+                <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                <path fill="#ffba08" d="M12 12h10v10H12z"/>
+              </svg>
             </div>
             <div>
-              <p className="text-primary-foreground/80 text-sm">Somos a maior Revendedora</p>
-              <p className="text-primary-foreground font-bold text-lg">Gold Microsoft Brasil</p>
+              <p className="text-white font-bold text-lg leading-tight">
+                Somos a maior Revendedora<br />
+                <span className="text-yellow-300">Oficial Microsoft Brasil</span>
+              </p>
+              <p className="text-blue-100 text-xs mt-1 max-w-xs">
+                Entre as maiores empresas de Revenda Microsoft do Brasil, oferecemos as melhores soluções com segurança.
+              </p>
             </div>
           </div>
 
-          {/* Center - Divider (desktop only) */}
-          <div className="hidden md:block w-px h-16 bg-white/20" />
+          {/* Divider */}
+          <div className="hidden lg:block w-px h-16 bg-white/20 mx-8" />
 
-          {/* Right - Copilot */}
-          <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
-              <Sparkles className="w-8 h-8 text-primary-foreground" />
+          {/* Center - Partner Badges */}
+          <div className="flex flex-wrap justify-center items-center gap-4 lg:flex-1">
+            {/* Solutions Partner - Modern Work */}
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
+              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0">
+                <path fill="#f35325" d="M1 1h10v10H1z"/>
+                <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                <path fill="#ffba08" d="M12 12h10v10H12z"/>
+              </svg>
+              <div>
+                <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
+                <p className="text-white font-semibold text-xs leading-tight">Solutions Partner</p>
+                <p className="text-blue-200 text-[10px] leading-none">Modern Work</p>
+              </div>
             </div>
-            <div>
-              <p className="text-primary-foreground/80 text-sm">Powered by</p>
-              <p className="text-primary-foreground font-bold text-lg">Inteligência Artificial</p>
+
+            {/* Solutions Partner - Infrastructure */}
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
+              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0">
+                <path fill="#f35325" d="M1 1h10v10H1z"/>
+                <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                <path fill="#ffba08" d="M12 12h10v10H12z"/>
+              </svg>
+              <div>
+                <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
+                <p className="text-white font-semibold text-xs leading-tight">Solutions Partner</p>
+                <p className="text-blue-200 text-[10px] leading-none">Infrastructure — Azure</p>
+              </div>
+            </div>
+
+            {/* Gold Partner */}
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
+              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0">
+                <path fill="#f35325" d="M1 1h10v10H1z"/>
+                <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                <path fill="#ffba08" d="M12 12h10v10H12z"/>
+              </svg>
+              <div>
+                <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
+                <p className="text-yellow-300 font-bold text-xs leading-tight">Gold Partner</p>
+              </div>
             </div>
           </div>
+
+          {/* Divider */}
+          <div className="hidden lg:block w-px h-16 bg-white/20 mx-8" />
+
+          {/* Right - AI badge */}
+          <div className="flex items-center gap-3 lg:flex-shrink-0">
+            <div className="w-10 h-10 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
+              <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-blue-100 text-xs">Powered by</p>
+              <p className="text-white font-bold text-sm leading-tight">Inteligência Artificial</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

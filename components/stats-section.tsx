@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Trophy } from "lucide-react"
+import Image from "next/image"
 
 const stats = [
   { value: 5000, label: "Clientes beneficiados", suffix: "+" },
@@ -48,7 +48,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   }, [value])
 
   return (
-    <div ref={ref} className="text-4xl sm:text-5xl font-bold text-foreground">
+    <div ref={ref} className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent [font-family:var(--font-space-grotesk)]">
       {count.toLocaleString("pt-BR")}{suffix}
     </div>
   )
@@ -85,17 +85,23 @@ export function StatsSection() {
             ))}
           </div>
 
-          {/* Center Trophy */}
+          {/* Center Logo */}
           <div className="flex justify-center order-first lg:order-none">
             <div className="relative">
               <div className="w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
                 <div className="w-36 h-36 sm:w-48 sm:h-48 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full flex items-center justify-center">
-                  <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl">
-                    <Trophy className="w-12 h-12 sm:w-16 sm:h-16 text-white" />
+                  <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl p-5">
+                    <Image
+                      src="/mundo365-logo.png"
+                      alt="Mundo365"
+                      width={120}
+                      height={40}
+                      className="brightness-0 invert w-full h-auto"
+                    />
                   </div>
                 </div>
               </div>
-              {/* Floating rings */}
+              {/* Floating ring */}
               <div className="absolute inset-0 animate-spin-slow">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rounded-full" />
               </div>
