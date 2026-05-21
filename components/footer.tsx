@@ -20,10 +20,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Facebook, href: "https://facebook.com/mundo365", label: "Facebook" },
+  { icon: Instagram, href: "https://instagram.com/mundo365", label: "Instagram" },
+  { icon: Linkedin, href: "https://linkedin.com/company/mundo365", label: "LinkedIn" },
+  { icon: Youtube, href: "https://youtube.com/@mundo365", label: "YouTube" },
 ]
 
 export function Footer() {
@@ -55,6 +55,8 @@ export function Footer() {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
                 >
