@@ -29,10 +29,10 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Isometric Illustration */}
           <div className="relative hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-2xl">
               {/* Cloud element */}
               <div className="absolute top-0 left-8 animate-float">
-                <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+                <svg width="160" height="110" viewBox="0 0 120 80" fill="none">
                   <ellipse cx="60" cy="50" rx="50" ry="25" fill="rgba(255,255,255,0.1)" stroke="rgba(0,255,255,0.5)" strokeWidth="2"/>
                   <ellipse cx="40" cy="40" rx="30" ry="15" fill="rgba(255,255,255,0.1)" stroke="rgba(0,255,255,0.5)" strokeWidth="2"/>
                   <ellipse cx="80" cy="35" rx="25" ry="12" fill="rgba(255,255,255,0.1)" stroke="rgba(0,255,255,0.5)" strokeWidth="2"/>
@@ -50,7 +50,7 @@ export function HeroSection() {
 
               {/* Laptop */}
               <div className="relative z-10 mx-auto mt-16">
-                <svg width="280" height="180" viewBox="0 0 280 180" fill="none" className="drop-shadow-2xl">
+                <svg width="380" height="240" viewBox="0 0 280 180" fill="none" className="drop-shadow-2xl">
                   {/* Screen */}
                   <rect x="40" y="10" width="200" height="120" rx="8" fill="#1e1b4b" stroke="rgba(139,92,246,0.5)" strokeWidth="2"/>
                   <rect x="50" y="20" width="180" height="100" rx="4" fill="#0f0a1e"/>
@@ -80,7 +80,7 @@ export function HeroSection() {
 
               {/* Phone left */}
               <div className="absolute bottom-8 left-0 animate-float-delayed">
-                <svg width="60" height="100" viewBox="0 0 60 100" fill="none">
+                <svg width="80" height="130" viewBox="0 0 60 100" fill="none">
                   <rect x="5" y="5" width="50" height="90" rx="8" fill="#1e1b4b" stroke="rgba(139,92,246,0.5)" strokeWidth="2"/>
                   <rect x="10" y="15" width="40" height="60" rx="2" fill="#0f0a1e"/>
                   {/* Download icon */}
@@ -99,7 +99,7 @@ export function HeroSection() {
 
               {/* Tablet right */}
               <div className="absolute bottom-4 right-0 animate-float">
-                <svg width="100" height="80" viewBox="0 0 100 80" fill="none">
+                <svg width="140" height="110" viewBox="0 0 100 80" fill="none">
                   <rect x="5" y="5" width="90" height="70" rx="6" fill="#1e1b4b" stroke="rgba(139,92,246,0.5)" strokeWidth="2"/>
                   <rect x="10" y="10" width="80" height="55" rx="2" fill="#0f0a1e"/>
                   {/* Mini chart */}

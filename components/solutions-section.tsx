@@ -74,9 +74,9 @@ const solutions = [
 
 function FloatingCard({ type, position }: { type: string; position: string }) {
   const positionClasses: Record<string, string> = {
-    "top-right": "top-4 -right-4",
-    "middle-right": "top-1/3 -right-8",
-    "bottom-left": "bottom-20 -left-4",
+    "top-right": "top-4 -right-2 sm:-right-4",
+    "middle-right": "top-1/3 -right-4 sm:-right-8",
+    "bottom-left": "bottom-20 -left-2 sm:-left-4",
   }
 
   const getContent = () => {
@@ -152,31 +152,51 @@ export function SolutionsSection() {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-16">
-          <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
+        <div className="mb-16">
+          {/* Mobile: grid 2 colunas */}
+          <div className="grid grid-cols-2 gap-2 sm:hidden bg-gray-100 rounded-2xl p-1.5">
             {solutions.map((solution) => (
               <button
                 key={solution.id}
                 onClick={() => setActiveTab(solution.id)}
-                className={`
-                  relative px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
-                  ${activeTab === solution.id
-                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20"
-                    : "text-gray-500 hover:text-gray-800"
-                  }
-                `}
+                className={[
+                  "px-3 py-2.5 rounded-xl text-xs font-medium transition-all duration-300 text-center",
+                  activeTab === solution.id
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md"
+                    : "text-gray-500 hover:text-gray-800",
+                ].join(" ")}
               >
                 {solution.tabTitle}
               </button>
             ))}
           </div>
+
+          {/* Desktop: row centralizado */}
+          <div className="hidden sm:flex justify-center">
+            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
+              {solutions.map((solution) => (
+                <button
+                  key={solution.id}
+                  onClick={() => setActiveTab(solution.id)}
+                  className={[
+                    "relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap",
+                    activeTab === solution.id
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20"
+                      : "text-gray-500 hover:text-gray-800",
+                  ].join(" ")}
+                >
+                  {solution.tabTitle}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text */}
-          <div className="max-w-lg">
-            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+          {/* Left side - Text (ordem 2 no mobile, 1 no desktop) */}
+          <div className="order-2 lg:order-1 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
               {activeSolution.description}
             </p>
             {activeSolution.subDescription && (
@@ -184,23 +204,24 @@ export function SolutionsSection() {
                 {activeSolution.subDescription}
               </p>
             )}
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5">
               {activeSolution.buttonText}
             </button>
           </div>
 
-          {/* Right side - Image with floating elements */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-100 to-blue-100 rounded-full" />
+          {/* Right side - Image (ordem 1 no mobile, 2 no desktop) */}
+          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end px-10 sm:px-12 lg:px-0">
+            {/* Blob decorativo */}
+            <div className="absolute right-4 lg:right-0 top-1/2 -translate-y-1/2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] bg-gradient-to-br from-purple-100 to-blue-100 rounded-full -z-0" />
 
             <div className="relative z-10">
-              <div className="relative w-[350px] h-[450px]">
+              <div className="relative w-[220px] h-[290px] sm:w-[280px] sm:h-[360px] lg:w-[350px] lg:h-[450px]">
                 <Image
                   src={activeSolution.image}
                   alt={activeSolution.title}
                   fill
                   className="object-cover object-top rounded-2xl"
-                  sizes="350px"
+                  sizes="(max-width: 640px) 220px, (max-width: 1024px) 280px, 350px"
                 />
               </div>
               <FloatingCard type="security" position="bottom-left" />
