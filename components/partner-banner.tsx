@@ -1,3 +1,14 @@
+function MicrosoftLogo({ size = 5 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className={`w-${size} h-${size} flex-shrink-0`}>
+      <path fill="#f35325" d="M1 1h10v10H1z"/>
+      <path fill="#81bc06" d="M12 1h10v10H12z"/>
+      <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+      <path fill="#ffba08" d="M12 12h10v10H12z"/>
+    </svg>
+  )
+}
+
 export function PartnerBanner() {
   return (
     <section className="py-10 relative overflow-hidden bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600">
@@ -20,13 +31,8 @@ export function PartnerBanner() {
           {/* Left - Microsoft branding */}
           <div className="flex items-center gap-6 lg:flex-1">
             {/* Microsoft logo */}
-            <div className="flex-shrink-0">
-              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 drop-shadow-lg">
-                <path fill="#f35325" d="M1 1h10v10H1z"/>
-                <path fill="#81bc06" d="M12 1h10v10H12z"/>
-                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
-                <path fill="#ffba08" d="M12 12h10v10H12z"/>
-              </svg>
+            <div className="flex-shrink-0 drop-shadow-lg">
+              <MicrosoftLogo size={12} />
             </div>
             <div>
               <p className="text-white font-bold text-lg leading-tight">
@@ -46,12 +52,7 @@ export function PartnerBanner() {
           <div className="flex flex-wrap justify-center items-center gap-4 lg:flex-1">
             {/* Solutions Partner - Modern Work */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
-              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0">
-                <path fill="#f35325" d="M1 1h10v10H1z"/>
-                <path fill="#81bc06" d="M12 1h10v10H12z"/>
-                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
-                <path fill="#ffba08" d="M12 12h10v10H12z"/>
-              </svg>
+              <MicrosoftLogo />
               <div>
                 <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
                 <p className="text-white font-semibold text-xs leading-tight">Solutions Partner</p>
@@ -61,12 +62,7 @@ export function PartnerBanner() {
 
             {/* Solutions Partner - Infrastructure */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
-              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0">
-                <path fill="#f35325" d="M1 1h10v10H1z"/>
-                <path fill="#81bc06" d="M12 1h10v10H12z"/>
-                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
-                <path fill="#ffba08" d="M12 12h10v10H12z"/>
-              </svg>
+              <MicrosoftLogo />
               <div>
                 <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
                 <p className="text-white font-semibold text-xs leading-tight">Solutions Partner</p>
@@ -76,12 +72,7 @@ export function PartnerBanner() {
 
             {/* Gold Partner */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
-              <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0">
-                <path fill="#f35325" d="M1 1h10v10H1z"/>
-                <path fill="#81bc06" d="M12 1h10v10H12z"/>
-                <path fill="#05a6f0" d="M1 12h10v10H1z"/>
-                <path fill="#ffba08" d="M12 12h10v10H12z"/>
-              </svg>
+              <MicrosoftLogo />
               <div>
                 <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
                 <p className="text-yellow-300 font-bold text-xs leading-tight">Gold Partner</p>

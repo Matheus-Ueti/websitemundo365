@@ -1,4 +1,4 @@
-// ─── Certifications Section ──────────────────────────────────────────────────
+import type React from "react"
 
 export type Competency = {
   label: string
@@ -9,8 +9,6 @@ export type CertBadge = {
   acronym: string
   title: string
 }
-
-// ─── Solutions Section ────────────────────────────────────────────────────────
 
 export type FloatingCardType = "security" | "notification" | "dashboard"
 
@@ -26,8 +24,6 @@ export type Solution = {
   image: string
 }
 
-// ─── Testimonials Section ─────────────────────────────────────────────────────
-
 export type Testimonial = {
   id: number
   quote: string
@@ -38,15 +34,11 @@ export type Testimonial = {
   color: string
 }
 
-// ─── Stats Section ────────────────────────────────────────────────────────────
-
 export type Stat = {
   value: number
   label: string
   suffix: string
 }
-
-// ─── Navigation ───────────────────────────────────────────────────────────────
 
 export type NavItem = {
   label: string
@@ -54,6 +46,7 @@ export type NavItem = {
 }
 
 export type SocialLink = {
+  icon: React.ComponentType<{ className?: string }>
   label: string
   href: string
 }

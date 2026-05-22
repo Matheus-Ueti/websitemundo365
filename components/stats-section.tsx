@@ -97,8 +97,7 @@ export function StatsSection() {
                       alt="Mundo365"
                       width={120}
                       height={40}
-                      style={{ width: "auto", height: "auto" }}
-                      className="brightness-0 invert max-w-full"
+                      className="w-auto h-auto brightness-0 invert max-w-full"
                     />
                   </div>
                 </div>

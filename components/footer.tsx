@@ -1,8 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
+import type { NavItem, SocialLink } from "@/types"
 
-const footerLinks = {
+const footerLinks: { services: NavItem[]; links: NavItem[] } = {
   services: [
     { label: "Backup gerenciado", href: "#" },
     { label: "Business Intelligence", href: "#" },
@@ -19,7 +20,7 @@ const footerLinks = {
   ],
 }
 
-const socialLinks = [
+const socialLinks: SocialLink[] = [
   { icon: Facebook, href: "https://facebook.com/mundo365", label: "Facebook" },
   { icon: Instagram, href: "https://instagram.com/mundo365", label: "Instagram" },
   { icon: Linkedin, href: "https://linkedin.com/company/mundo365", label: "LinkedIn" },
@@ -51,9 +52,9 @@ export function Footer() {
             
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <a
-                  key={index}
+                  key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,8 +71,8 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Serviços</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link, index) => (
-                <li key={index}>
+              {footerLinks.services.map((link) => (
+                <li key={link.label}>
                   <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
                   </Link>
@@ -84,8 +85,8 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Links Úteis</h4>
             <ul className="space-y-3">
-              {footerLinks.links.map((link, index) => (
-                <li key={index}>
+              {footerLinks.links.map((link) => (
+                <li key={link.label}>
                   <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
                   </Link>

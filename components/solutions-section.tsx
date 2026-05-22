@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import type { FloatingCardType, FloatingPosition, Solution } from "@/types"
 
-const solutions = [
+const solutions: Solution[] = [
   {
     id: "modern-workplace",
     tabTitle: "Modern Workplace",
@@ -12,11 +13,6 @@ const solutions = [
     subDescription: "Aumente a produtividade e a eficiência, proporcionando uma experiência de trabalho mais conectada.",
     buttonText: "Conheça nossos licenciamentos",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=face",
-    floatingElements: [
-      { icon: "check", color: "green", position: "top-right" },
-      { icon: "shield", color: "green", position: "middle-right" },
-      { icon: "alert", color: "red", position: "bottom-left" },
-    ]
   },
   {
     id: "cyber-security",
@@ -26,10 +22,6 @@ const solutions = [
     subDescription: "",
     buttonText: "Conheça os níveis de proteção da jornada",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop&crop=face",
-    floatingElements: [
-      { icon: "lock", color: "blue", position: "top-right" },
-      { icon: "check", color: "green", position: "middle-right" },
-    ]
   },
   {
     id: "cloud-solutions",
@@ -39,10 +31,6 @@ const solutions = [
     subDescription: "Reduza custos operacionais e aumente a disponibilidade dos seus sistemas com nossa expertise em cloud.",
     buttonText: "Conheça nossas soluções em nuvem",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face",
-    floatingElements: [
-      { icon: "cloud", color: "blue", position: "top-right" },
-      { icon: "server", color: "purple", position: "middle-right" },
-    ]
   },
   {
     id: "power-platform",
@@ -52,10 +40,6 @@ const solutions = [
     subDescription: "Power BI, Power Apps, Power Automate e Power Virtual Agents para transformar sua empresa.",
     buttonText: "Descubra o poder da automação",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=700&fit=crop&crop=face",
-    floatingElements: [
-      { icon: "chart", color: "yellow", position: "top-right" },
-      { icon: "zap", color: "orange", position: "middle-right" },
-    ]
   },
   {
     id: "servicos",
@@ -65,14 +49,10 @@ const solutions = [
     subDescription: "Nossa equipe certificada está pronta para ajudar sua empresa a alcançar o máximo potencial tecnológico.",
     buttonText: "Fale com um especialista",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face",
-    floatingElements: [
-      { icon: "headset", color: "purple", position: "top-right" },
-      { icon: "users", color: "blue", position: "middle-right" },
-    ]
   },
 ]
 
-function FloatingCard({ type, position }: { type: string; position: string }) {
+function FloatingCard({ type, position }: { type: FloatingCardType; position: FloatingPosition }) {
   const positionClasses: Record<string, string> = {
     "top-right": "top-4 -right-2 sm:-right-4",
     "middle-right": "top-1/3 -right-4 sm:-right-8",

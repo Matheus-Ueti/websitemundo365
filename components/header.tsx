@@ -4,8 +4,9 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import type { NavItem } from "@/types"
 
-const navItems = [
+const navItems: NavItem[] = [
   { label: "Início", href: "#" },
   { label: "Sobre nós", href: "#sobre" },
   { label: "Soluções", href: "#solucoes" },

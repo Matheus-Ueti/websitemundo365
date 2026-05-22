@@ -1,12 +1,6 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
-import { ChevronRight } from "lucide-react"
 
 export function HeroSection() {
-  const [activeSlide, setActiveSlide] = useState(0)
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#6b21a8] via-[#7c3aed] to-[#06b6d4] pt-20">
       {/* Background effects */}
@@ -145,10 +139,6 @@ export function HeroSection() {
                   className="drop-shadow-2xl"
                 />
 
-                {/* Navigation arrow */}
-                <button className="absolute top-1/2 -right-16 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <ChevronRight className="w-6 h-6 text-white" />
-                </button>
               </div>
             </div>
 
@@ -162,20 +152,6 @@ export function HeroSection() {
               </span>
             </h1>
 
-            {/* Slide indicators */}
-            <div className="flex gap-3 mt-4">
-              {[0, 1, 2].map((index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveSlide(index)}
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    activeSlide === index 
-                      ? "w-8 bg-white" 
-                      : "w-4 bg-white/40 hover:bg-white/60"
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </div>
