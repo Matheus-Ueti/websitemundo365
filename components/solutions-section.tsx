@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import type { FloatingCardType, FloatingPosition, Solution } from "@/types"
+import type { FloatingCardProps, FloatingPosition, Solution } from "@/types"
 
 const solutions: Solution[] = [
   {
@@ -52,8 +52,8 @@ const solutions: Solution[] = [
   },
 ]
 
-function FloatingCard({ type, position }: { type: FloatingCardType; position: FloatingPosition }) {
-  const positionClasses: Record<string, string> = {
+function FloatingCard({ type, position }: FloatingCardProps) {
+  const positionClasses: Record<FloatingPosition, string> = {
     "top-right": "top-4 -right-2 sm:-right-4",
     "middle-right": "top-1/3 -right-4 sm:-right-8",
     "bottom-left": "bottom-20 -left-2 sm:-left-4",

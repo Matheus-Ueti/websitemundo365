@@ -1,4 +1,6 @@
-function MicrosoftLogo({ size = 5 }: { size?: number }) {
+import type { MicrosoftLogoProps } from "@/types"
+
+function MicrosoftLogo({ size = 5 }: MicrosoftLogoProps) {
   return (
     <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" className={`w-${size} h-${size} flex-shrink-0`}>
       <path fill="#f35325" d="M1 1h10v10H1z"/>

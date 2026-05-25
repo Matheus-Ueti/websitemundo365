@@ -1,9 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Instagram, Linkedin } from "lucide-react"
-import type { NavItem, SocialLink } from "@/types"
+import type { FooterLinks, SocialLink } from "@/types"
 
-const footerLinks: { services: NavItem[]; links: NavItem[] } = {
+const footerLinks: FooterLinks = {
   services: [
     { label: "Backup gerenciado", href: "#" },
     { label: "Business Intelligence", href: "#" },

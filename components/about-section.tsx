@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Cloud, Rocket, Handshake, TrendingUp, Sparkles } from "lucide-react"
-import type { TimelineItem } from "@/types"
+import type { PartnerBadgeProps, TimelineItem, TimelineItemCardProps } from "@/types"
 
 const timeline: TimelineItem[] = [
   {
@@ -75,13 +75,15 @@ function OrbVisual() {
           <div className="absolute top-[30%] -left-1 w-2.5 h-2.5 rounded-full bg-cyan-300/50 shadow shadow-cyan-300" />
         </div>
 
-        <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden shadow-[0_12px_72px_rgba(99,102,241,0.45),0_0_0_8px_rgba(255,255,255,0.95),0_0_0_18px_rgba(99,102,241,0.14)] z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-violet-500/10 to-cyan-500/10 z-10" />
+        <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden bg-white shadow-[0_12px_72px_rgba(99,102,241,0.45),0_0_0_8px_rgba(255,255,255,0.95),0_0_0_18px_rgba(99,102,241,0.14)] z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-violet-500/5 to-cyan-500/10 z-10 pointer-events-none" />
           <Image
-            src="/award-winner.png"
-            alt="Equipe Mundo365"
+            src="/about-team-v2.png"
+            alt="Equipe Mundo365 colaborando"
             fill
-            className="object-cover object-center"
+            unoptimized
+            priority
+            className="object-cover object-center scale-[1.15]"
             sizes="(max-width: 640px) 320px, 384px"
           />
         </div>
@@ -98,7 +100,7 @@ function TimelineItemCard({
   icon: Icon,
   accent,
   isLast,
-}: TimelineItem & { isLast: boolean }) {
+}: TimelineItemCardProps) {
   return (
     <div className="relative flex flex-col items-center gap-3 flex-1 min-w-[140px]">
       {!isLast && (
@@ -120,7 +122,7 @@ function TimelineItemCard({
   )
 }
 
-function PartnerBadge({ label }: { label: string }) {
+function PartnerBadge({ label }: PartnerBadgeProps) {
   return (
     <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-100 rounded-xl px-3 py-2 shadow-sm">
       <svg viewBox="0 0 23 23" className="w-5 h-5 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">

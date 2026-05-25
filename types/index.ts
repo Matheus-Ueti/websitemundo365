@@ -1,6 +1,10 @@
 import type React from "react"
 
+// ─── Shared primitives ───────────────────────────────────────────────────────
+
 export type LucideIcon = React.ComponentType<{ className?: string }>
+
+// ─── Certifications ────────────────────────────────────────────────────────────
 
 export type Competency = {
   label: string
@@ -13,6 +17,8 @@ export type CertBadge = {
   title: string
   image: string
 }
+
+// ─── Solutions ─────────────────────────────────────────────────────────────────
 
 export type FloatingCardType = "security" | "notification" | "dashboard"
 
@@ -33,6 +39,8 @@ export type Solution = {
   image: string
 }
 
+// ─── Testimonials ──────────────────────────────────────────────────────────────
+
 export type Testimonial = {
   id: number
   quote: string
@@ -43,11 +51,17 @@ export type Testimonial = {
   color: string
 }
 
+// ─── Stats ─────────────────────────────────────────────────────────────────────
+
 export type Stat = {
   value: number
   label: string
   suffix: string
 }
+
+export type AnimatedCounterProps = Pick<Stat, "value" | "suffix">
+
+// ─── Navigation & footer ───────────────────────────────────────────────────────
 
 export type NavItem = {
   label: string
@@ -60,11 +74,24 @@ export type SocialLink = {
   href: string
 }
 
+export type FooterLinks = {
+  services: NavItem[]
+  links: NavItem[]
+}
+
+// ─── Partners ──────────────────────────────────────────────────────────────────
+
 export type Partner = {
   name: string
   src?: string
   inlineLogo?: React.ReactNode
 }
+
+export type MicrosoftLogoProps = {
+  size?: number
+}
+
+// ─── About ─────────────────────────────────────────────────────────────────────
 
 export type TimelineItem = {
   year: string
@@ -72,4 +99,12 @@ export type TimelineItem = {
   description: string
   icon: LucideIcon
   accent: string
+}
+
+export type TimelineItemCardProps = TimelineItem & {
+  isLast: boolean
+}
+
+export type PartnerBadgeProps = {
+  label: string
 }

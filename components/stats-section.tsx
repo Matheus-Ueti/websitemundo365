@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import type { Stat } from "@/types"
+import type { AnimatedCounterProps, Stat } from "@/types"
 
 const stats: Stat[] = [
   { value: 5000, label: "Clientes beneficiados", suffix: "+" },
@@ -13,7 +13,7 @@ const stats: Stat[] = [
   { value: 99, label: "Clientes ativos", suffix: "" },
 ]
 
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
+function AnimatedCounter({ value, suffix }: AnimatedCounterProps) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
   const hasAnimated = useRef(false)
