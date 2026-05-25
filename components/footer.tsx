@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
+import { Phone, Mail, MapPin, Instagram, Linkedin } from "lucide-react"
 import type { NavItem, SocialLink } from "@/types"
 
 const footerLinks: { services: NavItem[]; links: NavItem[] } = {
@@ -21,10 +21,8 @@ const footerLinks: { services: NavItem[]; links: NavItem[] } = {
 }
 
 const socialLinks: SocialLink[] = [
-  { icon: Facebook, href: "https://facebook.com/mundo365", label: "Facebook" },
-  { icon: Instagram, href: "https://instagram.com/mundo365", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com/company/mundo365", label: "LinkedIn" },
-  { icon: Youtube, href: "https://youtube.com/@mundo365", label: "YouTube" },
+  { icon: Instagram, href: "https://www.instagram.com/mundo365br/", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/empresamundo365/", label: "LinkedIn" },
 ]
 
 export function Footer() {
