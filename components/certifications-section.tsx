@@ -3,17 +3,11 @@ import {
   Monitor, Cloud, Zap, Server, Shield,
   BarChart3, Smartphone, MessageSquare, Database, ChevronRight,
 } from "lucide-react"
-import type { CertBadge } from "@/types"
+import type { CertBadge, Competency } from "@/types"
 
-// ─── Types & Data ─────────────────────────────────────────────────────────────
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
-type CompetencyItem = {
-  label: string
-  achieved: boolean
-  icon: React.ComponentType<{ className?: string }>
-}
-
-const competencies: CompetencyItem[] = [
+const competencies: Competency[] = [
   { label: "Windows and Devices",                 achieved: true,  icon: Monitor       },
   { label: "Small and Midmarket Cloud Solutions", achieved: true,  icon: Cloud         },
   { label: "Cloud Productivity",                  achieved: true,  icon: Zap           },
@@ -27,16 +21,16 @@ const competencies: CompetencyItem[] = [
 ]
 
 const certBadges: CertBadge[] = [
-  { acronym: "MCT",  title: "Microsoft Certified Trainer"              },
-  { acronym: "MCSE", title: "Microsoft Certified Solutions Expert"     },
-  { acronym: "MCSA", title: "Microsoft Certified Solutions Associate"  },
-  { acronym: "ASA",  title: "Azure Solutions Architect Expert"         },
-  { acronym: "MVP",  title: "Most Valuable Professional"               },
+  { acronym: "MCT",  title: "Microsoft Certified Trainer",             image: "/badge-mct.png"  },
+  { acronym: "MCSE", title: "Microsoft Certified Solutions Expert",    image: "/badge-mcse.png" },
+  { acronym: "MCSA", title: "Microsoft Certified Solutions Associate", image: "/badge-mcsa.png" },
+  { acronym: "ASA",  title: "Azure Solutions Architect Expert",        image: "/badge-asa.png"  },
+  { acronym: "MVP",  title: "Most Valuable Professional",              image: "/badge-mvp.png"  },
 ]
 
 // ─── Competency Card ─────────────────────────────────────────────────────────
 
-function CompetencyCard({ label, achieved, icon: Icon }: CompetencyItem) {
+function CompetencyCard({ label, achieved, icon: Icon }: Competency) {
   return (
     <article
       className={[
@@ -86,13 +80,16 @@ function CompetencyCard({ label, achieved, icon: Icon }: CompetencyItem) {
 
 // ─── Cert Badge ───────────────────────────────────────────────────────────────
 
-function CertBadgeChip({ acronym, title }: CertBadge) {
+function CertBadgeChip({ title, image }: CertBadge) {
   return (
-    <div className="group flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-4 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.09)] hover:-translate-y-0.5 transition-all duration-200 cursor-default">
-      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center flex-shrink-0 shadow-sm shadow-orange-300/40">
-        <span className="text-white font-bold text-[10px] tracking-wide">{acronym}</span>
-      </div>
-      <span className="text-gray-500 text-xs font-medium">{title}</span>
+    <div className="flex items-center justify-center bg-white border border-gray-100 rounded-2xl p-3 shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.09)] hover:-translate-y-1 transition-all duration-200 cursor-default">
+      <Image
+        src={image}
+        alt={title}
+        width={72}
+        height={72}
+        className="object-contain w-16 h-16"
+      />
     </div>
   )
 }
@@ -123,6 +120,16 @@ export function CertificationsSection() {
           </mask>
         </defs>
       </svg>
+
+      {/* ── Ambient glows globais ── */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Glow laranja topo direita */}
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-orange-100/50 blur-[120px]" />
+        {/* Glow violeta centro esquerda */}
+        <div className="absolute top-1/2 -left-20 -translate-y-1/2 w-[400px] h-[500px] rounded-full bg-violet-100/60 blur-[100px]" />
+        {/* Glow suave fundo */}
+        <div className="absolute -bottom-20 left-1/3 w-[500px] h-[300px] rounded-full bg-purple-50/80 blur-[80px]" />
+      </div>
 
       {/* ── Ambient glows globais ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">

@@ -1,10 +1,5 @@
 import Image from "next/image"
-
-type Partner = {
-  name: string
-  src?: string
-  inlineLogo?: React.ReactNode
-}
+import type { Partner } from "@/types"
 
 const partners: Partner[] = [
   {
