@@ -49,6 +49,19 @@ npm run dev
 
 Acesse [http://localhost:3000](http://localhost:3000).
 
+### Problema: "Another next dev server is already running" ou Internal Server Error
+
+Isso **não é bug no código** — acontece quando há **mais de um** `npm run dev` rodando no mesmo projeto, ou quando a pasta `.next` foi apagada com o servidor ainda ativo.
+
+**Solução (Windows):**
+
+```bash
+npm run dev:clean
+npm run dev
+```
+
+Use **apenas uma** aba/terminal com `npm run dev`. Feche os outros com Ctrl+C antes de iniciar de novo.
+
 ## Build de produção
 
 ```bash

@@ -165,12 +165,6 @@ export function AboutSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 
-        <div className="flex justify-center mb-4">
-          <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-indigo-500">
-            Sobre Nós
-          </span>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           <div
@@ -180,15 +174,19 @@ export function AboutSection() {
             ].join(" ")}
           >
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+                <span className="relative inline-block">
+                  Sobre nós
+                  <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
+                </span>
+              </h2>
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug tracking-tight">
                 Tecnologia que conecta{" "}
                 <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 bg-clip-text text-transparent">
                   ideias, pessoas
-                </span>
-                <br />
+                </span>{" "}
                 e possibilidades.
-              </h2>
-              <div className="mt-3 w-16 h-1 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
+              </p>
             </div>
 
             <p className="text-gray-500 text-base leading-relaxed max-w-md">

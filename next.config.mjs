@@ -11,12 +11,13 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       process.env.NODE_ENV === "development"
-        ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
-        : "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+        ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'"
+        : "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://va.vercel-scripts.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https://images.unsplash.com",
-      "connect-src 'self'",
+      "img-src 'self' data: blob: https://images.unsplash.com",
+      "connect-src 'self' https://lottie.host blob:",
+      "worker-src 'self' blob:",
     ].join("; "),
   },
 ]
