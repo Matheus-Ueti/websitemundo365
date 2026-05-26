@@ -20,12 +20,10 @@ export type CertBadge = {
 
 // ─── Solutions ─────────────────────────────────────────────────────────────────
 
-export type FloatingCardType = "security" | "notification" | "dashboard"
-
 export type FloatingPosition = "top-right" | "middle-right" | "bottom-left"
 
 export type FloatingCardProps = {
-  type: FloatingCardType
+  type: "security" | "notification" | "dashboard"
   position: FloatingPosition
 }
 

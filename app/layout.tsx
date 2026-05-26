@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Geist, Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SkipLink } from "@/components/skip-link"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { siteConfig } from "@/lib/site"
 import "./globals.css"
 
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body className="bg-background text-foreground antialiased">
         <SkipLink />
         {children}
+        <WhatsAppFloat />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

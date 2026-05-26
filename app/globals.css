@@ -57,25 +57,10 @@
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-10px); }
 }
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-8px); }
-}
-.animate-float         { animation: float 4s ease-in-out infinite; }
-.animate-float-delayed { animation: float-delayed 4s ease-in-out infinite; animation-delay: 1s; }
+.animate-float { animation: float 4s ease-in-out infinite; }
 
 /* Stats section orbit ring */
 @keyframes spin-slow {
   to { transform: rotate(360deg); }
 }
 .animate-spin-slow { animation: spin-slow 10s linear infinite; }
-
-/* Certifications trophy */
-@keyframes trophy-float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
-}
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.35; }
-  50%       { opacity: 0.75; }
-}

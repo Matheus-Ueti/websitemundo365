@@ -10,5 +10,13 @@ export const siteConfig = {
     phoneDisplay: "+55 (45) 3256-7890",
     email: "contato@mundo365.com.br",
     location: "Cascavel - PR, Brasil",
+    whatsappMessage:
+      "Olá! Gostaria de saber mais sobre as soluções Microsoft da Mundo365.",
   },
 } as const
+
+/** Número só com dígitos para links wa.me */
+export function getWhatsAppUrl(message = siteConfig.contact.whatsappMessage) {
+  const digits = siteConfig.contact.phone.replace(/\D/g, "")
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`
+}

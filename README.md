@@ -92,8 +92,10 @@ npm run lint
 ```
 Mundo365L/
 ├── app/
+│   ├── globals.css         # Tailwind + tokens + animações
 │   ├── layout.tsx          # Layout raiz — fontes, metadata, Analytics
-│   └── page.tsx            # Página principal — composição das seções
+│   ├── page.tsx            # Página principal — composição das seções
+│   ├── robots.ts, sitemap.ts
 ├── components/             # UI por seção + hero Lottie (client)
 │   └── ui/                 # Peças reutilizáveis (ex.: AnimatedCounter)
 ├── data/                   # Conteúdo estático (timeline, depoimentos, stats…)
@@ -101,7 +103,6 @@ Mundo365L/
 ├── lib/
 │   ├── constants/          # IDs de seção, menu, hero Lottie, redes sociais
 │   └── site.ts             # Metadados, contato, URL do site
-├── app/robots.ts, app/sitemap.ts
 ├── public/
 │   ├── dotlottie-player.wasm
 │   ├── mundo365-logo.png       # Logo principal
@@ -113,8 +114,6 @@ Mundo365L/
 │   ├── logo-kaspersky.png
 │   ├── logo-microsoft.svg
 │   └── logo-veeam.png
-├── styles/
-│   └── globals.css             # Tailwind + tokens CSS (design system)
 ├── types/
 │   └── index.ts                # Tipagens TypeScript centralizadas
 └── next.config.mjs             # Security headers (CSP, HSTS)

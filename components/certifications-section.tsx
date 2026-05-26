@@ -73,11 +73,11 @@ export function CertificationsSection() {
           </div>
         </div>
 
-        <div className="mt-16 pt-10 border-t border-gray-100/80">
-          <p className="text-center text-[11px] text-gray-400 uppercase tracking-[0.18em] font-medium mb-6">
+        <div className="relative mt-16 sm:mt-20 pt-12 sm:pt-14 pb-4 sm:pb-6">
+          <p className="text-center text-xs sm:text-sm text-gray-500 uppercase tracking-[0.2em] font-medium mb-8 sm:mb-10">
             Certificações da equipe
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 lg:gap-12">
             {certBadges.map((badge) => (
               <CertBadgeChip key={badge.acronym} {...badge} />
             ))}
