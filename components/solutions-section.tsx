@@ -2,9 +2,10 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import type { FloatingCardProps, FloatingPosition } from "@/types"
 import { DEFAULT_SOLUTION_ID, solutions } from "@/data/solutions"
-import { SECTION_IDS } from "@/lib/constants/sections"
+import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
 
 function FloatingCard({ type, position }: FloatingCardProps) {
   const positionClasses: Record<FloatingPosition, string> = {
@@ -111,7 +112,9 @@ export function SolutionsSection() {
               {solutions.map((solution) => (
                 <button
                   key={solution.id}
+                  type="button"
                   onClick={() => setActiveTab(solution.id)}
+                  aria-pressed={activeTab === solution.id}
                   className={[
                     "relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap",
                     activeTab === solution.id
@@ -138,9 +141,12 @@ export function SolutionsSection() {
                 {activeSolution.subDescription}
               </p>
             )}
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5">
+            <Link
+              href={sectionHref(SECTION_IDS.contact)}
+              className="inline-flex bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5"
+            >
               {activeSolution.buttonText}
-            </button>
+            </Link>
           </div>
 
           {/* Right side - Image (ordem 1 no mobile, 2 no desktop) */}

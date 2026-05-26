@@ -65,9 +65,19 @@ Use **apenas uma** aba/terminal com `npm run dev`. Feche os outros com Ctrl+C an
 ## Build de produção
 
 ```bash
+cp .env.example .env.local   # ajuste NEXT_PUBLIC_SITE_URL
 npm run build
 npm start
 ```
+
+### Checklist antes do deploy
+
+- [ ] `NEXT_PUBLIC_SITE_URL` apontando para o domínio real (Vercel → Environment Variables)
+- [ ] `public/dotlottie-player.wasm` versionado (necessário para o hero no desktop)
+- [ ] `public/mundo365-logo.png` e demais assets presentes
+- [ ] CI verde (`npm run lint` + `npm run build`)
+- [ ] Newsletter: integrar API/CRM quando disponível (hoje exibe confirmação + e-mail de contato)
+- [ ] (Opcional) Trocar URLs do Unsplash em `data/solutions.ts` por fotos oficiais em `/public`
 
 ## Lint
 
@@ -88,8 +98,12 @@ Mundo365L/
 │   └── ui/                 # Peças reutilizáveis (ex.: AnimatedCounter)
 ├── data/                   # Conteúdo estático (timeline, depoimentos, stats…)
 ├── hooks/                  # Hooks compartilhados (ex.: useIntersectionVisible)
-├── lib/constants/          # IDs de seção, menu, hero Lottie, redes sociais
+├── lib/
+│   ├── constants/          # IDs de seção, menu, hero Lottie, redes sociais
+│   └── site.ts             # Metadados, contato, URL do site
+├── app/robots.ts, app/sitemap.ts
 ├── public/
+│   ├── dotlottie-player.wasm
 │   ├── mundo365-logo.png       # Logo principal
 │   ├── azure-logo.svg          # Logo Microsoft Azure
 │   ├── award-winner.png        # Foto Top Growth Awards 2026
@@ -103,7 +117,7 @@ Mundo365L/
 │   └── globals.css             # Tailwind + tokens CSS (design system)
 ├── types/
 │   └── index.ts                # Tipagens TypeScript centralizadas
-└── next.config.mjs             # Security headers + remotePatterns
+└── next.config.mjs             # Security headers (CSP, HSTS)
 ```
 
 ---
@@ -112,8 +126,8 @@ Mundo365L/
 
 | Seção | Descrição |
 |---|---|
-| **Header** | Navegação com menu responsivo e seletor de idioma |
-| **Hero** | Chamada principal com ilustração de dashboard e logo Azure |
+| **Header** | Navegação responsiva com âncoras por seção |
+| **Hero** | Lottie no desktop; logo Azure + texto no mobile |
 | **Soluções** | Modern Workplace, Cyber Security, Cloud, Power Platform, Serviços |
 | **Estatísticas** | 5.000+ clientes, 150+ projetos, 100 prêmios (counter animado) |
 | **Partner Banner** | Microsoft Solutions Partner — Modern Work e Infrastructure |

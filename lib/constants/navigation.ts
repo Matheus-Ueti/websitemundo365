@@ -5,7 +5,7 @@ export const mainNavItems: NavItem[] = [
   { label: "Início", href: sectionHref(SECTION_IDS.home) },
   { label: "Sobre nós", href: sectionHref(SECTION_IDS.about) },
   { label: "Soluções", href: sectionHref(SECTION_IDS.solutions) },
-  { label: "Notícias", href: sectionHref(SECTION_IDS.news) },
+  { label: "Newsletter", href: sectionHref(SECTION_IDS.news) },
   { label: "Contato", href: sectionHref(SECTION_IDS.contact) },
 ]
 

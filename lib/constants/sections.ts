@@ -1,5 +1,6 @@
 /** IDs de âncora usados no menu e no footer — manter em um só lugar. */
 export const SECTION_IDS = {
+  main: "conteudo",
   home: "inicio",
   about: "sobre",
   solutions: "solucoes",

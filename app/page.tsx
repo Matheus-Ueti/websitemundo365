@@ -1,3 +1,4 @@
+import { SECTION_IDS } from "@/lib/constants/sections"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -12,7 +13,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-background">
+    <main id={SECTION_IDS.main} className="relative min-h-screen bg-background">
 
       <Header />
       <HeroSection />

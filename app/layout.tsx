@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Geist, Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SkipLink } from "@/components/skip-link"
+import { siteConfig } from "@/lib/site"
 import "./globals.css"
 
 const geist = Geist({
@@ -14,9 +16,29 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "Mundo365 | Soluções Microsoft para sua Empresa",
-  description:
-    "Maior Revendedora Gold Microsoft do Brasil. Backup gerenciado, Business Intelligence, Migração para Nuvem e muito mais.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
@@ -25,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${geist.variable} ${spaceGrotesk.variable}`}>
       <body className="bg-background text-foreground antialiased">
+        <SkipLink />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
