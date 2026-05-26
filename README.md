@@ -84,17 +84,11 @@ Mundo365L/
 ├── app/
 │   ├── layout.tsx          # Layout raiz — fontes, metadata, Analytics
 │   └── page.tsx            # Página principal — composição das seções
-├── components/
-│   ├── header.tsx              # Navbar com menu mobile
-│   ├── hero-section.tsx        # Hero com ilustração SVG animada e logo Azure
-│   ├── solutions-section.tsx   # Tabs de soluções com imagem e floating cards
-│   ├── stats-section.tsx       # Contadores animados com IntersectionObserver
-│   ├── partner-banner.tsx      # Banner Microsoft Solutions Partner
-│   ├── certifications-section.tsx  # Certificações com foto do prêmio e grid de competências
-│   ├── testimonials-section.tsx    # Depoimentos com sidebar de clientes
-│   ├── partners-section.tsx    # Logos dos parceiros (Acronis, Adobe, Fortinet, etc.)
-│   ├── newsletter-section.tsx  # Formulário de newsletter
-│   └── footer.tsx              # Rodapé com links, contato e redes sociais
+├── components/             # UI por seção + hero Lottie (client)
+│   └── ui/                 # Peças reutilizáveis (ex.: AnimatedCounter)
+├── data/                   # Conteúdo estático (timeline, depoimentos, stats…)
+├── hooks/                  # Hooks compartilhados (ex.: useIntersectionVisible)
+├── lib/constants/          # IDs de seção, menu, hero Lottie, redes sociais
 ├── public/
 │   ├── mundo365-logo.png       # Logo principal
 │   ├── azure-logo.svg          # Logo Microsoft Azure

@@ -83,8 +83,7 @@ export type FooterLinks = {
 
 export type Partner = {
   name: string
-  src?: string
-  inlineLogo?: React.ReactNode
+  src: string
 }
 
 export type MicrosoftLogoProps = {

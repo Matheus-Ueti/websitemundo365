@@ -1,33 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Instagram, Linkedin } from "lucide-react"
-import type { FooterLinks, SocialLink } from "@/types"
-
-const footerLinks: FooterLinks = {
-  services: [
-    { label: "Backup gerenciado", href: "#" },
-    { label: "Business Intelligence", href: "#" },
-    { label: "Planejamento e migração", href: "#" },
-    { label: "Adoção e treinamento", href: "#" },
-    { label: "Área de trabalho virtual", href: "#" },
-  ],
-  links: [
-    { label: "Início", href: "#" },
-    { label: "Sobre nós", href: "#sobre" },
-    { label: "Soluções", href: "#solucoes" },
-    { label: "Notícias", href: "#noticias" },
-    { label: "Contato", href: "#contato" },
-  ],
-}
-
-const socialLinks: SocialLink[] = [
-  { icon: Instagram, href: "https://www.instagram.com/mundo365br/", label: "Instagram" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/empresamundo365/", label: "LinkedIn" },
-]
+import { Phone, Mail, MapPin } from "lucide-react"
+import { footerLinks } from "@/lib/constants/navigation"
+import { SECTION_IDS } from "@/lib/constants/sections"
+import { socialLinks } from "@/lib/constants/social"
 
 export function Footer() {
   return (
-    <footer id="contato" className="bg-slate-900 text-slate-300">
+    <footer id={SECTION_IDS.contact} className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Contact Info */}

@@ -1,6 +1,7 @@
 "use client"
 
 import dynamic from "next/dynamic"
+import { heroLottieLayout } from "@/lib/constants/hero-lottie"
 
 const HeroLottie = dynamic(
   () => import("@/components/hero-lottie").then((mod) => mod.HeroLottie),
@@ -8,7 +9,7 @@ const HeroLottie = dynamic(
     ssr: false,
     loading: () => (
       <div
-        className="relative w-full min-h-[320px] sm:min-h-[400px] lg:min-h-[520px] aspect-square"
+        className={`relative w-full aspect-square ${heroLottieLayout.minHeights}`}
         aria-hidden
       />
     ),

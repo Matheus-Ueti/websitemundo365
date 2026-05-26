@@ -2,36 +2,27 @@
 
 import { useEffect, useState } from "react"
 import { DotLottieReact, setWasmUrl } from "@lottiefiles/dotlottie-react"
-
-const HERO_LOTTIE_SRC =
-  "https://lottie.host/8c15d878-eef7-4119-b54e-b11d5ed2bafe/hkvUWhAvYo.lottie"
-
-const WASM_PATH = "/dotlottie-player.wasm"
+import {
+  HERO_LOTTIE_SRC,
+  HERO_LOTTIE_WASM_PATH,
+  heroLottieLayout,
+} from "@/lib/constants/hero-lottie"
 
 export function HeroLottie() {
   const [isReady, setIsReady] = useState(false)
+  const layoutClass = `${heroLottieLayout.container} ${heroLottieLayout.minHeights}`
 
   useEffect(() => {
-    setWasmUrl(`${window.location.origin}${WASM_PATH}`)
+    setWasmUrl(`${window.location.origin}${HERO_LOTTIE_WASM_PATH}`)
     setIsReady(true)
   }, [])
 
-  const containerClass =
-    "relative w-full min-w-0 aspect-square flex items-center justify-start origin-left scale-[1.15] sm:scale-[1.25] lg:scale-[1.35] -translate-x-10 sm:-translate-x-14 lg:-translate-x-20 -translate-y-6 sm:-translate-y-8 lg:-translate-y-10"
-
   if (!isReady) {
-    return (
-      <div
-        className={`${containerClass} min-h-[320px] sm:min-h-[400px] lg:min-h-[520px]`}
-        aria-hidden
-      />
-    )
+    return <div className={layoutClass} aria-hidden />
   }
 
   return (
-    <div
-      className={`${containerClass} min-h-[320px] sm:min-h-[400px] lg:min-h-[520px]`}
-    >
+    <div className={layoutClass}>
       <DotLottieReact
         src={HERO_LOTTIE_SRC}
         loop

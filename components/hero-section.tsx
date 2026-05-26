@@ -1,10 +1,14 @@
 import Image from "next/image"
-import { HeroVisual } from "@/components/hero-visual"
+import { HeroVisualDesktop } from "@/components/hero-visual-desktop"
+import { heroLottieLayout } from "@/lib/constants/hero-lottie"
+import { SECTION_IDS } from "@/lib/constants/sections"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#6b21a8] via-[#7c3aed] to-[#06b6d4] pt-20">
-      {/* Background effects */}
+    <section
+      id={SECTION_IDS.home}
+      className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#6b21a8] via-[#7c3aed] to-[#06b6d4] pt-20 pb-8 lg:pb-0"
+    >
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
@@ -20,27 +24,21 @@ export function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left — Lottie */}
-          <div className="relative hidden lg:flex items-start justify-start min-h-[520px] overflow-visible w-full max-w-none -ml-8 xl:-ml-14 -mt-6">
-            <div className="w-[115%] max-w-none">
-              <HeroVisual />
+          {/* Lottie só no desktop (lg+); no mobile não carrega o player */}
+          <div className={heroLottieLayout.desktopWrapper}>
+            <div className={heroLottieLayout.desktopInner}>
+              <HeroVisualDesktop />
             </div>
           </div>
 
-          {/* Mobile — Lottie */}
-          <div className="relative flex lg:hidden items-start justify-start min-h-[340px] -mb-4 overflow-visible -ml-6 w-full -mt-4">
-            <HeroVisual />
-          </div>
-
-          {/* Right — Azure + texto */}
-          <div className="text-center lg:text-right flex flex-col items-center lg:items-end">
+          <div className="text-center lg:text-right flex flex-col items-center lg:items-end lg:col-start-2">
             <div className="relative mb-8">
               <Image
                 src="/azure-logo.svg"
                 alt="Microsoft Azure"
                 width={200}
                 height={200}
-                className="drop-shadow-2xl"
+                className="drop-shadow-2xl w-40 h-40 sm:w-48 sm:h-48 lg:w-[200px] lg:h-[200px]"
               />
             </div>
 

@@ -4,15 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
-import type { NavItem } from "@/types"
-
-const navItems: NavItem[] = [
-  { label: "Início", href: "#" },
-  { label: "Sobre nós", href: "#sobre" },
-  { label: "Soluções", href: "#solucoes" },
-  { label: "Notícias", href: "#noticias" },
-  { label: "Contato", href: "#contato" },
-]
+import { mainNavItems } from "@/lib/constants/navigation"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,7 +28,7 @@ export function Header() {
           {/* Desktop Navigation - Pill shaped container */}
           <nav className="hidden md:flex items-center">
             <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm rounded-full px-2 py-1.5 border border-white/20">
-              {navItems.map((item) => (
+              {mainNavItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
@@ -94,7 +86,7 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/20 bg-purple-900/90 backdrop-blur-md rounded-b-2xl">
             <nav className="flex flex-col gap-2">
-              {navItems.map((item) => (
+              {mainNavItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}

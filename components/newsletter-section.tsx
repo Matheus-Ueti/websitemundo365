@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, Mail } from "lucide-react"
+import { SECTION_IDS } from "@/lib/constants/sections"
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("")
@@ -12,7 +13,10 @@ export function NewsletterSection() {
   }
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-[#0d1f3c] to-slate-900">
+    <section
+      id={SECTION_IDS.news}
+      className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-[#0d1f3c] to-slate-900"
+    >
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-3xl" />

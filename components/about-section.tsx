@@ -1,47 +1,10 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Cloud, Rocket, Handshake, TrendingUp, Sparkles } from "lucide-react"
-import type { PartnerBadgeProps, TimelineItem, TimelineItemCardProps } from "@/types"
-
-const timeline: TimelineItem[] = [
-  {
-    year: "2014",
-    title: "Início da jornada",
-    description: "A Mundo365 nasce com o propósito de transformar negócios com tecnologia.",
-    icon: Rocket,
-    accent: "from-orange-400 to-amber-400",
-  },
-  {
-    year: "2016",
-    title: "Parceria Microsoft",
-    description: "Nos tornamos parceiros Microsoft e ampliamos nosso portfólio de soluções.",
-    icon: Handshake,
-    accent: "from-blue-500 to-sky-400",
-  },
-  {
-    year: "2019",
-    title: "Especialização em Cloud",
-    description: "Aprofundamos nossa atuação em Azure e soluções de infraestrutura.",
-    icon: Cloud,
-    accent: "from-cyan-500 to-blue-400",
-  },
-  {
-    year: "2022",
-    title: "Expansão e inovação",
-    description: "Crescemos, inovamos e expandimos nossa atuação em todo o Brasil.",
-    icon: TrendingUp,
-    accent: "from-violet-500 to-purple-400",
-  },
-  {
-    year: "2024+",
-    title: "O futuro nos move",
-    description: "Seguimos evoluindo com IA, automação e soluções que geram impacto real.",
-    icon: Sparkles,
-    accent: "from-fuchsia-500 to-pink-400",
-  },
-]
+import type { PartnerBadgeProps, TimelineItemCardProps } from "@/types"
+import { timeline } from "@/data/timeline"
+import { useIntersectionVisible } from "@/hooks/use-intersection-visible"
+import { SECTION_IDS } from "@/lib/constants/sections"
 
 function OrbVisual() {
   return (
@@ -137,22 +100,14 @@ function PartnerBadge({ label }: PartnerBadgeProps) {
 }
 
 export function AboutSection() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true)
-      },
-      { threshold: 0.15 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
+  const { ref: sectionRef, isVisible } = useIntersectionVisible<HTMLElement>()
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-white py-24 sm:py-32">
+    <section
+      ref={sectionRef}
+      id={SECTION_IDS.about}
+      className="relative overflow-hidden bg-white py-24 sm:py-32"
+    >
 
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-indigo-50/80 to-violet-50/60 blur-3xl" />
