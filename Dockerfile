@@ -34,19 +34,13 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Create non-root user for security
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
-
 # Copy only what's needed to run
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-USER nextjs
-
-EXPOSE 8080
-ENV PORT=8080
-ENV HOSTNAME="0.0.0.0"
+# Azure App Service default port
+EXPOSE 80
+ENV PORT=80
 
 CMD ["node", "server.js"]
