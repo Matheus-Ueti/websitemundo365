@@ -1,27 +1,16 @@
-import {
-  BarChart3,
-  Cloud,
-  Database,
-  MessageSquare,
-  Monitor,
-  Server,
-  Shield,
-  Smartphone,
-  Zap,
-} from "lucide-react"
 import type { CertBadge, Competency } from "@/types"
 
 export const competencies: Competency[] = [
-  { label: "Windows and Devices", achieved: true, icon: Monitor },
-  { label: "Small and Midmarket Cloud Solutions", achieved: true, icon: Cloud },
-  { label: "Cloud Productivity", achieved: true, icon: Zap },
-  { label: "Datacenter", achieved: true, icon: Server },
-  { label: "Security", achieved: true, icon: Shield },
-  { label: "Cloud Platform", achieved: false, icon: Cloud },
-  { label: "Data Analytics", achieved: false, icon: BarChart3 },
-  { label: "Enterprise Mobility Management", achieved: false, icon: Smartphone },
-  { label: "Communications", achieved: false, icon: MessageSquare },
-  { label: "Data Platform", achieved: false, icon: Database },
+  { label: "Windows and Devices", achieved: true },
+  { label: "Small and Midmarket Cloud Solutions", achieved: true },
+  { label: "Cloud Productivity", achieved: true },
+  { label: "Datacenter", achieved: true },
+  { label: "Security", achieved: true },
+  { label: "Cloud Platform", achieved: false },
+  { label: "Data Analytics", achieved: false },
+  { label: "Enterprise Mobility Management", achieved: false },
+  { label: "Communications", achieved: false },
+  { label: "Data Platform", achieved: false },
 ]
 
 export const certBadges: CertBadge[] = [

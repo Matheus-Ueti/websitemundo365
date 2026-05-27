@@ -9,7 +9,6 @@ export type LucideIcon = React.ComponentType<{ className?: string }>
 export type Competency = {
   label: string
   achieved: boolean
-  icon: LucideIcon
 }
 
 export type CertBadge = {
