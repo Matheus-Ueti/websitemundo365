@@ -25,7 +25,7 @@ export function CertificationsSection() {
         </header>
 
         <div className="grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-16 xl:gap-20 items-end mb-14 sm:mb-16">
-          <div className="min-w-0 lg:-ml-4 xl:-ml-6">
+          <div className="min-w-0">
             <AwardVisual />
           </div>
 

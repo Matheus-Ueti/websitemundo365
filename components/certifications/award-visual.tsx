@@ -4,7 +4,7 @@ export function AwardVisual() {
   return (
     <div className="relative min-w-0 w-full">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute left-[40%] top-[36%] h-[52%] w-[68%] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-200/30 via-indigo-100/20 to-cyan-100/15 blur-3xl" />
+        <div className="absolute left-1/2 top-[36%] h-[52%] w-[68%] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-200/30 via-indigo-100/20 to-cyan-100/15 blur-3xl" />
       </div>
 
       <Image

@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Instagram, Linkedin, Menu, X } from "lucide-react"
 import { mainNavItems } from "@/lib/constants/navigation"
 
 const MOBILE_MENU_ID = "mobile-nav-menu"
@@ -40,17 +40,40 @@ export function Header() {
             </div>
           </nav>
 
-          <span
-            className="hidden md:inline-flex items-center gap-1.5 text-white/90 text-sm font-medium"
-            aria-label="Idioma do site: Português (Brasil)"
-          >
-            PT
-            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="rounded-sm overflow-hidden" aria-hidden>
-              <rect width="24" height="18" fill="#009739" />
-              <path d="M12 2 L22 9 L12 16 L2 9 Z" fill="#FEDD00" />
-              <circle cx="12" cy="9" r="3.5" fill="#002776" />
-            </svg>
-          </span>
+          <div className="hidden md:flex items-center gap-3">
+            <div className="flex items-center gap-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-1">
+              <Link
+                href="https://www.linkedin.com/company/empresamundo365/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-white/90 hover:bg-white/10 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-4.5 w-4.5" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/mundo365br/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-white/90 hover:bg-white/10 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-4.5 w-4.5" />
+              </Link>
+            </div>
+
+            <span
+              className="inline-flex items-center gap-1.5 text-white/90 text-sm font-medium"
+              aria-label="Idioma do site: Português (Brasil)"
+            >
+              PT
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="rounded-sm overflow-hidden" aria-hidden>
+                <rect width="24" height="18" fill="#009739" />
+                <path d="M12 2 L22 9 L12 16 L2 9 Z" fill="#FEDD00" />
+                <circle cx="12" cy="9" r="3.5" fill="#002776" />
+              </svg>
+            </span>
+          </div>
 
           <button
             type="button"
