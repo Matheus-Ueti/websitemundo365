@@ -1,0 +1,31 @@
+# Dependencies
+node_modules
+
+# Build output
+.next
+out
+
+# Version control
+.git
+.github
+.gitignore
+
+# IDE / Editor
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment (will be injected via docker-compose)
+.env*.local
+
+# Misc
+README.md
+tsconfig.tsbuildinfo
+.eslintrc.json
+.vercel
