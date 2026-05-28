@@ -1,10 +1,12 @@
-"use client"
-
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 import { AnimatedCounter } from "@/components/ui/animated-counter"
-import { stats } from "@/data/stats"
+import type { Stat } from "@/types"
 
-export function StatsSection() {
+export async function StatsSection() {
+  const t = await getTranslations("stats")
+  const stats = t.raw("items") as Stat[]
+
   return (
     <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
@@ -14,10 +16,10 @@ export function StatsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
-            Nossa História
+            {t("eyebrow")}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4 text-balance">
-            Por que a Mundo365 é a melhor
+            {t("title")}
           </h2>
         </div>
 

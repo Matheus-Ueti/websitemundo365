@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "title": "Mundo365 | Microsoft Solutions for Your Business",
+    "description": "Largest Gold Microsoft reseller in Southern Brazil. Managed backup, Business Intelligence, Azure migration, and cutting-edge Microsoft solutions."
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "homeAria": "Mundo365 — home page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navMain": "Main",
+    "whatsappAria": "Chat with Mundo365 on WhatsApp",
+    "partner": "Partner",
+    "microsoftAzure": "Microsoft Azure"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "solutions": "Solutions",
+    "newsletter": "Newsletter",
+    "contact": "Contact"
+  },
+  "footer": {
+    "contactTitle": "Contact us",
+    "servicesTitle": "Services",
+    "linksTitle": "Useful links",
+    "tagline": "For over 11 years, we have been transforming businesses with cutting-edge Microsoft solutions. Your trusted technology partner.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "services": {
+      "backup": "Managed backup",
+      "bi": "Business Intelligence",
+      "migration": "Planning and migration",
+      "adoption": "Adoption and training",
+      "vdi": "Virtual desktop"
+    }
+  },
+  "hero": {
+    "titleBefore": "Come to",
+    "titleBrand": "Mundo365",
+    "titleMiddle": "host your systems on Microsoft",
+    "titleAzure": "Azure"
+  },
+  "about": {
+    "title": "About us",
+    "headlineBefore": "Technology that connects",
+    "headlineHighlight": "ideas, people",
+    "headlineAfter": "and possibilities.",
+    "description": "For over 11 years, Mundo365 has been turning challenges into solutions with Microsoft technology. We help companies innovate, grow, and go further with security, performance, and intelligence.",
+    "badgeModernWork": "Solutions Partner · Modern Work",
+    "badgeInfrastructure": "Solutions Partner · Infrastructure & Azure",
+    "teamImageAlt": "Mundo365 team collaborating",
+    "journeyLabel": "Our journey",
+    "journeyTitleBefore": "A story built with",
+    "journeyTitleHighlight": "purpose",
+    "timeline": {
+      "items": [
+        {
+          "year": "2014",
+          "title": "The journey begins",
+          "description": "Mundo365 was founded to transform businesses through technology.",
+          "accent": "from-orange-400 to-amber-400"
+        },
+        {
+          "year": "2016",
+          "title": "Microsoft partnership",
+          "description": "We became Microsoft partners and expanded our solution portfolio.",
+          "accent": "from-blue-500 to-sky-400"
+        },
+        {
+          "year": "2019",
+          "title": "Cloud specialization",
+          "description": "We deepened our focus on Azure and infrastructure solutions.",
+          "accent": "from-cyan-500 to-blue-400"
+        },
+        {
+          "year": "2022",
+          "title": "Expansion and innovation",
+          "description": "We grew, innovated, and expanded our operations across Brazil.",
+          "accent": "from-violet-500 to-purple-400"
+        },
+        {
+          "year": "2024+",
+          "title": "The future drives us",
+          "description": "We keep evolving with AI, automation, and solutions that deliver real impact.",
+          "accent": "from-fuchsia-500 to-pink-400"
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "title": "Our solutions",
+    "subtitle": "Discover our products, services, technology journeys, and team of experts!",
+    "floating": {
+      "safe": "You are safe",
+      "now": "Now",
+      "protected": "System protected",
+      "portal": "Azure Portal"
+    },
+    "items": [
+      {
+        "id": "modern-workplace",
+        "tabTitle": "Modern Workplace",
+        "title": "Modern Workplace",
+        "description": "Transform how your team collaborates with innovative Modern Workplace solutions.",
+        "subDescription": "Boost productivity and efficiency with a more connected work experience.",
+        "buttonText": "Explore our licensing",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "cyber-security",
+        "tabTitle": "Cyber Security",
+        "title": "Cyber Security",
+        "description": "We guide you through planning and implementing tools that together make your company's data security robust and efficient.",
+        "subDescription": "",
+        "buttonText": "See protection levels",
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "cloud-solutions",
+        "tabTitle": "Cloud Solutions",
+        "title": "Cloud Solutions",
+        "description": "Migrate your infrastructure to Microsoft Azure with security, scalability, and cost efficiency.",
+        "subDescription": "Reduce operational costs and increase system availability with our cloud expertise.",
+        "buttonText": "Explore our cloud solutions",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "power-platform",
+        "tabTitle": "Power Platform",
+        "title": "Power Platform",
+        "description": "Automate processes, build custom apps, and analyze data with Microsoft's Power Platform.",
+        "subDescription": "Power BI, Power Apps, Power Automate, and Power Virtual Agents to transform your business.",
+        "buttonText": "Discover the power of automation",
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "servicos",
+        "tabTitle": "Services",
+        "title": "Specialized services",
+        "description": "Consulting, training, and technical support across the entire Microsoft ecosystem.",
+        "subDescription": "Our certified team is ready to help your company reach its full technology potential.",
+        "buttonText": "Talk to an expert",
+        "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face"
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "Our story",
+    "title": "Why Mundo365 is the best choice",
+    "items": [
+      { "value": 5000, "label": "Clients served", "suffix": "+" },
+      { "value": 150, "label": "Projects delivered", "suffix": "+" },
+      { "value": 100, "label": "Awards won", "suffix": "" },
+      { "value": 999, "label": "Services delivered", "suffix": "+" },
+      { "value": 850, "label": "Monthly IT hours", "suffix": "+" },
+      { "value": 99, "label": "Active clients", "suffix": "" }
+    ]
+  },
+  "partnerBanner": {
+    "titleLine1": "We are the largest",
+    "titleLine2": "Official Microsoft reseller in Brazil",
+    "subtitle": "Among the largest Microsoft resellers in Brazil, we deliver the best solutions with confidence.",
+    "microsoft": "Microsoft",
+    "solutionsPartner": "Solutions Partner",
+    "modernWork": "Modern Work",
+    "infrastructure": "Infrastructure — Azure",
+    "goldPartner": "Gold Partner",
+    "poweredBy": "Powered by",
+    "ai": "Artificial Intelligence"
+  },
+  "certifications": {
+    "eyebrow": "Certifications and qualifications",
+    "titleBefore": "Recognition that ensures",
+    "titleHighlight": "quality",
+    "description": "Trust in Mundo365 services through official Microsoft certifications and awards.",
+    "awardImageAlt": "Mundo365 representative with Microsoft Top Growth Awards",
+    "teamCerts": "Team certifications",
+    "competencies": [
+      { "label": "Windows and Devices", "achieved": true },
+      { "label": "Small and Midmarket Cloud Solutions", "achieved": true },
+      { "label": "Cloud Productivity", "achieved": true },
+      { "label": "Datacenter", "achieved": true },
+      { "label": "Security", "achieved": true },
+      { "label": "Cloud Platform", "achieved": false },
+      { "label": "Data Analytics", "achieved": false },
+      { "label": "Enterprise Mobility Management", "achieved": false },
+      { "label": "Communications", "achieved": false },
+      { "label": "Data Platform", "achieved": false }
+    ],
+    "badges": [
+      { "acronym": "MCT", "title": "Microsoft Certified Trainer", "image": "/badge-mct.png" },
+      { "acronym": "MCSE", "title": "Microsoft Certified Solutions Expert", "image": "/badge-mcse.png" },
+      { "acronym": "MCSA", "title": "Microsoft Certified Solutions Associate", "image": "/badge-mcsa.png" },
+      { "acronym": "ASA", "title": "Azure Solutions Architect Expert", "image": "/badge-asa.png" },
+      { "acronym": "MVP", "title": "Most Valuable Professional", "image": "/badge-mvp.png" }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "For 11 years, Mundo365 has delivered results and built success stories",
+    "items": [
+      {
+        "id": 1,
+        "quote": "I find Mundo365's service excellent—always attentive and fast depending on each situation's urgency. After we received IT advisory support, we improved many internal processes, including customer-facing platforms and employee workflows to stay agile in the market, because clients won't wait. The impact inside our company was very positive. The difference is not just putting out fires, but managing what can be improved—and that's what makes Mundo365 stand out.",
+        "author": "Felipe Torrano Trevisan",
+        "company": "Grupo Campseg",
+        "initials": "GC",
+        "color": "from-cyan-500 to-blue-600"
+      },
+      {
+        "id": 2,
+        "quote": "After Mundo365's team supported us—always attentive and quick depending on urgency—the security implementation was flawless and technical support exceeded all expectations.",
+        "author": "Elson Soares",
+        "company": "Hospital São Lucas",
+        "initials": "HS",
+        "color": "from-violet-500 to-purple-600"
+      },
+      {
+        "id": 3,
+        "quote": "Excellent partnership! The team showed deep technical knowledge and commitment to our results. Managed backup gave us complete peace of mind about our data security.",
+        "author": "João D. Batista",
+        "company": "J.D.B Seguros",
+        "initials": "JD",
+        "color": "from-emerald-500 to-green-600"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Partners and technologies we work with"
+  },
+  "newsletter": {
+    "title": "Get tips, insights, and news",
+    "subtitle": "Straight to your inbox, no spam.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "submit": "Subscribe",
+    "successBefore": "Thank you for your interest! To reach our team now, email",
+    "successAfter": "."
+  },
+  "contact": {
+    "whatsappMessage": "Hello! I'd like to learn more about Mundo365's Microsoft solutions.",
+    "location": "Cascavel - PR, Brazil"
+  }
+}

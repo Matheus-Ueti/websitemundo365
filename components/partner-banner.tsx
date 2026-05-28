@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import type { MicrosoftLogoProps } from "@/types"
 
 function MicrosoftLogo({ size = 5 }: MicrosoftLogoProps) {
@@ -11,10 +12,11 @@ function MicrosoftLogo({ size = 5 }: MicrosoftLogoProps) {
   )
 }
 
-export function PartnerBanner() {
+export async function PartnerBanner() {
+  const t = await getTranslations("partnerBanner")
+
   return (
     <section className="py-10 relative overflow-hidden bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600">
-      {/* Subtle background texture */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -29,70 +31,58 @@ export function PartnerBanner() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-
-          {/* Left - Microsoft branding */}
           <div className="flex items-center gap-6 lg:flex-1">
-            {/* Microsoft logo */}
             <div className="flex-shrink-0 drop-shadow-lg">
               <MicrosoftLogo size={12} />
             </div>
             <div>
               <p className="text-white font-bold text-lg leading-tight">
-                Somos a maior Revendedora<br />
-                <span className="text-yellow-300">Oficial Microsoft Brasil</span>
+                {t("titleLine1")}
+                <br />
+                <span className="text-yellow-300">{t("titleLine2")}</span>
               </p>
-              <p className="text-blue-100 text-xs mt-1 max-w-xs">
-                Entre as maiores empresas de Revenda Microsoft do Brasil, oferecemos as melhores soluções com segurança.
-              </p>
+              <p className="text-blue-100 text-xs mt-1 max-w-xs">{t("subtitle")}</p>
             </div>
           </div>
 
-          {/* Divider */}
           <div className="hidden lg:block w-px h-16 bg-white/20 mx-8" />
 
-          {/* Center - Partner Badges */}
           <div className="flex flex-wrap justify-center items-center gap-4 lg:flex-1">
-            {/* Solutions Partner - Modern Work */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
               <MicrosoftLogo />
               <div>
-                <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
-                <p className="text-white font-semibold text-xs leading-tight">Solutions Partner</p>
-                <p className="text-blue-200 text-[10px] leading-none">Modern Work</p>
+                <p className="text-white/70 text-[10px] leading-none">{t("microsoft")}</p>
+                <p className="text-white font-semibold text-xs leading-tight">{t("solutionsPartner")}</p>
+                <p className="text-blue-200 text-[10px] leading-none">{t("modernWork")}</p>
               </div>
             </div>
 
-            {/* Solutions Partner - Infrastructure */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
               <MicrosoftLogo />
               <div>
-                <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
-                <p className="text-white font-semibold text-xs leading-tight">Solutions Partner</p>
-                <p className="text-blue-200 text-[10px] leading-none">Infrastructure — Azure</p>
+                <p className="text-white/70 text-[10px] leading-none">{t("microsoft")}</p>
+                <p className="text-white font-semibold text-xs leading-tight">{t("solutionsPartner")}</p>
+                <p className="text-blue-200 text-[10px] leading-none">{t("infrastructure")}</p>
               </div>
             </div>
 
-            {/* Gold Partner */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
               <MicrosoftLogo />
               <div>
-                <p className="text-white/70 text-[10px] leading-none">Microsoft</p>
-                <p className="text-yellow-300 font-bold text-xs leading-tight">Gold Partner</p>
+                <p className="text-white/70 text-[10px] leading-none">{t("microsoft")}</p>
+                <p className="text-yellow-300 font-bold text-xs leading-tight">{t("goldPartner")}</p>
               </div>
             </div>
           </div>
 
-          {/* Divider */}
           <div className="hidden lg:block w-px h-16 bg-white/20 mx-8" />
 
-          {/* Right - AI badge */}
           <div className="flex items-center gap-3 lg:flex-shrink-0">
             <div>
-              <p className="text-blue-100 text-xs">Powered by</p>
-              <p className="text-white font-bold text-sm leading-tight">Inteligência Artificial</p>
+              <p className="text-blue-100 text-xs">{t("poweredBy")}</p>
+              <p className="text-white font-bold text-sm leading-tight">{t("ai")}</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -6,15 +6,14 @@
     "dev": "next dev",
     "dev:clean": "powershell -NoProfile -Command \"$ports = 3000,3001; Get-NetTCPConnection -LocalPort $ports -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; if (Test-Path .next) { Remove-Item -Recurse -Force .next }; Write-Host 'Pronto. Rode: npm run dev'\"",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint ."
+    "start": "next start"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.19.4",
     "@vercel/analytics": "1.6.1",
-    "autoprefixer": "^10.4.20",
     "lucide-react": "^0.564.0",
     "next": "16.2.6",
+    "next-intl": "^4.13.0",
     "react": "^19",
     "react-dom": "^19"
   },

@@ -1,17 +1,13 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-
-type Options = {
-  threshold?: number
-  triggerOnce?: boolean
-}
+import type { IntersectionVisibleOptions } from "@/types"
 
 /**
  * Marca visibilidade quando o elemento entra no viewport (animações on-scroll).
  */
 export function useIntersectionVisible<T extends HTMLElement>(
-  options: Options = {}
+  options: IntersectionVisibleOptions = {}
 ) {
   const { threshold = 0.15, triggerOnce = true } = options
   const ref = useRef<T>(null)

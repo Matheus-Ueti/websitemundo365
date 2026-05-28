@@ -1,20 +1,40 @@
-import Link from "next/link"
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 import { Phone, Mail, MapPin } from "lucide-react"
-import { footerLinks } from "@/lib/constants/navigation"
+import { Link } from "@/i18n/navigation"
 import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
 import { socialLinks } from "@/lib/constants/social"
 import { siteConfig } from "@/lib/site"
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("footer")
+  const tNav = await getTranslations("nav")
+  const tContact = await getTranslations("contact")
+  const tCommon = await getTranslations("common")
   const { contact } = siteConfig
+
+  const mainNavItems = [
+    { label: tNav("home"), href: sectionHref(SECTION_IDS.home) },
+    { label: tNav("about"), href: sectionHref(SECTION_IDS.about) },
+    { label: tNav("solutions"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: tNav("newsletter"), href: sectionHref(SECTION_IDS.news) },
+    { label: tNav("contact"), href: sectionHref(SECTION_IDS.contact) },
+  ]
+
+  const serviceLinks = [
+    { label: t("services.backup"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.bi"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.migration"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.adoption"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.vdi"), href: sectionHref(SECTION_IDS.solutions) },
+  ]
 
   return (
     <footer id={SECTION_IDS.contact} className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Fale conosco</h4>
+            <h4 className="text-white font-bold text-lg mb-6">{t("contactTitle")}</h4>
             <div className="space-y-4">
               <a
                 href={`tel:${contact.phone}`}
@@ -32,7 +52,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden />
-                <span>{contact.location}</span>
+                <span>{tContact("location")}</span>
               </div>
             </div>
 
@@ -53,9 +73,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Serviços</h4>
+            <h4 className="text-white font-bold text-lg mb-6">{t("servicesTitle")}</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
@@ -66,10 +86,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Links Úteis</h4>
+            <h4 className="text-white font-bold text-lg mb-6">{t("linksTitle")}</h4>
             <ul className="space-y-3">
-              {footerLinks.links.map((link) => (
-                <li key={link.label}>
+              {mainNavItems.map((link) => (
+                <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
                   </Link>
@@ -79,7 +99,7 @@ export function Footer() {
           </div>
 
           <div>
-            <Link href="/" className="flex items-center mb-4" aria-label="Mundo365 — página inicial">
+            <Link href="/" className="flex items-center mb-4" aria-label={tCommon("homeAria")}>
               <Image
                 src="/mundo365-logo.png"
                 alt="Mundo365"
@@ -88,16 +108,17 @@ export function Footer() {
                 className="brightness-0 invert"
               />
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Há mais de 11 anos transformando empresas com soluções Microsoft de ponta.
-              Sua parceira de confiança em tecnologia.
-            </p>
+            <p className="text-slate-400 text-sm leading-relaxed">{t("tagline")}</p>
 
             <div className="mt-6 flex items-center gap-3 bg-slate-800 rounded-lg px-4 py-3 w-fit">
               <Image src="/azure-logo.svg" alt="" width={28} height={28} aria-hidden />
               <div>
-                <p className="text-slate-500 text-xs uppercase tracking-wider leading-none mb-0.5">Parceiro</p>
-                <p className="text-white text-sm font-semibold leading-none">Microsoft Azure</p>
+                <p className="text-slate-500 text-xs uppercase tracking-wider leading-none mb-0.5">
+                  {tCommon("partner")}
+                </p>
+                <p className="text-white text-sm font-semibold leading-none">
+                  {tCommon("microsoftAzure")}
+                </p>
               </div>
             </div>
           </div>
@@ -107,19 +128,21 @@ export function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-            <p>&copy; {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.</p>
+            <p>
+              &copy; {new Date().getFullYear()} {siteConfig.name}. {t("rights")}
+            </p>
             <div className="flex gap-6">
               <Link
                 href={sectionHref(SECTION_IDS.contact)}
                 className="hover:text-slate-300 transition-colors"
               >
-                Política de Privacidade
+                {t("privacy")}
               </Link>
               <Link
                 href={sectionHref(SECTION_IDS.contact)}
                 className="hover:text-slate-300 transition-colors"
               >
-                Termos de Uso
+                {t("terms")}
               </Link>
             </div>
           </div>

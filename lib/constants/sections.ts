@@ -1,14 +1,6 @@
-/** IDs de âncora usados no menu e no footer — manter em um só lugar. */
-export const SECTION_IDS = {
-  main: "conteudo",
-  home: "inicio",
-  about: "sobre",
-  solutions: "solucoes",
-  news: "noticias",
-  contact: "contato",
-} as const
+import { SECTION_IDS, type SectionId } from "@/types"
 
-export type SectionId = (typeof SECTION_IDS)[keyof typeof SECTION_IDS]
+export { SECTION_IDS, type SectionId }
 
 export function sectionHref(id: SectionId): string {
   return `#${id}`

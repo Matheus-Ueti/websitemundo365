@@ -1,12 +1,14 @@
 "use client"
 
 import Image from "next/image"
+import { useLocale, useTranslations } from "next-intl"
 import type { PartnerBadgeProps, TimelineItemCardProps } from "@/types"
-import { timeline } from "@/data/timeline"
 import { useIntersectionVisible } from "@/hooks/use-intersection-visible"
+import type { Locale } from "@/types"
+import { getTimeline } from "@/i18n/timeline"
 import { SECTION_IDS } from "@/lib/constants/sections"
 
-function OrbVisual() {
+function OrbVisual({ imageAlt }: { imageAlt: string }) {
   return (
     <div className="relative w-full h-[580px] sm:h-[700px] flex items-center justify-end pr-4 sm:pr-8 select-none overflow-visible">
 
@@ -42,7 +44,7 @@ function OrbVisual() {
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-violet-500/5 to-cyan-500/10 z-10 pointer-events-none" />
           <Image
             src="/about-team-v2.png"
-            alt="Equipe Mundo365 colaborando"
+            alt={imageAlt}
             fill
             unoptimized
             priority
@@ -101,23 +103,16 @@ function PartnerBadge({ label }: PartnerBadgeProps) {
 
 export function AboutSection() {
   const { ref: sectionRef, isVisible } = useIntersectionVisible<HTMLElement>()
+  const locale = useLocale() as Locale
+  const t = useTranslations("about")
+  const timeline = getTimeline(locale)
 
   return (
     <section
       ref={sectionRef}
       id={SECTION_IDS.about}
-      className="relative overflow-hidden bg-white py-24 sm:py-32"
+      className="relative -mt-px z-10 overflow-hidden bg-white py-24 sm:py-32"
     >
-
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-indigo-50/80 to-violet-50/60 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-blue-50/70 to-cyan-50/50 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.025]"
-          style={{ backgroundImage: "radial-gradient(circle, #6366f1 1px, transparent 1px)", backgroundSize: "28px 28px" }}
-        />
-      </div>
-
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -131,28 +126,26 @@ export function AboutSection() {
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
                 <span className="relative inline-block">
-                  Sobre nós
+                  {t("title")}
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
                 </span>
               </h2>
               <p className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug tracking-tight">
-                Tecnologia que conecta{" "}
+                {t("headlineBefore")}{" "}
                 <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 bg-clip-text text-transparent">
-                  ideias, pessoas
+                  {t("headlineHighlight")}
                 </span>{" "}
-                e possibilidades.
+                {t("headlineAfter")}
               </p>
             </div>
 
             <p className="text-gray-500 text-base leading-relaxed max-w-md">
-              Há mais de 11 anos, a Mundo365 transforma desafios em soluções com
-              tecnologia Microsoft. Impulsionamos empresas a inovarem, crescerem
-              e irem além com segurança, performance e inteligência.
+              {t("description")}
             </p>
 
             <div className="flex flex-wrap gap-2">
-              <PartnerBadge label="Solutions Partner · Modern Work" />
-              <PartnerBadge label="Solutions Partner · Infrastructure & Azure" />
+              <PartnerBadge label={t("badgeModernWork")} />
+              <PartnerBadge label={t("badgeInfrastructure")} />
             </div>
           </div>
 
@@ -162,7 +155,7 @@ export function AboutSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
             ].join(" ")}
           >
-            <OrbVisual />
+            <OrbVisual imageAlt={t("teamImageAlt")} />
           </div>
         </div>
 
@@ -174,12 +167,12 @@ export function AboutSection() {
         >
           <div className="text-center mb-12">
             <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-indigo-500 mb-2">
-              Nossa Trajetória
+              {t("journeyLabel")}
             </p>
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-              Uma história construída com{" "}
+              {t("journeyTitleBefore")}{" "}
               <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                propósito
+                {t("journeyTitleHighlight")}
               </span>
             </h3>
           </div>

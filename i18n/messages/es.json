@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "title": "Mundo365 | Soluciones Microsoft para su Empresa",
+    "description": "Mayor revendedor Gold Microsoft del sur de Brasil. Backup gestionado, Business Intelligence, migración a Azure y soluciones Microsoft de primer nivel."
+  },
+  "common": {
+    "skipToContent": "Saltar al contenido",
+    "homeAria": "Mundo365 — página de inicio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "navMain": "Principal",
+    "whatsappAria": "Hablar con Mundo365 en WhatsApp",
+    "partner": "Socio",
+    "microsoftAzure": "Microsoft Azure"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "solutions": "Soluciones",
+    "newsletter": "Newsletter",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "contactTitle": "Contáctenos",
+    "servicesTitle": "Servicios",
+    "linksTitle": "Enlaces útiles",
+    "tagline": "Hace más de 11 años transformamos empresas con soluciones Microsoft de primer nivel. Su socio tecnológico de confianza.",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "services": {
+      "backup": "Backup gestionado",
+      "bi": "Business Intelligence",
+      "migration": "Planificación y migración",
+      "adoption": "Adopción y capacitación",
+      "vdi": "Escritorio virtual"
+    }
+  },
+  "hero": {
+    "titleBefore": "Venga a",
+    "titleBrand": "Mundo365",
+    "titleMiddle": "aloje sus sistemas en Microsoft",
+    "titleAzure": "Azure"
+  },
+  "about": {
+    "title": "Sobre nosotros",
+    "headlineBefore": "Tecnología que conecta",
+    "headlineHighlight": "ideas, personas",
+    "headlineAfter": "y posibilidades.",
+    "description": "Hace más de 11 años, Mundo365 transforma desafíos en soluciones con tecnología Microsoft. Impulsamos a las empresas a innovar, crecer e ir más allá con seguridad, rendimiento e inteligencia.",
+    "badgeModernWork": "Solutions Partner · Modern Work",
+    "badgeInfrastructure": "Solutions Partner · Infrastructure & Azure",
+    "teamImageAlt": "Equipo Mundo365 colaborando",
+    "journeyLabel": "Nuestra trayectoria",
+    "journeyTitleBefore": "Una historia construida con",
+    "journeyTitleHighlight": "propósito",
+    "timeline": {
+      "items": [
+        {
+          "year": "2014",
+          "title": "Inicio del camino",
+          "description": "Mundo365 nace con el propósito de transformar negocios con tecnología.",
+          "accent": "from-orange-400 to-amber-400"
+        },
+        {
+          "year": "2016",
+          "title": "Alianza Microsoft",
+          "description": "Nos convertimos en socios Microsoft y ampliamos nuestro portafolio de soluciones.",
+          "accent": "from-blue-500 to-sky-400"
+        },
+        {
+          "year": "2019",
+          "title": "Especialización en Cloud",
+          "description": "Profundizamos nuestra actuación en Azure y soluciones de infraestructura.",
+          "accent": "from-cyan-500 to-blue-400"
+        },
+        {
+          "year": "2022",
+          "title": "Expansión e innovación",
+          "description": "Crecimos, innovamos y expandimos nuestra actuación en todo Brasil.",
+          "accent": "from-violet-500 to-purple-400"
+        },
+        {
+          "year": "2024+",
+          "title": "El futuro nos impulsa",
+          "description": "Seguimos evolucionando con IA, automatización y soluciones de impacto real.",
+          "accent": "from-fuchsia-500 to-pink-400"
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "title": "Nuestras soluciones",
+    "subtitle": "Conozca nuestros productos, servicios, recorridos tecnológicos y nuestro equipo de especialistas.",
+    "floating": {
+      "safe": "Está seguro",
+      "now": "Ahora",
+      "protected": "Sistema protegido",
+      "portal": "Azure Portal"
+    },
+    "items": [
+      {
+        "id": "modern-workplace",
+        "tabTitle": "Modern Workplace",
+        "title": "Modern Workplace",
+        "description": "Transforme la forma en que su equipo colabora con soluciones innovadoras de Modern Workplace.",
+        "subDescription": "Aumente la productividad y la eficiencia con una experiencia de trabajo más conectada.",
+        "buttonText": "Conozca nuestras licencias",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "cyber-security",
+        "tabTitle": "Cyber Security",
+        "title": "Cyber Security",
+        "description": "Le acompañamos en la planificación e implementación de herramientas que, en conjunto, hacen robusta y eficiente la seguridad de datos de su empresa.",
+        "subDescription": "",
+        "buttonText": "Conozca los niveles de protección",
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "cloud-solutions",
+        "tabTitle": "Cloud Solutions",
+        "title": "Cloud Solutions",
+        "description": "Migre su infraestructura a Microsoft Azure con seguridad, escalabilidad y economía.",
+        "subDescription": "Reduzca costos operativos y aumente la disponibilidad de sus sistemas con nuestra experiencia en la nube.",
+        "buttonText": "Conozca nuestras soluciones en la nube",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "power-platform",
+        "tabTitle": "Power Platform",
+        "title": "Power Platform",
+        "description": "Automatice procesos, cree aplicaciones personalizadas y analice datos con Power Platform de Microsoft.",
+        "subDescription": "Power BI, Power Apps, Power Automate y Power Virtual Agents para transformar su empresa.",
+        "buttonText": "Descubra el poder de la automatización",
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "servicos",
+        "tabTitle": "Servicios",
+        "title": "Servicios especializados",
+        "description": "Consultoría, capacitación y soporte técnico especializado en todo el ecosistema Microsoft.",
+        "subDescription": "Nuestro equipo certificado está listo para ayudar a su empresa a alcanzar su máximo potencial tecnológico.",
+        "buttonText": "Hable con un especialista",
+        "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face"
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "Nuestra historia",
+    "title": "Por qué Mundo365 es la mejor opción",
+    "items": [
+      { "value": 5000, "label": "Clientes beneficiados", "suffix": "+" },
+      { "value": 150, "label": "Proyectos completados", "suffix": "+" },
+      { "value": 100, "label": "Premios obtenidos", "suffix": "" },
+      { "value": 999, "label": "Servicios realizados", "suffix": "+" },
+      { "value": 850, "label": "Horas mensuales en TI", "suffix": "+" },
+      { "value": 99, "label": "Clientes activos", "suffix": "" }
+    ]
+  },
+  "partnerBanner": {
+    "titleLine1": "Somos el mayor revendedor",
+    "titleLine2": "Oficial Microsoft de Brasil",
+    "subtitle": "Entre las mayores empresas de reventa Microsoft de Brasil, ofrecemos las mejores soluciones con seguridad.",
+    "microsoft": "Microsoft",
+    "solutionsPartner": "Solutions Partner",
+    "modernWork": "Modern Work",
+    "infrastructure": "Infrastructure — Azure",
+    "goldPartner": "Gold Partner",
+    "poweredBy": "Powered by",
+    "ai": "Inteligencia Artificial"
+  },
+  "certifications": {
+    "eyebrow": "Certificaciones y calificaciones",
+    "titleBefore": "Reconocimiento que garantiza",
+    "titleHighlight": "calidad",
+    "description": "Confianza en los servicios de Mundo365 a través de certificaciones y premios oficiales de Microsoft.",
+    "awardImageAlt": "Representante de Mundo365 con premios Microsoft Top Growth Awards",
+    "teamCerts": "Certificaciones del equipo",
+    "competencies": [
+      { "label": "Windows and Devices", "achieved": true },
+      { "label": "Small and Midmarket Cloud Solutions", "achieved": true },
+      { "label": "Cloud Productivity", "achieved": true },
+      { "label": "Datacenter", "achieved": true },
+      { "label": "Security", "achieved": true },
+      { "label": "Cloud Platform", "achieved": false },
+      { "label": "Data Analytics", "achieved": false },
+      { "label": "Enterprise Mobility Management", "achieved": false },
+      { "label": "Communications", "achieved": false },
+      { "label": "Data Platform", "achieved": false }
+    ],
+    "badges": [
+      { "acronym": "MCT", "title": "Microsoft Certified Trainer", "image": "/badge-mct.png" },
+      { "acronym": "MCSE", "title": "Microsoft Certified Solutions Expert", "image": "/badge-mcse.png" },
+      { "acronym": "MCSA", "title": "Microsoft Certified Solutions Associate", "image": "/badge-mcsa.png" },
+      { "acronym": "ASA", "title": "Azure Solutions Architect Expert", "image": "/badge-asa.png" },
+      { "acronym": "MVP", "title": "Most Valuable Professional", "image": "/badge-mvp.png" }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Hace 11 años Mundo365 entrega resultados y construye historias de éxito",
+    "items": [
+      {
+        "id": 1,
+        "quote": "Considero que la atención de Mundo365 es excelente, siempre muy atentos y rápidos según la urgencia de cada situación. Después de contar con el asesoramiento en TI, mejoramos muchas cosas internamente, incluidas plataformas de atención y procesos para nuestros colaboradores, para ser ágiles en el mercado, porque los clientes no quieren esperar. El impacto dentro de nuestra empresa fue muy positivo. La diferencia no es solo apagar incendios, sino gestionar lo que se puede mejorar; eso es lo que hace destacar a Mundo365.",
+        "author": "Felipe Torrano Trevisan",
+        "company": "Grupo Campseg",
+        "initials": "GC",
+        "color": "from-cyan-500 to-blue-600"
+      },
+      {
+        "id": 2,
+        "quote": "Tras la atención del equipo de Mundo365, siempre muy atentos y rápidos según la urgencia, la implementación de seguridad fue impecable y el soporte técnico superó todas las expectativas.",
+        "author": "Elson Soares",
+        "company": "Hospital São Lucas",
+        "initials": "HS",
+        "color": "from-violet-500 to-purple-600"
+      },
+      {
+        "id": 3,
+        "quote": "¡Excelente alianza! El equipo demostró profundo conocimiento técnico y compromiso con nuestros resultados. El backup gestionado nos dio total tranquilidad sobre la seguridad de nuestros datos.",
+        "author": "João D. Batista",
+        "company": "J.D.B Seguros",
+        "initials": "JD",
+        "color": "from-emerald-500 to-green-600"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Socios y tecnologías con las que trabajamos"
+  },
+  "newsletter": {
+    "title": "Reciba consejos, insights y novedades",
+    "subtitle": "Directo en su correo, sin spam.",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "su@email.com",
+    "submit": "Suscribirse",
+    "successBefore": "¡Gracias por su interés! Para hablar con nuestro equipo ahora, escriba a",
+    "successAfter": "."
+  },
+  "contact": {
+    "whatsappMessage": "¡Hola! Me gustaría saber más sobre las soluciones Microsoft de Mundo365.",
+    "location": "Cascavel - PR, Brasil"
+  }
+}

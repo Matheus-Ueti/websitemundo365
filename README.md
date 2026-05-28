@@ -23,8 +23,25 @@ Landing page institucional moderna, desenvolvida com foco em:
 | [React](https://react.dev/) | 19 |
 | [TypeScript](https://www.typescriptlang.org/) | 5.7.3 |
 | [Tailwind CSS](https://tailwindcss.com/) | 4.x |
+| [next-intl](https://next-intl.dev/) | i18n (pt, en, es) |
 | [Lucide React](https://lucide.dev/) | 0.564.x |
 | [Vercel Analytics](https://vercel.com/analytics) | 1.6.x |
+
+---
+
+## Idiomas (i18n)
+
+| Código | URL | Conteúdo |
+|--------|-----|----------|
+| `pt` | `/` | Português (padrão) |
+| `en` | `/en` | English |
+| `es` | `/es` | Español |
+
+**Quer mudar um texto do site?** → [`i18n/messages/`](i18n/messages/) (leia [`i18n/messages/README.md`](i18n/messages/README.md)).
+
+**Quer mudar telefone/e-mail?** → [`lib/site.ts`](lib/site.ts).
+
+**Idiomas (config + seletor PT/EN/ES):** tudo em [`i18n/`](i18n/) — veja [`i18n/README.md`](i18n/README.md).
 
 ---
 
@@ -98,7 +115,11 @@ Mundo365L/
 │   ├── robots.ts, sitemap.ts
 ├── components/             # UI por seção + hero Lottie (client)
 │   └── ui/                 # Peças reutilizáveis (ex.: AnimatedCounter)
-├── data/                   # Conteúdo estático (timeline, depoimentos, stats…)
+├── data/partners.ts        # Logos de parceiros (sem tradução)
+├── i18n/                   # ← IDIOMAS: messages, routing, middleware, switcher
+│   ├── messages/           # Textos pt.json, en.json, es.json
+│   ├── components/         # language-switcher
+│   └── …                   # routing, request, navigation, timeline
 ├── hooks/                  # Hooks compartilhados (ex.: useIntersectionVisible)
 ├── lib/
 │   ├── constants/          # IDs de seção, menu, hero Lottie, redes sociais
@@ -107,7 +128,7 @@ Mundo365L/
 │   ├── dotlottie-player.wasm
 │   ├── mundo365-logo.png       # Logo principal
 │   ├── azure-logo.svg          # Logo Microsoft Azure
-│   ├── award-winner.png        # Foto Top Growth Awards 2026
+│   ├── certifications-portrait.jpg  # Foto Top Growth Awards (certificações)
 │   ├── logo-acronis.png
 │   ├── logo-adobe.png
 │   ├── logo-fortinet.png

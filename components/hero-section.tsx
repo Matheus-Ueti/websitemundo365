@@ -1,9 +1,12 @@
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 import { HeroVisualDesktop } from "@/components/hero-visual-desktop"
 import { heroLottieLayout } from "@/lib/constants/hero-lottie"
 import { SECTION_IDS } from "@/lib/constants/sections"
 
-export function HeroSection() {
+export async function HeroSection() {
+  const t = await getTranslations("hero")
+
   return (
     <section
       id={SECTION_IDS.home}
@@ -24,7 +27,6 @@ export function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Lottie só no desktop (lg+); no mobile não carrega o player */}
           <div className={heroLottieLayout.desktopWrapper}>
             <div className={heroLottieLayout.desktopInner}>
               <HeroVisualDesktop />
@@ -43,20 +45,28 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 text-balance">
-              Venha para a{" "}
-              <span className="font-extrabold">Mundo365</span>{" "}
-              hospedar seus sistemas no Microsoft{" "}
+              {t("titleBefore")}{" "}
+              <span className="font-extrabold">{t("titleBrand")}</span>{" "}
+              {t("titleMiddle")}{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent font-extrabold">
-                Azure
+                {t("titleAzure")}
               </span>
             </h1>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" fill="none" className="w-full">
-          <path d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z" fill="white" />
+      <div className="absolute bottom-0 left-0 right-0 z-10 leading-[0] pointer-events-none">
+        <svg
+          viewBox="0 0 1440 60"
+          className="block w-full translate-y-px"
+          preserveAspectRatio="none"
+          aria-hidden
+        >
+          <path
+            d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z"
+            fill="#ffffff"
+          />
         </svg>
       </div>
     </section>

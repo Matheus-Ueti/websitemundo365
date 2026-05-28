@@ -1,10 +1,5 @@
 import { Award, Medal, Trophy } from "lucide-react"
-import type { Competency, LucideIcon } from "@/types"
-
-type CompetencyCardProps = Competency & {
-  className?: string
-  medalIndex?: number
-}
+import type { CompetencyCardProps, LucideIcon } from "@/types"
 
 const MEDAL_ICONS: LucideIcon[] = [Medal, Award, Trophy]
 

@@ -1,10 +1,34 @@
 import type React from "react"
 
-// ─── Shared primitives ───────────────────────────────────────────────────────
+// ─── i18n ──────────────────────────────────────────────────────────────────────
+
+export const LOCALES = ["pt", "en", "es"] as const
+export type Locale = (typeof LOCALES)[number]
+
+export const LOCALE_LABELS: Record<Locale, string> = {
+  pt: "PT",
+  en: "EN",
+  es: "ES",
+}
+
+// ─── Navegação (âncoras da página) ─────────────────────────────────────────────
+
+export const SECTION_IDS = {
+  main: "conteudo",
+  home: "inicio",
+  about: "sobre",
+  solutions: "solucoes",
+  news: "noticias",
+  contact: "contato",
+} as const
+
+export type SectionId = (typeof SECTION_IDS)[keyof typeof SECTION_IDS]
+
+// ─── Primitivos compartilhados ─────────────────────────────────────────────────
 
 export type LucideIcon = React.ComponentType<{ className?: string }>
 
-// ─── Certifications ────────────────────────────────────────────────────────────
+// ─── Certificações ─────────────────────────────────────────────────────────────
 
 export type Competency = {
   label: string
@@ -17,13 +41,35 @@ export type CertBadge = {
   image: string
 }
 
-// ─── Solutions ─────────────────────────────────────────────────────────────────
+export type CompetencyCardProps = Competency & {
+  className?: string
+  medalIndex?: number
+}
+
+export type AwardVisualProps = {
+  alt: string
+}
+
+// ─── Soluções ──────────────────────────────────────────────────────────────────
 
 export type FloatingPosition = "top-right" | "middle-right" | "bottom-left"
 
+export type FloatingCardType = "security" | "notification" | "dashboard"
+
 export type FloatingCardProps = {
-  type: "security" | "notification" | "dashboard"
+  type: FloatingCardType
   position: FloatingPosition
+}
+
+export type FloatingLabels = {
+  safe: string
+  now: string
+  protected: string
+  portal: string
+}
+
+export type FloatingCardWithLabelsProps = FloatingCardProps & {
+  labels: FloatingLabels
 }
 
 export type Solution = {
@@ -36,19 +82,18 @@ export type Solution = {
   image: string
 }
 
-// ─── Testimonials ──────────────────────────────────────────────────────────────
+// ─── Depoimentos ───────────────────────────────────────────────────────────────
 
 export type Testimonial = {
   id: number
   quote: string
   author: string
-  role: string
   company: string
   initials: string
   color: string
 }
 
-// ─── Stats ─────────────────────────────────────────────────────────────────────
+// ─── Estatísticas ──────────────────────────────────────────────────────────────
 
 export type Stat = {
   value: number
@@ -58,7 +103,7 @@ export type Stat = {
 
 export type AnimatedCounterProps = Pick<Stat, "value" | "suffix">
 
-// ─── Navigation & footer ───────────────────────────────────────────────────────
+// ─── Menu e rodapé ─────────────────────────────────────────────────────────────
 
 export type NavItem = {
   label: string
@@ -76,7 +121,7 @@ export type FooterLinks = {
   links: NavItem[]
 }
 
-// ─── Partners ──────────────────────────────────────────────────────────────────
+// ─── Parceiros ─────────────────────────────────────────────────────────────────
 
 export type Partner = {
   name: string
@@ -87,14 +132,18 @@ export type MicrosoftLogoProps = {
   size?: number
 }
 
-// ─── About ─────────────────────────────────────────────────────────────────────
+// ─── Sobre nós / timeline ────────────────────────────────────────────────────────
 
-export type TimelineItem = {
+/** Texto da timeline em i18n/messages/*.json (sem ícone Lucide). */
+export type TimelineItemCopy = {
   year: string
   title: string
   description: string
-  icon: LucideIcon
   accent: string
+}
+
+export type TimelineItem = TimelineItemCopy & {
+  icon: LucideIcon
 }
 
 export type TimelineItemCardProps = TimelineItem & {
@@ -103,4 +152,30 @@ export type TimelineItemCardProps = TimelineItem & {
 
 export type PartnerBadgeProps = {
   label: string
+}
+
+// ─── Newsletter ────────────────────────────────────────────────────────────────
+
+export type NewsletterFormStatus = "idle" | "success"
+
+// ─── Hooks ─────────────────────────────────────────────────────────────────────
+
+export type IntersectionVisibleOptions = {
+  threshold?: number
+  triggerOnce?: boolean
+}
+
+// ─── App Router (layouts/páginas) ────────────────────────────────────────────
+
+export type LocaleParams = {
+  locale: string
+}
+
+export type LocalePageProps = {
+  params: Promise<LocaleParams>
+}
+
+export type LocaleLayoutProps = {
+  children: React.ReactNode
+  params: Promise<LocaleParams>
 }

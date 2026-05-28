@@ -1,15 +1,16 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 import { ArrowRight, Mail } from "lucide-react"
 import { SECTION_IDS } from "@/lib/constants/sections"
 import { siteConfig } from "@/lib/site"
-
-type FormStatus = "idle" | "success"
+import type { NewsletterFormStatus } from "@/types"
 
 export function NewsletterSection() {
+  const t = useTranslations("newsletter")
   const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<FormStatus>("idle")
+  const [status, setStatus] = useState<NewsletterFormStatus>("idle")
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -36,11 +37,9 @@ export function NewsletterSection() {
             </div>
             <div>
               <h2 id="newsletter-heading" className="text-xl font-bold text-white mb-1">
-                Receba dicas, insights e novidades
+                {t("title")}
               </h2>
-              <p className="text-slate-400 text-sm">
-                Direto no seu e-mail, sem spam.
-              </p>
+              <p className="text-slate-400 text-sm">{t("subtitle")}</p>
             </div>
           </div>
 
@@ -49,14 +48,14 @@ export function NewsletterSection() {
               role="status"
               className="text-cyan-300 text-sm md:text-base text-center md:text-right max-w-md"
             >
-              Obrigado pelo interesse! Para falar com nossa equipe agora, escreva para{" "}
+              {t("successBefore")}{" "}
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 className="underline hover:text-white"
               >
                 {siteConfig.contact.email}
               </a>
-              .
+              {t("successAfter")}
             </p>
           ) : (
             <form
@@ -65,7 +64,7 @@ export function NewsletterSection() {
               noValidate
             >
               <label htmlFor="newsletter-email" className="sr-only">
-                E-mail
+                {t("emailLabel")}
               </label>
               <input
                 id="newsletter-email"
@@ -74,7 +73,7 @@ export function NewsletterSection() {
                 autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="seu@email.com"
+                placeholder={t("emailPlaceholder")}
                 className="flex-1 md:w-72 px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-600/50 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all"
                 required
               />
@@ -82,7 +81,7 @@ export function NewsletterSection() {
                 type="submit"
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-3 rounded-xl font-medium transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 whitespace-nowrap"
               >
-                Inscrever
+                {t("submit")}
                 <ArrowRight className="w-4 h-4" aria-hidden />
               </button>
             </form>

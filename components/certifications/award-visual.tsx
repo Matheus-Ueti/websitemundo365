@@ -1,6 +1,7 @@
 import Image from "next/image"
+import type { AwardVisualProps } from "@/types"
 
-export function AwardVisual() {
+export function AwardVisual({ alt }: AwardVisualProps) {
   return (
     <div className="relative min-w-0 w-full">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -9,7 +10,7 @@ export function AwardVisual() {
 
       <Image
         src="/certifications-portrait.jpg"
-        alt="Representante Mundo365 com prêmios Microsoft Top Growth Awards"
+        alt={alt}
         width={1024}
         height={971}
         unoptimized

@@ -1,21 +1,33 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { Instagram, Linkedin, Menu, X } from "lucide-react"
-import { mainNavItems } from "@/lib/constants/navigation"
+import { Link } from "@/i18n/navigation"
+import Image from "next/image"
+import { LanguageSwitcher } from "@/i18n/components/language-switcher"
+import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
 
 const MOBILE_MENU_ID = "mobile-nav-menu"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const t = useTranslations("nav")
+  const tCommon = useTranslations("common")
+
+  const mainNavItems = [
+    { label: t("home"), href: sectionHref(SECTION_IDS.home) },
+    { label: t("about"), href: sectionHref(SECTION_IDS.about) },
+    { label: t("solutions"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("newsletter"), href: sectionHref(SECTION_IDS.news) },
+    { label: t("contact"), href: sectionHref(SECTION_IDS.contact) },
+  ]
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" aria-label="Mundo365 — página inicial">
+          <Link href="/" aria-label={tCommon("homeAria")}>
             <Image
               src="/mundo365-logo.png"
               alt="Mundo365"
@@ -26,11 +38,11 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center" aria-label="Principal">
+          <nav className="hidden md:flex items-center" aria-label={tCommon("navMain")}>
             <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm rounded-full px-2 py-1.5 border border-white/20">
               {mainNavItems.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.href}
                   href={item.href}
                   className="text-white hover:bg-white/10 transition-colors text-sm font-medium px-4 py-1.5 rounded-full"
                 >
@@ -62,17 +74,7 @@ export function Header() {
               </Link>
             </div>
 
-            <span
-              className="inline-flex items-center gap-1.5 text-white/90 text-sm font-medium"
-              aria-label="Idioma do site: Português (Brasil)"
-            >
-              PT
-              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="rounded-sm overflow-hidden" aria-hidden>
-                <rect width="24" height="18" fill="#009739" />
-                <path d="M12 2 L22 9 L12 16 L2 9 Z" fill="#FEDD00" />
-                <circle cx="12" cy="9" r="3.5" fill="#002776" />
-              </svg>
-            </span>
+            <LanguageSwitcher />
           </div>
 
           <button
@@ -81,7 +83,7 @@ export function Header() {
             onClick={() => setIsMenuOpen((open) => !open)}
             aria-expanded={isMenuOpen}
             aria-controls={MOBILE_MENU_ID}
-            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={isMenuOpen ? tCommon("closeMenu") : tCommon("openMenu")}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -92,10 +94,10 @@ export function Header() {
             id={MOBILE_MENU_ID}
             className="md:hidden py-4 border-t border-white/20 bg-purple-900/90 backdrop-blur-md rounded-b-2xl"
           >
-            <nav className="flex flex-col gap-2" aria-label="Principal">
+            <nav className="flex flex-col gap-2" aria-label={tCommon("navMain")}>
               {mainNavItems.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.href}
                   href={item.href}
                   className="text-white hover:bg-white/10 transition-colors text-sm font-medium py-3 px-4 rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
@@ -104,6 +106,9 @@ export function Header() {
                 </Link>
               ))}
             </nav>
+            <div className="mt-4 flex justify-center px-4">
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>

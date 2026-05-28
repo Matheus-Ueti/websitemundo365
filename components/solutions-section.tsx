@@ -2,12 +2,19 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
-import type { FloatingCardProps, FloatingPosition } from "@/types"
-import { DEFAULT_SOLUTION_ID, solutions } from "@/data/solutions"
+import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
+import type {
+  FloatingCardWithLabelsProps,
+  FloatingLabels,
+  FloatingPosition,
+  Solution,
+} from "@/types"
 import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
 
-function FloatingCard({ type, position }: FloatingCardProps) {
+const DEFAULT_SOLUTION_ID = "modern-workplace"
+
+function FloatingCard({ type, position, labels }: FloatingCardWithLabelsProps) {
   const positionClasses: Record<FloatingPosition, string> = {
     "top-right": "top-2 right-0 sm:top-4 sm:-right-4",
     "middle-right": "top-1/3 right-0 sm:-right-8",
@@ -24,7 +31,7 @@ function FloatingCard({ type, position }: FloatingCardProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <span className="text-sm font-medium text-gray-700">You are safe</span>
+            <span className="text-sm font-medium text-gray-700">{labels.safe}</span>
           </div>
         )
       case "notification":
@@ -32,9 +39,9 @@ function FloatingCard({ type, position }: FloatingCardProps) {
           <div className="bg-white rounded-xl shadow-xl p-3">
             <div className="flex items-center gap-2 mb-1">
               <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">K</div>
-              <span className="text-xs text-gray-500">Agora</span>
+              <span className="text-xs text-gray-500">{labels.now}</span>
             </div>
-            <p className="text-sm text-gray-700">Sistema protegido</p>
+            <p className="text-sm text-gray-700">{labels.protected}</p>
           </div>
         )
       case "dashboard":
@@ -42,7 +49,7 @@ function FloatingCard({ type, position }: FloatingCardProps) {
           <div className="bg-white rounded-xl shadow-xl p-3 sm:p-4 w-36 sm:w-48">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-sm font-bold">A</div>
-              <span className="text-xs font-medium text-gray-700">Azure Portal</span>
+              <span className="text-xs font-medium text-gray-700">{labels.portal}</span>
             </div>
             <div className="space-y-2">
               <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
@@ -67,28 +74,34 @@ function FloatingCard({ type, position }: FloatingCardProps) {
 }
 
 export function SolutionsSection() {
+  const t = useTranslations("solutions")
+  const solutions = t.raw("items") as Solution[]
+  const floatingLabels: FloatingLabels = {
+    safe: t("floating.safe"),
+    now: t("floating.now"),
+    protected: t("floating.protected"),
+    portal: t("floating.portal"),
+  }
+
   const [activeTab, setActiveTab] = useState(DEFAULT_SOLUTION_ID)
   const activeSolution = solutions.find((s) => s.id === activeTab) ?? solutions[0]
 
   return (
     <section id={SECTION_IDS.solutions} className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
             <span className="relative inline-block">
-              Nossas soluções
+              {t("title")}
               <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
             </span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto mt-6 text-pretty">
-            Conheça nossos produtos, serviços, jornadas de desenvolvimento tecnológico e nossa equipe de especialistas!
+            {t("subtitle")}
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="mb-12 sm:mb-16">
-          {/* Mobile: uma coluna — botões do mesmo tamanho, fácil de tocar */}
           <div className="flex flex-col gap-2 sm:hidden bg-gray-100 rounded-2xl p-2">
             {solutions.map((solution) => (
               <button
@@ -108,7 +121,6 @@ export function SolutionsSection() {
             ))}
           </div>
 
-          {/* Desktop: row centralizado */}
           <div className="hidden sm:flex justify-center">
             <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
               {solutions.map((solution) => (
@@ -131,9 +143,7 @@ export function SolutionsSection() {
           </div>
         </div>
 
-        {/* Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text (ordem 2 no mobile, 1 no desktop) */}
           <div className="order-2 lg:order-1 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
               {activeSolution.description}
@@ -151,9 +161,7 @@ export function SolutionsSection() {
             </Link>
           </div>
 
-          {/* Right side - Image (ordem 1 no mobile, 2 no desktop) */}
           <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end px-4 sm:px-12 lg:px-0">
-            {/* Blob decorativo */}
             <div className="absolute right-4 lg:right-0 top-1/2 -translate-y-1/2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] bg-gradient-to-br from-purple-100 to-blue-100 rounded-full -z-0" />
 
             <div className="relative z-10">
@@ -166,9 +174,9 @@ export function SolutionsSection() {
                   sizes="(max-width: 640px) 220px, (max-width: 1024px) 280px, 350px"
                 />
               </div>
-              <FloatingCard type="security" position="bottom-left" />
-              <FloatingCard type="notification" position="top-right" />
-              <FloatingCard type="dashboard" position="middle-right" />
+              <FloatingCard type="security" position="bottom-left" labels={floatingLabels} />
+              <FloatingCard type="notification" position="top-right" labels={floatingLabels} />
+              <FloatingCard type="dashboard" position="middle-right" labels={floatingLabels} />
             </div>
           </div>
         </div>
