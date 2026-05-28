@@ -6,8 +6,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mundo365.com.br",
   locale: "pt_BR",
   contact: {
-    phone: "+554532567890",
-    phoneDisplay: "+55 (45) 3256-7890",
+    phone: "+554530996897",
+    phoneDisplay: "+55 (45) 3099-6897",
     email: "contato@mundo365.com.br",
     location: "Cascavel - PR, Brasil",
     whatsappMessage:

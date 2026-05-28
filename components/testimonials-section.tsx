@@ -64,35 +64,41 @@ export function TestimonialsSection() {
           </div>
 
           {/* ── Card do depoimento ── */}
-          <div className="relative bg-white rounded-2xl border-2 border-cyan-400/60 shadow-sm shadow-cyan-100 p-8 md:p-10 flex flex-col justify-between min-h-[320px]">
+          <div className="relative bg-white rounded-2xl border-2 border-cyan-400/60 shadow-sm shadow-cyan-100 p-6 sm:p-8 md:p-10 flex flex-col min-h-[280px] sm:min-h-[320px]">
 
-            {/* Aspas abertura — topo esquerdo */}
-            <span className="absolute top-6 left-8 text-6xl font-serif text-gray-900 leading-none select-none">&ldquo;</span>
+            <span
+              className="absolute top-4 left-4 sm:top-6 sm:left-8 text-5xl sm:text-6xl font-serif text-gray-900 leading-none select-none pointer-events-none"
+              aria-hidden
+            >
+              &ldquo;
+            </span>
 
-            {/* Logo empresa — topo direito */}
-            <div className="absolute top-6 right-8 flex flex-col items-center gap-1">
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${current.color} flex items-center justify-center shadow-md`}>
+            {/* Logo + empresa no fluxo normal (evita sobrepor o texto no mobile) */}
+            <div className="flex items-center justify-end gap-2 mb-4 pt-2">
+              <div
+                className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${current.color} flex items-center justify-center shadow-md flex-shrink-0`}
+              >
                 <span className="text-white font-bold text-sm">{current.initials}</span>
               </div>
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
+              <span className="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider text-right max-w-[140px] leading-tight">
                 {current.company}
               </span>
             </div>
 
-            {/* Texto do depoimento */}
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mt-10 mb-8 pr-16">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 pl-6 sm:pl-8 pr-2 sm:pr-12">
               {current.quote}
             </p>
 
-            {/* Autor — rodapé esquerdo */}
-            <div>
-              <p className="text-xs font-bold text-gray-800 uppercase tracking-widest">
-                {current.author} — {current.company.toUpperCase()}
-              </p>
-            </div>
+            <p className="text-xs font-bold text-gray-800 uppercase tracking-widest mt-auto">
+              {current.author} — {current.company.toUpperCase()}
+            </p>
 
-            {/* Aspas fechamento — rodapé direito */}
-            <span className="absolute bottom-6 right-8 text-6xl font-serif text-gray-900 leading-none select-none">&rdquo;</span>
+            <span
+              className="absolute bottom-4 right-4 sm:bottom-6 sm:right-8 text-5xl sm:text-6xl font-serif text-gray-900 leading-none select-none pointer-events-none"
+              aria-hidden
+            >
+              &rdquo;
+            </span>
           </div>
         </div>
       </div>

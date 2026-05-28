@@ -9,9 +9,9 @@ import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
 
 function FloatingCard({ type, position }: FloatingCardProps) {
   const positionClasses: Record<FloatingPosition, string> = {
-    "top-right": "top-4 -right-2 sm:-right-4",
-    "middle-right": "top-1/3 -right-4 sm:-right-8",
-    "bottom-left": "bottom-20 -left-2 sm:-left-4",
+    "top-right": "top-2 right-0 sm:top-4 sm:-right-4",
+    "middle-right": "top-1/3 right-0 sm:-right-8",
+    "bottom-left": "bottom-16 left-0 sm:bottom-20 sm:-left-4",
   }
 
   const getContent = () => {
@@ -39,7 +39,7 @@ function FloatingCard({ type, position }: FloatingCardProps) {
         )
       case "dashboard":
         return (
-          <div className="bg-white rounded-xl shadow-xl p-4 w-48">
+          <div className="bg-white rounded-xl shadow-xl p-3 sm:p-4 w-36 sm:w-48">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-sm font-bold">A</div>
               <span className="text-xs font-medium text-gray-700">Azure Portal</span>
@@ -60,7 +60,7 @@ function FloatingCard({ type, position }: FloatingCardProps) {
   }
 
   return (
-    <div className={`absolute ${positionClasses[position]} animate-float z-10`}>
+    <div className={`absolute ${positionClasses[position]} animate-float z-10 scale-[0.85] sm:scale-100 origin-center`}>
       {getContent()}
     </div>
   )
@@ -87,18 +87,20 @@ export function SolutionsSection() {
         </div>
 
         {/* Tabs */}
-        <div className="mb-16">
-          {/* Mobile: grid 2 colunas */}
-          <div className="grid grid-cols-2 gap-2 sm:hidden bg-gray-100 rounded-2xl p-1.5">
+        <div className="mb-12 sm:mb-16">
+          {/* Mobile: uma coluna — botões do mesmo tamanho, fácil de tocar */}
+          <div className="flex flex-col gap-2 sm:hidden bg-gray-100 rounded-2xl p-2">
             {solutions.map((solution) => (
               <button
                 key={solution.id}
+                type="button"
                 onClick={() => setActiveTab(solution.id)}
+                aria-pressed={activeTab === solution.id}
                 className={[
-                  "px-3 py-2.5 rounded-xl text-xs font-medium transition-all duration-300 text-center",
+                  "w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-center",
                   activeTab === solution.id
                     ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md"
-                    : "text-gray-500 hover:text-gray-800",
+                    : "text-gray-600 hover:text-gray-900 bg-white/60",
                 ].join(" ")}
               >
                 {solution.tabTitle}
@@ -150,7 +152,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Right side - Image (ordem 1 no mobile, 2 no desktop) */}
-          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end px-10 sm:px-12 lg:px-0">
+          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end px-4 sm:px-12 lg:px-0">
             {/* Blob decorativo */}
             <div className="absolute right-4 lg:right-0 top-1/2 -translate-y-1/2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] bg-gradient-to-br from-purple-100 to-blue-100 rounded-full -z-0" />
 
