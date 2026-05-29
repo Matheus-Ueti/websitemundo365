@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import type { AnimatedCounterProps } from "@/types"
 
-export function AnimatedCounter({ value, suffix }: AnimatedCounterProps) {
+export function AnimatedCounter({ value, prefix = "", suffix }: AnimatedCounterProps) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
   const hasAnimated = useRef(false)
@@ -43,6 +43,7 @@ export function AnimatedCounter({ value, suffix }: AnimatedCounterProps) {
       ref={ref}
       className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent [font-family:var(--font-space-grotesk)]"
     >
+      {prefix}
       {count.toLocaleString("pt-BR")}
       {suffix}
     </div>

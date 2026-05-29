@@ -150,12 +150,10 @@
     "eyebrow": "Nuestra historia",
     "title": "Por qué Mundo365 es la mejor opción",
     "items": [
-      { "value": 5000, "label": "Clientes beneficiados", "suffix": "+" },
-      { "value": 150, "label": "Proyectos completados", "suffix": "+" },
-      { "value": 100, "label": "Premios obtenidos", "suffix": "" },
-      { "value": 999, "label": "Servicios realizados", "suffix": "+" },
-      { "value": 850, "label": "Horas mensuales en TI", "suffix": "+" },
-      { "value": 99, "label": "Clientes activos", "suffix": "" }
+      { "value": 25, "label": "horas trabajadas en proyectos", "prefix": "+", "suffix": " mil" },
+      { "value": 250, "label": "buzones migrados a Microsoft", "prefix": "+", "suffix": " mil" },
+      { "value": 500, "label": "proyectos ejecutados", "prefix": "+", "suffix": "" },
+      { "value": 250, "label": "clientes activos", "prefix": "", "suffix": "" }
     ]
   },
   "partnerBanner": {

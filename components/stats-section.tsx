@@ -25,9 +25,9 @@ export async function StatsSection() {
 
         <div className="grid lg:grid-cols-3 gap-8 items-center">
           <div className="space-y-8">
-            {stats.slice(0, 3).map((stat) => (
+            {stats.slice(0, 2).map((stat) => (
               <div key={stat.label} className="text-center lg:text-right">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 <p className="text-slate-400 mt-2">{stat.label}</p>
               </div>
             ))}
@@ -55,9 +55,9 @@ export async function StatsSection() {
           </div>
 
           <div className="space-y-8">
-            {stats.slice(3, 6).map((stat) => (
+            {stats.slice(2, 4).map((stat) => (
               <div key={stat.label} className="text-center lg:text-left">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 <p className="text-slate-400 mt-2">{stat.label}</p>
               </div>
             ))}

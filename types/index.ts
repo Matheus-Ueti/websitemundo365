@@ -98,10 +98,11 @@ export type Testimonial = {
 export type Stat = {
   value: number
   label: string
+  prefix?: string
   suffix: string
 }
 
-export type AnimatedCounterProps = Pick<Stat, "value" | "suffix">
+export type AnimatedCounterProps = Pick<Stat, "value" | "prefix" | "suffix">
 
 // ─── Menu e rodapé ─────────────────────────────────────────────────────────────
 

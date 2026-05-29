@@ -150,12 +150,10 @@
     "eyebrow": "Our story",
     "title": "Why Mundo365 is the best choice",
     "items": [
-      { "value": 5000, "label": "Clients served", "suffix": "+" },
-      { "value": 150, "label": "Projects delivered", "suffix": "+" },
-      { "value": 100, "label": "Awards won", "suffix": "" },
-      { "value": 999, "label": "Services delivered", "suffix": "+" },
-      { "value": 850, "label": "Monthly IT hours", "suffix": "+" },
-      { "value": 99, "label": "Active clients", "suffix": "" }
+      { "value": 25, "label": "hours worked on projects", "prefix": "+", "suffix": "k" },
+      { "value": 250, "label": "mailboxes migrated to Microsoft", "prefix": "+", "suffix": "k" },
+      { "value": 500, "label": "projects delivered", "prefix": "+", "suffix": "" },
+      { "value": 250, "label": "active clients", "prefix": "", "suffix": "" }
     ]
   },
   "partnerBanner": {
