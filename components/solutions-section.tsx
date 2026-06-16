@@ -12,7 +12,7 @@ import type {
 } from "@/types"
 import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
 
-const DEFAULT_SOLUTION_ID = "modern-workplace"
+const DEFAULT_SOLUTION_ID = "cyber-security"
 
 function FloatingCard({ type, position, labels }: FloatingCardWithLabelsProps) {
   const positionClasses: Record<FloatingPosition, string> = {
@@ -122,7 +122,7 @@ export function SolutionsSection() {
           </div>
 
           <div className="hidden sm:flex justify-center">
-            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
+            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1 flex-wrap justify-center max-w-4xl">
               {solutions.map((solution) => (
                 <button
                   key={solution.id}
@@ -145,6 +145,9 @@ export function SolutionsSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 text-balance">
+              {activeSolution.headline}
+            </h3>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
               {activeSolution.description}
             </p>

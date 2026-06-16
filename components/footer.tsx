@@ -22,11 +22,11 @@ export async function Footer() {
   ]
 
   const serviceLinks = [
-    { label: t("services.backup"), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t("services.bi"), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t("services.migration"), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t("services.adoption"), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t("services.vdi"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.cybersecurity"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.cloud"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.ai"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.modernWorkplace"), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t("services.governance"), href: sectionHref(SECTION_IDS.solutions) },
   ]
 
   return (

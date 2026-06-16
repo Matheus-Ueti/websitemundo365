@@ -76,10 +76,17 @@ export type Solution = {
   id: string
   tabTitle: string
   title: string
+  /** Frase de impacto exibida acima do texto principal na aba */
+  headline: string
   description: string
   subDescription: string
   buttonText: string
   image: string
+}
+
+export type HeroSlide = {
+  headline: string
+  subline?: string
 }
 
 // ─── Depoimentos ───────────────────────────────────────────────────────────────

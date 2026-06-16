@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Mundo365 | Soluções Microsoft para sua Empresa",
-    "description": "Maior Revendedora Gold Microsoft do Sul do Brasil. Backup gerenciado, Business Intelligence, migração para Azure e soluções Microsoft de ponta."
+    "title": "Mundo365 | Cloud, Cybersecurity e Inteligência Artificial",
+    "description": "Transformação digital com estratégia, segurança e inovação. Impulsionamos negócios com Cloud, Cybersecurity e Inteligência Artificial no ecossistema Microsoft."
   },
   "common": {
     "skipToContent": "Pular para o conteúdo",
@@ -24,30 +24,45 @@
     "contactTitle": "Fale conosco",
     "servicesTitle": "Serviços",
     "linksTitle": "Links Úteis",
-    "tagline": "Há mais de 11 anos transformando empresas com soluções Microsoft de ponta. Sua parceira de confiança em tecnologia.",
+    "tagline": "Mais segurança. Mais produtividade. Mais resultados. Há mais de 11 anos conectando pessoas, dados e negócios com tecnologia Microsoft.",
     "rights": "Todos os direitos reservados.",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Uso",
     "services": {
-      "backup": "Backup gerenciado",
-      "bi": "Business Intelligence",
-      "migration": "Planejamento e migração",
-      "adoption": "Adoção e treinamento",
-      "vdi": "Área de trabalho virtual"
+      "cybersecurity": "Cybersecurity",
+      "cloud": "Infraestrutura e Cloud",
+      "ai": "Inteligência Artificial",
+      "modernWorkplace": "Modern Workplace",
+      "governance": "Governança e Compliance"
     }
   },
   "hero": {
-    "titleBefore": "Venha para a",
-    "titleBrand": "Mundo365",
-    "titleMiddle": "hospedar seus sistemas no Microsoft",
-    "titleAzure": "Azure"
+    "brandLine": "Mundo365 · Parceira Microsoft",
+    "slides": [
+      {
+        "headline": "Tecnologia que protege. Conecta. Transforma.",
+        "subline": "Impulsionamos negócios através de Cloud, Cybersecurity e Inteligência Artificial."
+      },
+      {
+        "headline": "Mais segurança. Mais produtividade. Mais resultados.",
+        "subline": "Transformação digital com estratégia, segurança e inovação."
+      },
+      {
+        "headline": "Conectando pessoas, dados e negócios para um futuro sem limites.",
+        "subline": "A evolução digital da sua empresa começa aqui."
+      },
+      {
+        "headline": "Da infraestrutura à inteligência artificial.",
+        "subline": "Soluções completas para acelerar o crescimento do seu negócio."
+      }
+    ]
   },
   "about": {
     "title": "Sobre nós",
-    "headlineBefore": "Tecnologia que conecta",
-    "headlineHighlight": "ideias, pessoas",
-    "headlineAfter": "e possibilidades.",
-    "description": "Há mais de 11 anos, a Mundo365 transforma desafios em soluções com tecnologia Microsoft. Impulsionamos empresas a inovarem, crescerem e irem além com segurança, performance e inteligência.",
+    "headlineBefore": "Tecnologia que",
+    "headlineHighlight": "protege, conecta",
+    "headlineAfter": "e transforma.",
+    "description": "Há mais de 11 anos, a Mundo365 impulsiona empresas com Cloud, Cybersecurity e Inteligência Artificial no ecossistema Microsoft — com segurança, performance e resultados reais.",
     "badgeModernWork": "Solutions Partner · Modern Work",
     "badgeInfrastructure": "Solutions Partner · Infrastructure & Azure",
     "teamImageAlt": "Equipe Mundo365 colaborando",
@@ -90,8 +105,8 @@
     }
   },
   "solutions": {
-    "title": "Nossas soluções",
-    "subtitle": "Conheça nossos produtos, serviços, jornadas de desenvolvimento tecnológico e nossa equipe de especialistas!",
+    "title": "Serviços em alta",
+    "subtitle": "Soluções Microsoft para proteger, conectar e acelerar a transformação digital da sua empresa.",
     "floating": {
       "safe": "Você está seguro",
       "now": "Agora",
@@ -100,47 +115,52 @@
     },
     "items": [
       {
-        "id": "modern-workplace",
-        "tabTitle": "Modern Workplace",
-        "title": "Modern Workplace",
-        "description": "Transforme a maneira como sua equipe colabora com soluções inovadoras de Modern Workplace.",
-        "subDescription": "Aumente a produtividade e a eficiência, proporcionando uma experiência de trabalho mais conectada.",
-        "buttonText": "Conheça nossos licenciamentos",
-        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=face"
-      },
-      {
         "id": "cyber-security",
-        "tabTitle": "Cyber Security",
-        "title": "Cyber Security",
-        "description": "Criamos uma jornada que irá te auxiliar no planejamento e implementação de ferramentas que em conjunto tornam a segurança de dados da sua empresa robusta e eficiente.",
-        "subDescription": "",
-        "buttonText": "Conheça os níveis de proteção da jornada",
+        "tabTitle": "Cybersecurity",
+        "title": "Cybersecurity",
+        "headline": "Proteja o que move o seu negócio.",
+        "description": "Segurança digital inteligente para antecipar ameaças, reduzir riscos e garantir a continuidade da operação.",
+        "subDescription": "Sua empresa preparada para os desafios da nova era digital — com monitoramento, proteção de identidades e segurança em múltiplas camadas.",
+        "buttonText": "Fale sobre cibersegurança",
         "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop&crop=face"
       },
       {
         "id": "cloud-solutions",
-        "tabTitle": "Cloud Solutions",
-        "title": "Cloud Solutions",
-        "description": "Migre sua infraestrutura para a nuvem Microsoft Azure com segurança, escalabilidade e economia.",
-        "subDescription": "Reduza custos operacionais e aumente a disponibilidade dos seus sistemas com nossa expertise em cloud.",
-        "buttonText": "Conheça nossas soluções em nuvem",
+        "tabTitle": "Infraestrutura e Cloud",
+        "title": "Infraestrutura e Cloud",
+        "headline": "Infraestrutura moderna para empresas que não podem parar.",
+        "description": "Ambientes escaláveis, seguros e preparados para o crescimento.",
+        "subDescription": "Transformamos tecnologia em desempenho, disponibilidade e produtividade. Soluções em nuvem com flexibilidade, segurança e alta performance.",
+        "buttonText": "Conheça soluções em nuvem",
         "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face"
       },
       {
-        "id": "power-platform",
-        "tabTitle": "Power Platform",
-        "title": "Power Platform",
-        "description": "Automatize processos, crie aplicativos personalizados e analise dados com a Power Platform da Microsoft.",
-        "subDescription": "Power BI, Power Apps, Power Automate e Power Virtual Agents para transformar sua empresa.",
-        "buttonText": "Descubra o poder da automação",
-        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=700&fit=crop&crop=face"
+        "id": "ai",
+        "tabTitle": "Inteligência Artificial",
+        "title": "Inteligência Artificial",
+        "headline": "Transforme dados em decisões inteligentes.",
+        "description": "Leve o potencial da Inteligência Artificial para o dia a dia da sua empresa.",
+        "subDescription": "Automatize processos e potencialize resultados com IA integrada ao seu ambiente Microsoft. Inovação, eficiência e vantagem competitiva.",
+        "buttonText": "Explore soluções com IA",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=700&fit=crop"
       },
       {
-        "id": "servicos",
-        "tabTitle": "Serviços",
-        "title": "Serviços Especializados",
-        "description": "Consultoria, treinamento e suporte técnico especializado em todo ecossistema Microsoft.",
-        "subDescription": "Nossa equipe certificada está pronta para ajudar sua empresa a alcançar o máximo potencial tecnológico.",
+        "id": "modern-workplace",
+        "tabTitle": "Modern Workplace",
+        "title": "Modern Workplace",
+        "headline": "Trabalhe de qualquer lugar. Produza sem limites.",
+        "description": "Colaboração segura e integrada para equipes modernas.",
+        "subDescription": "Experiências digitais que aumentam a produtividade e a colaboração. Ambientes inteligentes para uma força de trabalho mais conectada e eficiente.",
+        "buttonText": "Conheça o Modern Workplace",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "governance",
+        "tabTitle": "Governança e Compliance",
+        "title": "Governança e Compliance",
+        "headline": "Governança que gera confiança.",
+        "description": "Controle, conformidade e proteção para os ativos mais valiosos da sua empresa.",
+        "subDescription": "Segurança, conformidade e gestão em um único ecossistema — tecnologia alinhada aos objetivos estratégicos do negócio.",
         "buttonText": "Fale com um especialista",
         "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face"
       }
@@ -238,7 +258,7 @@
     "successAfter": "."
   },
   "contact": {
-    "whatsappMessage": "Olá! Gostaria de saber mais sobre as soluções Microsoft da Mundo365.",
+    "whatsappMessage": "Olá! Gostaria de saber mais sobre Cloud, Cybersecurity e Inteligência Artificial da Mundo365.",
     "location": "Cascavel - PR, Brasil"
   }
 }

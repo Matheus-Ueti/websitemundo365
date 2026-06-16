@@ -1,11 +1,14 @@
 import Image from "next/image"
 import { getTranslations } from "next-intl/server"
+import { HeroHeadlines } from "@/components/hero-headlines"
 import { HeroVisualDesktop } from "@/components/hero-visual-desktop"
 import { heroLottieLayout } from "@/lib/constants/hero-lottie"
 import { SECTION_IDS } from "@/lib/constants/sections"
+import type { HeroSlide } from "@/types"
 
 export async function HeroSection() {
   const t = await getTranslations("hero")
+  const slides = t.raw("slides") as HeroSlide[]
 
   return (
     <section
@@ -34,24 +37,21 @@ export async function HeroSection() {
           </div>
 
           <div className="text-center lg:text-right flex flex-col items-center lg:items-end lg:col-start-2">
-            <div className="relative mb-8">
+            <div className="relative mb-6">
               <Image
                 src="/azure-logo.svg"
                 alt="Microsoft Azure"
                 width={200}
                 height={200}
-                className="drop-shadow-2xl w-40 h-40 sm:w-48 sm:h-48 lg:w-[200px] lg:h-[200px]"
+                className="drop-shadow-2xl w-32 h-32 sm:w-40 sm:h-40 lg:w-[180px] lg:h-[180px]"
               />
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 text-balance">
-              {t("titleBefore")}{" "}
-              <span className="font-extrabold">{t("titleBrand")}</span>{" "}
-              {t("titleMiddle")}{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent font-extrabold">
-                {t("titleAzure")}
-              </span>
-            </h1>
+            <p className="text-sm sm:text-base font-medium text-cyan-200/90 mb-4 tracking-wide uppercase">
+              {t("brandLine")}
+            </p>
+
+            <HeroHeadlines slides={slides} />
           </div>
         </div>
       </div>
