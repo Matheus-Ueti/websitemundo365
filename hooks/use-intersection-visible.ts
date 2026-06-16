@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { useEffect, useRef, useState } from "react"
-import type { IntersectionVisibleOptions } from "@/types"
+import { useEffect, useRef, useState } from 'react'
+import type { IntersectionVisibleOptions } from '@/types'
 
 /**
  * Marca visibilidade quando o elemento entra no viewport (animações on-scroll).

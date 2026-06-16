@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { useTranslations } from "next-intl"
-import type { Testimonial } from "@/types"
+import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import type { Testimonial } from '@/types'
 
 export function TestimonialsSection() {
-  const t = useTranslations("testimonials")
-  const testimonials = t.raw("items") as Testimonial[]
+  const t = useTranslations('testimonials')
+  const testimonials = t.raw('items') as Testimonial[]
   const [activeId, setActiveId] = useState(testimonials[0]?.id ?? 1)
   const current = testimonials.find((item) => item.id === activeId) ?? testimonials[0]
 
@@ -17,9 +17,9 @@ export function TestimonialsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
-            {t("title")}
+            {t('title')}
           </h2>
-          <p className="text-gray-500 text-base">{t("subtitle")}</p>
+          <p className="text-gray-500 text-base">{t('subtitle')}</p>
         </div>
 
         <div className="grid md:grid-cols-[220px_1fr] gap-6 items-stretch">
@@ -31,27 +31,27 @@ export function TestimonialsSection() {
                   key={item.id}
                   onClick={() => setActiveId(item.id)}
                   className={[
-                    "flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 whitespace-nowrap md:whitespace-normal w-full",
+                    'flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 whitespace-nowrap md:whitespace-normal w-full',
                     isActive
-                      ? "bg-gray-900 shadow-md"
-                      : "bg-gray-50 hover:bg-gray-100 border border-gray-100",
-                  ].join(" ")}
+                      ? 'bg-gray-900 shadow-md'
+                      : 'bg-gray-50 hover:bg-gray-100 border border-gray-100',
+                  ].join(' ')}
                 >
                   <div
                     className={[
-                      "w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold",
+                      'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold',
                       isActive
-                        ? "bg-white/15 text-white"
-                        : "bg-white border border-gray-200 text-gray-500",
-                    ].join(" ")}
+                        ? 'bg-white/15 text-white'
+                        : 'bg-white border border-gray-200 text-gray-500',
+                    ].join(' ')}
                   >
                     {item.initials}
                   </div>
                   <span
                     className={[
-                      "text-sm font-semibold leading-tight",
-                      isActive ? "text-white" : "text-gray-600",
-                    ].join(" ")}
+                      'text-sm font-semibold leading-tight',
+                      isActive ? 'text-white' : 'text-gray-600',
+                    ].join(' ')}
                   >
                     {item.company}
                   </span>

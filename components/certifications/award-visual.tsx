@@ -1,5 +1,5 @@
-import Image from "next/image"
-import type { AwardVisualProps } from "@/types"
+import Image from 'next/image'
+import type { AwardVisualProps } from '@/types'
 
 export function AwardVisual({ alt }: AwardVisualProps) {
   return (

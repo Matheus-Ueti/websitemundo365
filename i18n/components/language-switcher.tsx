@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { useLocale } from "next-intl"
-import { Link, usePathname } from "@/i18n/navigation"
-import { LOCALE_LABELS, LOCALES, type Locale } from "@/types"
-import { cn } from "@/lib/utils"
+import { useLocale } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
+import { LOCALE_LABELS, LOCALES, type Locale } from '@/types'
+import { cn } from '@/lib/utils'
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale
@@ -21,12 +21,12 @@ export function LanguageSwitcher() {
           href={pathname}
           locale={code}
           className={cn(
-            "min-w-[2.25rem] rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors text-center",
+            'min-w-[2.25rem] rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors text-center',
             locale === code
-              ? "bg-white text-purple-900 shadow-sm"
-              : "text-white/90 hover:bg-white/10"
+              ? 'bg-white text-purple-900 shadow-sm'
+              : 'text-white/90 hover:bg-white/10'
           )}
-          aria-current={locale === code ? "true" : undefined}
+          aria-current={locale === code ? 'true' : undefined}
         >
           {LOCALE_LABELS[code]}
         </Link>

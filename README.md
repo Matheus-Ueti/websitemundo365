@@ -17,25 +17,25 @@ Landing page institucional moderna, desenvolvida com foco em:
 
 ## Stack
 
-| Tecnologia | Versão |
-|---|---|
-| [Next.js](https://nextjs.org/) | 16.2.6 |
-| [React](https://react.dev/) | 19 |
-| [TypeScript](https://www.typescriptlang.org/) | 5.7.3 |
-| [Tailwind CSS](https://tailwindcss.com/) | 4.x |
-| [next-intl](https://next-intl.dev/) | i18n (pt, en, es) |
-| [Lucide React](https://lucide.dev/) | 0.564.x |
-| [Vercel Analytics](https://vercel.com/analytics) | 1.6.x |
+| Tecnologia                                       | Versão            |
+| ------------------------------------------------ | ----------------- |
+| [Next.js](https://nextjs.org/)                   | 16.2.6            |
+| [React](https://react.dev/)                      | 19                |
+| [TypeScript](https://www.typescriptlang.org/)    | 5.7.3             |
+| [Tailwind CSS](https://tailwindcss.com/)         | 4.x               |
+| [next-intl](https://next-intl.dev/)              | i18n (pt, en, es) |
+| [Lucide React](https://lucide.dev/)              | 0.564.x           |
+| [Vercel Analytics](https://vercel.com/analytics) | 1.6.x             |
 
 ---
 
 ## Idiomas (i18n)
 
-| Código | URL | Conteúdo |
-|--------|-----|----------|
-| `pt` | `/` | Português (padrão) |
-| `en` | `/en` | English |
-| `es` | `/es` | Español |
+| Código | URL   | Conteúdo           |
+| ------ | ----- | ------------------ |
+| `pt`   | `/`   | Português (padrão) |
+| `en`   | `/en` | English            |
+| `es`   | `/es` | Español            |
 
 **Quer mudar um texto do site?** → [`i18n/messages/`](i18n/messages/) (leia [`i18n/messages/README.md`](i18n/messages/README.md)).
 
@@ -144,18 +144,18 @@ Mundo365L/
 
 ## Seções da Landing Page
 
-| Seção | Descrição |
-|---|---|
-| **Header** | Navegação responsiva com âncoras por seção |
-| **Hero** | Lottie no desktop; logo Azure + texto no mobile |
-| **Soluções** | Modern Workplace, Cyber Security, Cloud, Power Platform, Serviços |
-| **Estatísticas** | 5.000+ clientes, 150+ projetos, 100 prêmios (counter animado) |
-| **Partner Banner** | Microsoft Solutions Partner — Modern Work e Infrastructure |
-| **Certificações** | Foto Top Growth Awards 2026 + grid de competências Microsoft |
-| **Depoimentos** | Sidebar com clientes reais (Campseg, Hospital São Lucas, JDB) |
-| **Parceiros** | Logos de Acronis, Adobe, Fortinet, Kaspersky, Microsoft, Veeam |
-| **Newsletter** | Formulário de captura de e-mail |
-| **Footer** | Contato, links, Instagram, LinkedIn e logo Azure Partner |
+| Seção              | Descrição                                                         |
+| ------------------ | ----------------------------------------------------------------- |
+| **Header**         | Navegação responsiva com âncoras por seção                        |
+| **Hero**           | Lottie no desktop; logo Azure + texto no mobile                   |
+| **Soluções**       | Modern Workplace, Cyber Security, Cloud, Power Platform, Serviços |
+| **Estatísticas**   | 5.000+ clientes, 150+ projetos, 100 prêmios (counter animado)     |
+| **Partner Banner** | Microsoft Solutions Partner — Modern Work e Infrastructure        |
+| **Certificações**  | Foto Top Growth Awards 2026 + grid de competências Microsoft      |
+| **Depoimentos**    | Sidebar com clientes reais (Campseg, Hospital São Lucas, JDB)     |
+| **Parceiros**      | Logos de Acronis, Adobe, Fortinet, Kaspersky, Microsoft, Veeam    |
+| **Newsletter**     | Formulário de captura de e-mail                                   |
+| **Footer**         | Contato, links, Instagram, LinkedIn e logo Azure Partner          |
 
 ---
 

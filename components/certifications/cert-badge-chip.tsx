@@ -1,8 +1,8 @@
-import Image from "next/image"
-import type { CertBadge } from "@/types"
+import Image from 'next/image'
+import type { CertBadge } from '@/types'
 
 function usesWhiteKnockout(acronym: string) {
-  return acronym !== "MVP"
+  return acronym !== 'MVP'
 }
 
 export function CertBadgeChip({ acronym, title, image }: CertBadge) {
@@ -16,9 +16,9 @@ export function CertBadgeChip({ acronym, title, image }: CertBadge) {
         width={112}
         height={112}
         className={[
-          "object-contain w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32",
-          knockout ? "mix-blend-multiply" : "",
-        ].join(" ")}
+          'object-contain w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32',
+          knockout ? 'mix-blend-multiply' : '',
+        ].join(' ')}
       />
     </div>
   )

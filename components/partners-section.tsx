@@ -1,15 +1,15 @@
-import { getTranslations } from "next-intl/server"
-import Image from "next/image"
-import { partners } from "@/data/partners"
+import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
+import { partners } from '@/data/partners'
 
 export async function PartnersSection() {
-  const t = await getTranslations("partners")
+  const t = await getTranslations('partners')
 
   return (
     <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-gray-500 text-sm sm:text-base uppercase tracking-[0.2em] font-medium mb-14 sm:mb-16">
-          {t("title")}
+          {t('title')}
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">

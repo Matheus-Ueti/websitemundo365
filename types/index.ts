@@ -1,25 +1,25 @@
-import type React from "react"
+import type React from 'react'
 
 // ─── i18n ──────────────────────────────────────────────────────────────────────
 
-export const LOCALES = ["pt", "en", "es"] as const
+export const LOCALES = ['pt', 'en', 'es'] as const
 export type Locale = (typeof LOCALES)[number]
 
 export const LOCALE_LABELS: Record<Locale, string> = {
-  pt: "PT",
-  en: "EN",
-  es: "ES",
+  pt: 'PT',
+  en: 'EN',
+  es: 'ES',
 }
 
 // ─── Navegação (âncoras da página) ─────────────────────────────────────────────
 
 export const SECTION_IDS = {
-  main: "conteudo",
-  home: "inicio",
-  about: "sobre",
-  solutions: "solucoes",
-  news: "noticias",
-  contact: "contato",
+  main: 'conteudo',
+  home: 'inicio',
+  about: 'sobre',
+  solutions: 'solucoes',
+  news: 'noticias',
+  contact: 'contato',
 } as const
 
 export type SectionId = (typeof SECTION_IDS)[keyof typeof SECTION_IDS]
@@ -52,9 +52,9 @@ export type AwardVisualProps = {
 
 // ─── Soluções ──────────────────────────────────────────────────────────────────
 
-export type FloatingPosition = "top-right" | "middle-right" | "bottom-left"
+export type FloatingPosition = 'top-right' | 'middle-right' | 'bottom-left'
 
-export type FloatingCardType = "security" | "notification" | "dashboard"
+export type FloatingCardType = 'security' | 'notification' | 'dashboard'
 
 export type FloatingCardProps = {
   type: FloatingCardType
@@ -109,7 +109,7 @@ export type Stat = {
   suffix: string
 }
 
-export type AnimatedCounterProps = Pick<Stat, "value" | "prefix" | "suffix">
+export type AnimatedCounterProps = Pick<Stat, 'value' | 'prefix' | 'suffix'>
 
 // ─── Menu e rodapé ─────────────────────────────────────────────────────────────
 
@@ -164,7 +164,7 @@ export type PartnerBadgeProps = {
 
 // ─── Newsletter ────────────────────────────────────────────────────────────────
 
-export type NewsletterFormStatus = "idle" | "success"
+export type NewsletterFormStatus = 'idle' | 'success'
 
 // ─── Hooks ─────────────────────────────────────────────────────────────────────
 

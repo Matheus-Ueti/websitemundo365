@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import type { HeroSlide } from "@/types"
+import { useEffect, useState } from 'react'
+import type { HeroSlide } from '@/types'
 
 const ROTATE_MS = 6000
 
@@ -35,18 +35,18 @@ export function HeroHeadlines({ slides }: HeroHeadlinesProps) {
     <div className="min-h-[7.5rem] sm:min-h-[9rem] lg:min-h-[10rem] flex flex-col justify-center">
       <h1
         className={[
-          "text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance transition-opacity duration-300",
-          visible ? "opacity-100" : "opacity-0",
-        ].join(" ")}
+          'text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance transition-opacity duration-300',
+          visible ? 'opacity-100' : 'opacity-0',
+        ].join(' ')}
       >
         {slide.headline}
       </h1>
       {slide.subline ? (
         <p
           className={[
-            "mt-4 text-base sm:text-lg text-white/85 max-w-xl text-balance transition-opacity duration-300",
-            visible ? "opacity-100" : "opacity-0",
-          ].join(" ")}
+            'mt-4 text-base sm:text-lg text-white/85 max-w-xl text-balance transition-opacity duration-300',
+            visible ? 'opacity-100' : 'opacity-0',
+          ].join(' ')}
         >
           {slide.subline}
         </p>
@@ -72,9 +72,9 @@ export function HeroHeadlines({ slides }: HeroHeadlinesProps) {
                 }, 200)
               }}
               className={[
-                "h-2 rounded-full transition-all duration-300",
-                i === index ? "w-8 bg-cyan-400" : "w-2 bg-white/40 hover:bg-white/60",
-              ].join(" ")}
+                'h-2 rounded-full transition-all duration-300',
+                i === index ? 'w-8 bg-cyan-400' : 'w-2 bg-white/40 hover:bg-white/60',
+              ].join(' ')}
             />
           ))}
         </div>

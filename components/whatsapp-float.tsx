@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { useTranslations } from "next-intl"
-import { getWhatsAppUrl } from "@/lib/site"
+import { useTranslations } from 'next-intl'
+import { getWhatsAppUrl } from '@/lib/site'
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -12,16 +12,16 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export function WhatsAppFloat() {
-  const t = useTranslations("contact")
-  const tCommon = useTranslations("common")
+  const t = useTranslations('contact')
+  const tCommon = useTranslations('common')
 
   return (
     <a
-      href={getWhatsAppUrl(t("whatsappMessage"))}
+      href={getWhatsAppUrl(t('whatsappMessage'))}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 transition-transform hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:bottom-8 sm:right-8 sm:h-16 sm:w-16"
-      aria-label={tCommon("whatsappAria")}
+      aria-label={tCommon('whatsappAria')}
     >
       <WhatsAppIcon className="h-7 w-7 sm:h-8 sm:w-8" />
     </a>

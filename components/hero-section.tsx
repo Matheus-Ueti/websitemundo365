@@ -1,14 +1,14 @@
-import Image from "next/image"
-import { getTranslations } from "next-intl/server"
-import { HeroHeadlines } from "@/components/hero-headlines"
-import { HeroVisualDesktop } from "@/components/hero-visual-desktop"
-import { heroLottieLayout } from "@/lib/constants/hero-lottie"
-import { SECTION_IDS } from "@/lib/constants/sections"
-import type { HeroSlide } from "@/types"
+import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
+import { HeroHeadlines } from '@/components/hero-headlines'
+import { HeroVisualDesktop } from '@/components/hero-visual-desktop'
+import { heroLottieLayout } from '@/lib/constants/hero-lottie'
+import { SECTION_IDS } from '@/lib/constants/sections'
+import type { HeroSlide } from '@/types'
 
 export async function HeroSection() {
-  const t = await getTranslations("hero")
-  const slides = t.raw("slides") as HeroSlide[]
+  const t = await getTranslations('hero')
+  const slides = t.raw('slides') as HeroSlide[]
 
   return (
     <section
@@ -20,7 +20,7 @@ export async function HeroSection() {
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "50px 50px",
+            backgroundSize: '50px 50px',
           }}
         />
         <div className="absolute top-20 left-20 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl" />
@@ -48,7 +48,7 @@ export async function HeroSection() {
             </div>
 
             <p className="text-sm sm:text-base font-medium text-cyan-200/90 mb-4 tracking-wide uppercase">
-              {t("brandLine")}
+              {t('brandLine')}
             </p>
 
             <HeroHeadlines slides={slides} />
@@ -63,10 +63,7 @@ export async function HeroSection() {
           preserveAspectRatio="none"
           aria-hidden
         >
-          <path
-            d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z"
-            fill="#ffffff"
-          />
+          <path d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z" fill="#ffffff" />
         </svg>
       </div>
     </section>

@@ -209,8 +209,16 @@
     ],
     "badges": [
       { "acronym": "MCT", "title": "Microsoft Certified Trainer", "image": "/badge-mct.png" },
-      { "acronym": "MCSE", "title": "Microsoft Certified Solutions Expert", "image": "/badge-mcse.png" },
-      { "acronym": "MCSA", "title": "Microsoft Certified Solutions Associate", "image": "/badge-mcsa.png" },
+      {
+        "acronym": "MCSE",
+        "title": "Microsoft Certified Solutions Expert",
+        "image": "/badge-mcse.png"
+      },
+      {
+        "acronym": "MCSA",
+        "title": "Microsoft Certified Solutions Associate",
+        "image": "/badge-mcsa.png"
+      },
       { "acronym": "ASA", "title": "Azure Solutions Architect Expert", "image": "/badge-asa.png" },
       { "acronym": "MVP", "title": "Most Valuable Professional", "image": "/badge-mvp.png" }
     ]

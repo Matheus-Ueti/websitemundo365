@@ -4,11 +4,11 @@ Todos os textos visíveis da landing page ficam aqui (`pt.json`, `en.json`, `es.
 
 ## Arquivos
 
-| Arquivo    | Idioma    | URL no site |
-|------------|-----------|-------------|
-| `pt.json`  | Português | `/`         |
-| `en.json`  | English   | `/en`       |
-| `es.json`  | Español   | `/es`       |
+| Arquivo   | Idioma    | URL no site |
+| --------- | --------- | ----------- |
+| `pt.json` | Português | `/`         |
+| `en.json` | English   | `/en`       |
+| `es.json` | Español   | `/es`       |
 
 ## Como alterar um texto
 

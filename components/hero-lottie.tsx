@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import { DotLottieReact, setWasmUrl } from "@lottiefiles/dotlottie-react"
+import { useEffect, useState } from 'react'
+import { DotLottieReact, setWasmUrl } from '@lottiefiles/dotlottie-react'
 import {
   HERO_LOTTIE_SRC,
   HERO_LOTTIE_WASM_PATH,
   heroLottieLayout,
-} from "@/lib/constants/hero-lottie"
+} from '@/lib/constants/hero-lottie'
 
 export function HeroLottie() {
   const [isReady, setIsReady] = useState(false)

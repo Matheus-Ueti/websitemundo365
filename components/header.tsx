@@ -1,33 +1,33 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { useTranslations } from "next-intl"
-import { Instagram, Linkedin, Menu, X } from "lucide-react"
-import { Link } from "@/i18n/navigation"
-import Image from "next/image"
-import { LanguageSwitcher } from "@/i18n/components/language-switcher"
-import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
+import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { Instagram, Linkedin, Menu, X } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
+import Image from 'next/image'
+import { LanguageSwitcher } from '@/i18n/components/language-switcher'
+import { SECTION_IDS, sectionHref } from '@/lib/constants/sections'
 
-const MOBILE_MENU_ID = "mobile-nav-menu"
+const MOBILE_MENU_ID = 'mobile-nav-menu'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const t = useTranslations("nav")
-  const tCommon = useTranslations("common")
+  const t = useTranslations('nav')
+  const tCommon = useTranslations('common')
 
   const mainNavItems = [
-    { label: t("home"), href: sectionHref(SECTION_IDS.home) },
-    { label: t("about"), href: sectionHref(SECTION_IDS.about) },
-    { label: t("solutions"), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t("newsletter"), href: sectionHref(SECTION_IDS.news) },
-    { label: t("contact"), href: sectionHref(SECTION_IDS.contact) },
+    { label: t('home'), href: sectionHref(SECTION_IDS.home) },
+    { label: t('about'), href: sectionHref(SECTION_IDS.about) },
+    { label: t('solutions'), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t('newsletter'), href: sectionHref(SECTION_IDS.news) },
+    { label: t('contact'), href: sectionHref(SECTION_IDS.contact) },
   ]
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" aria-label={tCommon("homeAria")}>
+          <Link href="/" aria-label={tCommon('homeAria')}>
             <Image
               src="/mundo365-logo.png"
               alt="Mundo365"
@@ -38,7 +38,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center" aria-label={tCommon("navMain")}>
+          <nav className="hidden md:flex items-center" aria-label={tCommon('navMain')}>
             <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm rounded-full px-2 py-1.5 border border-white/20">
               {mainNavItems.map((item) => (
                 <Link
@@ -83,7 +83,7 @@ export function Header() {
             onClick={() => setIsMenuOpen((open) => !open)}
             aria-expanded={isMenuOpen}
             aria-controls={MOBILE_MENU_ID}
-            aria-label={isMenuOpen ? tCommon("closeMenu") : tCommon("openMenu")}
+            aria-label={isMenuOpen ? tCommon('closeMenu') : tCommon('openMenu')}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -94,7 +94,7 @@ export function Header() {
             id={MOBILE_MENU_ID}
             className="md:hidden py-4 border-t border-white/20 bg-purple-900/90 backdrop-blur-md rounded-b-2xl"
           >
-            <nav className="flex flex-col gap-2" aria-label={tCommon("navMain")}>
+            <nav className="flex flex-col gap-2" aria-label={tCommon('navMain')}>
               {mainNavItems.map((item) => (
                 <Link
                   key={item.href}

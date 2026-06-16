@@ -1,54 +1,68 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Image from "next/image"
-import { useTranslations } from "next-intl"
-import { Link } from "@/i18n/navigation"
+import { useState } from 'react'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import type {
   FloatingCardWithLabelsProps,
   FloatingLabels,
   FloatingPosition,
   Solution,
-} from "@/types"
-import { SECTION_IDS, sectionHref } from "@/lib/constants/sections"
+} from '@/types'
+import { SECTION_IDS, sectionHref } from '@/lib/constants/sections'
 
-const DEFAULT_SOLUTION_ID = "cyber-security"
+const DEFAULT_SOLUTION_ID = 'cyber-security'
 
 function FloatingCard({ type, position, labels }: FloatingCardWithLabelsProps) {
   const positionClasses: Record<FloatingPosition, string> = {
-    "top-right": "top-2 right-0 sm:top-4 sm:-right-4",
-    "middle-right": "top-1/3 right-0 sm:-right-8",
-    "bottom-left": "bottom-16 left-0 sm:bottom-20 sm:-left-4",
+    'top-right': 'top-2 right-0 sm:top-4 sm:-right-4',
+    'middle-right': 'top-1/3 right-0 sm:-right-8',
+    'bottom-left': 'bottom-16 left-0 sm:bottom-20 sm:-left-4',
   }
 
   const getContent = () => {
     switch (type) {
-      case "security":
+      case 'security':
         return (
           <div className="bg-white rounded-xl shadow-xl p-3 flex items-center gap-2">
             <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-5 h-5 text-green-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
             <span className="text-sm font-medium text-gray-700">{labels.safe}</span>
           </div>
         )
-      case "notification":
+      case 'notification':
         return (
           <div className="bg-white rounded-xl shadow-xl p-3">
             <div className="flex items-center gap-2 mb-1">
-              <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">K</div>
+              <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                K
+              </div>
               <span className="text-xs text-gray-500">{labels.now}</span>
             </div>
             <p className="text-sm text-gray-700">{labels.protected}</p>
           </div>
         )
-      case "dashboard":
+      case 'dashboard':
         return (
           <div className="bg-white rounded-xl shadow-xl p-3 sm:p-4 w-36 sm:w-48">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-sm font-bold">A</div>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-sm font-bold">
+                A
+              </div>
               <span className="text-xs font-medium text-gray-700">{labels.portal}</span>
             </div>
             <div className="space-y-2">
@@ -67,20 +81,22 @@ function FloatingCard({ type, position, labels }: FloatingCardWithLabelsProps) {
   }
 
   return (
-    <div className={`absolute ${positionClasses[position]} animate-float z-10 scale-[0.85] sm:scale-100 origin-center`}>
+    <div
+      className={`absolute ${positionClasses[position]} animate-float z-10 scale-[0.85] sm:scale-100 origin-center`}
+    >
       {getContent()}
     </div>
   )
 }
 
 export function SolutionsSection() {
-  const t = useTranslations("solutions")
-  const solutions = t.raw("items") as Solution[]
+  const t = useTranslations('solutions')
+  const solutions = t.raw('items') as Solution[]
   const floatingLabels: FloatingLabels = {
-    safe: t("floating.safe"),
-    now: t("floating.now"),
-    protected: t("floating.protected"),
-    portal: t("floating.portal"),
+    safe: t('floating.safe'),
+    now: t('floating.now'),
+    protected: t('floating.protected'),
+    portal: t('floating.portal'),
   }
 
   const [activeTab, setActiveTab] = useState(DEFAULT_SOLUTION_ID)
@@ -92,13 +108,11 @@ export function SolutionsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
             <span className="relative inline-block">
-              {t("title")}
+              {t('title')}
               <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
             </span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto mt-6 text-pretty">
-            {t("subtitle")}
-          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto mt-6 text-pretty">{t('subtitle')}</p>
         </div>
 
         <div className="mb-12 sm:mb-16">
@@ -110,11 +124,11 @@ export function SolutionsSection() {
                 onClick={() => setActiveTab(solution.id)}
                 aria-pressed={activeTab === solution.id}
                 className={[
-                  "w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-center",
+                  'w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-center',
                   activeTab === solution.id
-                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md"
-                    : "text-gray-600 hover:text-gray-900 bg-white/60",
-                ].join(" ")}
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md'
+                    : 'text-gray-600 hover:text-gray-900 bg-white/60',
+                ].join(' ')}
               >
                 {solution.tabTitle}
               </button>
@@ -130,11 +144,11 @@ export function SolutionsSection() {
                   onClick={() => setActiveTab(solution.id)}
                   aria-pressed={activeTab === solution.id}
                   className={[
-                    "relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap",
+                    'relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap',
                     activeTab === solution.id
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20"
-                      : "text-gray-500 hover:text-gray-800",
-                  ].join(" ")}
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20'
+                      : 'text-gray-500 hover:text-gray-800',
+                  ].join(' ')}
                 >
                   {solution.tabTitle}
                 </button>
@@ -152,9 +166,7 @@ export function SolutionsSection() {
               {activeSolution.description}
             </p>
             {activeSolution.subDescription && (
-              <p className="text-gray-500 leading-relaxed mb-8">
-                {activeSolution.subDescription}
-              </p>
+              <p className="text-gray-500 leading-relaxed mb-8">{activeSolution.subDescription}</p>
             )}
             <Link
               href={sectionHref(SECTION_IDS.contact)}

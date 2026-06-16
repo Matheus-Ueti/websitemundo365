@@ -1,6 +1,6 @@
-import { getRequestConfig } from "next-intl/server"
-import { routing } from "./routing"
-import type { Locale } from "@/types"
+import { getRequestConfig } from 'next-intl/server'
+import { routing } from './routing'
+import type { Locale } from '@/types'
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale
