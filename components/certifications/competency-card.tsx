@@ -11,6 +11,9 @@ export function CompetencyCard({
 }: CompetencyCardProps) {
   const MedalIcon = MEDAL_ICONS[medalIndex % MEDAL_ICONS.length]
 
+  const iconClass = achieved ? 'bg-orange-50 text-orange-500' : 'bg-gray-50 text-gray-300'
+  const labelClass = achieved ? 'text-orange-500' : 'text-gray-400'
+
   return (
     <article
       className={[
@@ -21,22 +24,14 @@ export function CompetencyCard({
       ].join(' ')}
     >
       <div
-        className={[
-          'flex h-11 w-11 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-xl',
-          achieved ? 'bg-orange-50 text-orange-500' : 'bg-gray-50 text-gray-300',
-        ].join(' ')}
+        className={`flex h-11 w-11 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-xl ${iconClass}`}
       >
         <MedalIcon className="h-6 w-6 sm:h-7 sm:w-7" />
       </div>
 
       <div className="min-w-0 flex-1">
         <p className="text-[13px] sm:text-sm font-semibold text-gray-900 leading-snug">{label}</p>
-        <p
-          className={[
-            'text-[11px] sm:text-xs font-medium mt-0.5',
-            achieved ? 'text-orange-500' : 'text-gray-400',
-          ].join(' ')}
-        >
+        <p className={`text-[11px] sm:text-xs font-medium mt-0.5 ${labelClass}`}>
           Solutions Partner
         </p>
       </div>

@@ -15,10 +15,7 @@ export function CertBadgeChip({ acronym, title, image }: CertBadge) {
         alt={title}
         width={112}
         height={112}
-        className={[
-          'object-contain w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32',
-          knockout ? 'mix-blend-multiply' : '',
-        ].join(' ')}
+        className={`object-contain w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 ${knockout ? 'mix-blend-multiply' : ''}`}
       />
     </div>
   )

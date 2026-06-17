@@ -117,42 +117,44 @@ export function SolutionsSection() {
 
         <div className="mb-12 sm:mb-16">
           <div className="flex flex-col gap-2 sm:hidden bg-gray-100 rounded-2xl p-2">
-            {solutions.map((solution) => (
-              <button
-                key={solution.id}
-                type="button"
-                onClick={() => setActiveTab(solution.id)}
-                aria-pressed={activeTab === solution.id}
-                className={[
-                  'w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-center',
-                  activeTab === solution.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md'
-                    : 'text-gray-600 hover:text-gray-900 bg-white/60',
-                ].join(' ')}
-              >
-                {solution.tabTitle}
-              </button>
-            ))}
-          </div>
-
-          <div className="hidden sm:flex justify-center">
-            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1 flex-wrap justify-center max-w-4xl">
-              {solutions.map((solution) => (
+            {solutions.map((solution) => {
+              const isActive = activeTab === solution.id
+              const tabClass = isActive
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md'
+                : 'text-gray-600 hover:text-gray-900 bg-white/60'
+              return (
                 <button
                   key={solution.id}
                   type="button"
                   onClick={() => setActiveTab(solution.id)}
-                  aria-pressed={activeTab === solution.id}
-                  className={[
-                    'relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap',
-                    activeTab === solution.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20'
-                      : 'text-gray-500 hover:text-gray-800',
-                  ].join(' ')}
+                  aria-pressed={isActive}
+                  className={`w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-center ${tabClass}`}
                 >
                   {solution.tabTitle}
                 </button>
-              ))}
+              )
+            })}
+          </div>
+
+          <div className="hidden sm:flex justify-center">
+            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1 flex-wrap justify-center max-w-4xl">
+              {solutions.map((solution) => {
+                const isActive = activeTab === solution.id
+                const tabClass = isActive
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-blue-500/20'
+                  : 'text-gray-500 hover:text-gray-800'
+                return (
+                  <button
+                    key={solution.id}
+                    type="button"
+                    onClick={() => setActiveTab(solution.id)}
+                    aria-pressed={isActive}
+                    className={`relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${tabClass}`}
+                  >
+                    {solution.tabTitle}
+                  </button>
+                )
+              })}
             </div>
           </div>
         </div>

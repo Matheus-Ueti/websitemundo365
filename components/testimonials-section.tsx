@@ -26,33 +26,28 @@ export function TestimonialsSection() {
           <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0">
             {testimonials.map((item) => {
               const isActive = item.id === activeId
+              const styles = {
+                button: isActive
+                  ? 'bg-gray-900 shadow-md'
+                  : 'bg-gray-50 hover:bg-gray-100 border border-gray-100',
+                avatar: isActive
+                  ? 'bg-white/15 text-white'
+                  : 'bg-white border border-gray-200 text-gray-500',
+                company: isActive ? 'text-white' : 'text-gray-600',
+              }
+
               return (
                 <button
                   key={item.id}
                   onClick={() => setActiveId(item.id)}
-                  className={[
-                    'flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 whitespace-nowrap md:whitespace-normal w-full',
-                    isActive
-                      ? 'bg-gray-900 shadow-md'
-                      : 'bg-gray-50 hover:bg-gray-100 border border-gray-100',
-                  ].join(' ')}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 whitespace-nowrap md:whitespace-normal w-full ${styles.button}`}
                 >
                   <div
-                    className={[
-                      'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold',
-                      isActive
-                        ? 'bg-white/15 text-white'
-                        : 'bg-white border border-gray-200 text-gray-500',
-                    ].join(' ')}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${styles.avatar}`}
                   >
                     {item.initials}
                   </div>
-                  <span
-                    className={[
-                      'text-sm font-semibold leading-tight',
-                      isActive ? 'text-white' : 'text-gray-600',
-                    ].join(' ')}
-                  >
+                  <span className={`text-sm font-semibold leading-tight ${styles.company}`}>
                     {item.company}
                   </span>
                 </button>

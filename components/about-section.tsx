@@ -113,6 +113,8 @@ export function AboutSection() {
   const t = useTranslations('about')
   const timeline = getTimeline(locale)
 
+  const fadeIn = isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+
   return (
     <section
       ref={sectionRef}
@@ -121,12 +123,7 @@ export function AboutSection() {
     >
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div
-            className={[
-              'flex flex-col gap-6 transition-all duration-700',
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
-            ].join(' ')}
-          >
+          <div className={`flex flex-col gap-6 transition-all duration-700 ${fadeIn}`}>
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
                 <span className="relative inline-block">
@@ -151,22 +148,12 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div
-            className={[
-              'transition-all duration-700 delay-200',
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
-            ].join(' ')}
-          >
+          <div className={`transition-all duration-700 delay-200 ${fadeIn}`}>
             <OrbVisual imageAlt={t('teamImageAlt')} />
           </div>
         </div>
 
-        <div
-          className={[
-            'mt-24 transition-all duration-700 delay-300',
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
-          ].join(' ')}
-        >
+        <div className={`mt-24 transition-all duration-700 delay-300 ${fadeIn}`}>
           <div className="text-center mb-12">
             <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-indigo-500 mb-2">
               {t('journeyLabel')}
