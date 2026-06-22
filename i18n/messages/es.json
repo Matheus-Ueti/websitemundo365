@@ -268,5 +268,24 @@
   "contact": {
     "whatsappMessage": "¡Hola! Me gustaría saber más sobre Cloud, Cybersecurity e Inteligencia Artificial de Mundo365.",
     "location": "Cascavel - PR, Brasil"
+  },
+  "contactForm": {
+    "eyebrow": "Contáctenos",
+    "title": "Hablemos sobre su negocio",
+    "subtitle": "Complete el formulario y un especialista de Mundo365 se pondrá en contacto pronto.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Ingrese su nombre",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "+1 (000) 000-0000",
+    "emailLabel": "Su mejor correo",
+    "emailPlaceholder": "usted@empresa.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntenos un poco sobre lo que necesita...",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando...",
+    "successTitle": "¡Mensaje enviado!",
+    "successSubtitle": "Recibimos su contacto. Nuestro equipo responderá pronto.",
+    "sendAnother": "Enviar otro mensaje",
+    "errorGeneric": "Error al enviar el mensaje. Intente nuevamente."
   }
 }

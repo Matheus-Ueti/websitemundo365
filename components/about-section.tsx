@@ -148,7 +148,7 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className={`transition-all duration-700 delay-200 ${fadeIn}`}>
+          <div className={`hidden lg:block transition-all duration-700 delay-200 ${fadeIn}`}>
             <OrbVisual imageAlt={t('teamImageAlt')} />
           </div>
         </div>

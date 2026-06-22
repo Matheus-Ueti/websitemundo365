@@ -164,7 +164,7 @@ export type PartnerBadgeProps = {
 
 // ─── Newsletter ────────────────────────────────────────────────────────────────
 
-export type NewsletterFormStatus = 'idle' | 'success'
+export type NewsletterFormStatus = 'idle' | 'loading' | 'success' | 'error'
 
 // ─── Hooks ─────────────────────────────────────────────────────────────────────
 
