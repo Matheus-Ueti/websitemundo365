@@ -17,7 +17,7 @@
     "home": "Home",
     "about": "About us",
     "solutions": "Solutions",
-    "newsletter": "Newsletter",
+    "marketplace": "Marketplace",
     "contact": "Contact"
   },
   "footer": {
@@ -256,18 +256,51 @@
   "partners": {
     "title": "Partners and technologies we work with"
   },
-  "newsletter": {
-    "title": "Get tips, insights, and news",
-    "subtitle": "Straight to your inbox, no spam.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@email.com",
-    "submit": "Subscribe",
-    "successBefore": "Thank you for your interest! To reach our team now, email",
-    "successAfter": "."
-  },
   "contact": {
     "whatsappMessage": "Hello! I'd like to learn more about Cloud, Cybersecurity, and AI solutions from Mundo365.",
     "location": "Cascavel - PR, Brazil"
+  },
+  "marketplace": {
+    "eyebrow": "Marketplace",
+    "title": "Mundo365 Marketplace",
+    "subtitle": "Managed solutions to protect, modernize and scale your business with Microsoft technology and expert support.",
+    "firewallCategory": "Managed Security",
+    "firewallName": "Managed Firewall",
+    "firewallDescription": "Advanced perimeter protection with continuous monitoring, threat blocking and expert management by the Mundo365 team.",
+    "mostWanted": "Most popular",
+    "chips": ["24/7 Monitoring", "Secure VPN", "Monthly Reports"],
+    "includedTitle": "What's included",
+    "buyButton": "Request a quote",
+    "footerNote": "Microsoft Environment • Compliance • Protected Data",
+    "firewallFeatures": [
+      {
+        "title": "Secure VPN for remote access",
+        "description": "Secure and encrypted access for collaborators and administrators from anywhere."
+      },
+      {
+        "title": "Threat and malicious traffic blocking",
+        "description": "Advanced multi-layer protection against intrusions, malware, exploits and DDoS attacks."
+      },
+      {
+        "title": "Continuous environment monitoring",
+        "description": "24/7 supervision of traffic and security events with rapid incident response."
+      },
+      {
+        "title": "Monthly security reports",
+        "description": "Detailed reports with metrics, alerts and recommendations for continuous improvement."
+      },
+      {
+        "title": "Specialized technical support",
+        "description": "Microsoft-certified team available to ensure stability, performance and protection of your environment."
+      }
+    ],
+    "trust": [
+      { "label": "Microsoft Certified Solutions" },
+      { "label": "LGPD Compliance" },
+      { "label": "Secure Infrastructure" },
+      { "label": "Certified Specialists" },
+      { "label": "24/7 Support" }
+    ]
   },
   "contactForm": {
     "eyebrow": "Get in touch",

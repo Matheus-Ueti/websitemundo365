@@ -19,7 +19,7 @@ export function Header() {
     { label: t('home'), href: sectionHref(SECTION_IDS.home) },
     { label: t('about'), href: sectionHref(SECTION_IDS.about) },
     { label: t('solutions'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t('newsletter'), href: sectionHref(SECTION_IDS.news) },
+    { label: t('marketplace'), href: sectionHref(SECTION_IDS.marketplace) },
     { label: t('contact'), href: sectionHref(SECTION_IDS.contact) },
   ]
 

@@ -35,7 +35,7 @@ export function ContactSection() {
     setErrorMsg('')
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/sendemail/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -60,11 +60,15 @@ export function ContactSection() {
   return (
     <section
       id={SECTION_IDS.contact}
-      className="py-16 sm:py-20 bg-gray-50"
+      className="py-16 sm:py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-[#0d1f3c] to-slate-900"
       aria-label={t('eyebrow')}
     >
-      <div className="max-w-md mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-gradient-to-br from-[#6b21a8] via-[#7c3aed] to-[#06b6d4] p-8 shadow-2xl shadow-violet-500/25">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl" />
+      </div>
+      <div className="relative max-w-md mx-auto px-4 sm:px-6">
+        <div className="rounded-3xl bg-gradient-to-br from-[#0d1f3c] via-[#0f2a4a] to-[#0a1628] border border-blue-900/40 p-8 shadow-2xl shadow-blue-900/40">
 
           {status === 'success' ? (
             <div className="flex flex-col items-center gap-4 py-10 text-center">

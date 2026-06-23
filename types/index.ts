@@ -18,7 +18,7 @@ export const SECTION_IDS = {
   home: 'inicio',
   about: 'sobre',
   solutions: 'solucoes',
-  news: 'noticias',
+  marketplace: 'marketplace',
   contact: 'contato',
 } as const
 
@@ -162,9 +162,25 @@ export type PartnerBadgeProps = {
   label: string
 }
 
-// ─── Newsletter ────────────────────────────────────────────────────────────────
+// ─── Marketplace ───────────────────────────────────────────────────────────────
 
-export type NewsletterFormStatus = 'idle' | 'loading' | 'success' | 'error'
+export type MarketplaceFeature = {
+  title: string
+  description: string
+}
+
+export type MarketplaceTrustItem = {
+  label: string
+}
+
+/** @deprecated replaced by MarketplaceFeature flat list */
+export type MarketplaceFeatureItem = MarketplaceFeature
+
+/** @deprecated replaced by MarketplaceFeature flat list */
+export type MarketplaceFeatureGroup = {
+  label: string
+  items: MarketplaceFeatureItem[]
+}
 
 // ─── Hooks ─────────────────────────────────────────────────────────────────────
 

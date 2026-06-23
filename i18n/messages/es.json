@@ -17,7 +17,7 @@
     "home": "Inicio",
     "about": "Sobre nosotros",
     "solutions": "Soluciones",
-    "newsletter": "Newsletter",
+    "marketplace": "Marketplace",
     "contact": "Contacto"
   },
   "footer": {
@@ -256,18 +256,51 @@
   "partners": {
     "title": "Socios y tecnologías con las que trabajamos"
   },
-  "newsletter": {
-    "title": "Reciba consejos, insights y novedades",
-    "subtitle": "Directo en su correo, sin spam.",
-    "emailLabel": "Correo electrónico",
-    "emailPlaceholder": "su@email.com",
-    "submit": "Suscribirse",
-    "successBefore": "¡Gracias por su interés! Para hablar con nuestro equipo ahora, escriba a",
-    "successAfter": "."
-  },
   "contact": {
     "whatsappMessage": "¡Hola! Me gustaría saber más sobre Cloud, Cybersecurity e Inteligencia Artificial de Mundo365.",
     "location": "Cascavel - PR, Brasil"
+  },
+  "marketplace": {
+    "eyebrow": "Marketplace",
+    "title": "Marketplace Mundo365",
+    "subtitle": "Soluciones administradas para proteger, modernizar y escalar su empresa con tecnología Microsoft y soporte especializado.",
+    "firewallCategory": "Seguridad Administrada",
+    "firewallName": "Firewall Administrado",
+    "firewallDescription": "Protección avanzada de perímetro con monitoreo continuo, bloqueo de amenazas y gestión especializada por el equipo Mundo365.",
+    "mostWanted": "Más buscado",
+    "chips": ["Monitoreo 24/7", "VPN Segura", "Informes Mensuales"],
+    "includedTitle": "Qué está incluido",
+    "buyButton": "Solicitar propuesta",
+    "footerNote": "Entorno Microsoft • Conformidad • Datos protegidos",
+    "firewallFeatures": [
+      {
+        "title": "VPN segura para acceso remoto",
+        "description": "Acceso seguro y cifrado para colaboradores y administradores desde cualquier lugar."
+      },
+      {
+        "title": "Bloqueo de amenazas y tráfico malicioso",
+        "description": "Protección avanzada en múltiples capas contra intrusiones, malware, exploits y ataques DDoS."
+      },
+      {
+        "title": "Monitoreo continuo del entorno",
+        "description": "Supervisión 24/7 del tráfico y eventos de seguridad con respuesta rápida a incidentes."
+      },
+      {
+        "title": "Informes mensuales de seguridad",
+        "description": "Informes detallados con métricas, alertas y recomendaciones para mejora continua."
+      },
+      {
+        "title": "Soporte técnico especializado",
+        "description": "Equipo certificado Microsoft disponible para garantizar estabilidad, rendimiento y protección de su entorno."
+      }
+    ],
+    "trust": [
+      { "label": "Soluciones Microsoft Certificadas" },
+      { "label": "Conformidad y LGPD" },
+      { "label": "Infraestructura Segura" },
+      { "label": "Especialistas Certificados" },
+      { "label": "Soporte 24/7" }
+    ]
   },
   "contactForm": {
     "eyebrow": "Contáctenos",

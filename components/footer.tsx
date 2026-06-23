@@ -17,7 +17,7 @@ export async function Footer() {
     { label: tNav('home'), href: sectionHref(SECTION_IDS.home) },
     { label: tNav('about'), href: sectionHref(SECTION_IDS.about) },
     { label: tNav('solutions'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: tNav('newsletter'), href: sectionHref(SECTION_IDS.news) },
+    { label: tNav('marketplace'), href: sectionHref(SECTION_IDS.marketplace) },
     { label: tNav('contact'), href: sectionHref(SECTION_IDS.contact) },
   ]
 
@@ -30,7 +30,7 @@ export async function Footer() {
   ]
 
   return (
-    <footer id={SECTION_IDS.contact} className="bg-slate-900 text-slate-300">
+    <footer className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
