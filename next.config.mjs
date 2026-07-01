@@ -25,6 +25,7 @@ const securityHeaders = [
       "img-src 'self' data: blob: https://images.unsplash.com",
       "connect-src 'self' https://lottie.host blob:",
       "worker-src 'self' blob:",
+      "base-uri 'self'",
     ].join('; '),
   },
 ]

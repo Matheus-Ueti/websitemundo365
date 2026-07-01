@@ -1,6 +1,23 @@
 import { google } from 'googleapis'
 import { NextResponse } from 'next/server'
 
+const FIELD_LIMITS = { nome: 100, telefone: 30, email: 254, mensagem: 2000 }
+
+// Removes CR/LF to prevent MIME header injection
+function sanitizeHeader(value: string): string {
+  return value.replace(/[\r\n\0]/g, '')
+}
+
+// Escapes HTML entities to prevent XSS in email body
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+}
+
 function buildEmailRaw(from: string, to: string, nome: string, telefone: string, email: string, mensagem: string): string {
   const subject = `Novo contato pelo site — ${nome}`
 
@@ -17,19 +34,19 @@ function buildEmailRaw(from: string, to: string, nome: string, telefone: string,
       <table style="width: 100%; border-collapse: collapse;">
         <tr>
           <td style="padding: 10px 0; color: #6b7280; font-size: 13px; width: 110px;">Nome</td>
-          <td style="padding: 10px 0; color: #111827; font-weight: 600;">${nome}</td>
+          <td style="padding: 10px 0; color: #111827; font-weight: 600;">${escapeHtml(nome)}</td>
         </tr>
         <tr style="border-top: 1px solid #f3f4f6;">
           <td style="padding: 10px 0; color: #6b7280; font-size: 13px;">Telefone</td>
-          <td style="padding: 10px 0; color: #111827; font-weight: 600;">${telefone}</td>
+          <td style="padding: 10px 0; color: #111827; font-weight: 600;">${escapeHtml(telefone)}</td>
         </tr>
         <tr style="border-top: 1px solid #f3f4f6;">
           <td style="padding: 10px 0; color: #6b7280; font-size: 13px;">E-mail</td>
-          <td style="padding: 10px 0; color: #111827; font-weight: 600;">${email}</td>
+          <td style="padding: 10px 0; color: #111827; font-weight: 600;">${escapeHtml(email)}</td>
         </tr>
         <tr style="border-top: 1px solid #f3f4f6;">
           <td style="padding: 10px 0; color: #6b7280; font-size: 13px; vertical-align: top;">Mensagem</td>
-          <td style="padding: 10px 0; color: #111827; white-space: pre-wrap;">${mensagem}</td>
+          <td style="padding: 10px 0; color: #111827; white-space: pre-wrap;">${escapeHtml(mensagem)}</td>
         </tr>
       </table>
     </div>
@@ -43,7 +60,7 @@ function buildEmailRaw(from: string, to: string, nome: string, telefone: string,
   const messageParts = [
     `From: Mundo365 Site <${from}>`,
     `To: ${to}`,
-    `Reply-To: ${email}`,
+    `Reply-To: ${sanitizeHeader(email)}`,
     `Subject: =?UTF-8?B?${Buffer.from(subject).toString('base64')}?=`,
     'MIME-Version: 1.0',
     'Content-Type: text/html; charset=UTF-8',
@@ -64,6 +81,19 @@ export async function POST(req: Request) {
 
     if (!nome?.trim() || !telefone?.trim() || !email?.trim() || !mensagem?.trim()) {
       return NextResponse.json({ error: 'Todos os campos são obrigatórios.' }, { status: 400 })
+    }
+
+    if (nome.trim().length > FIELD_LIMITS.nome) {
+      return NextResponse.json({ error: 'Nome muito longo.' }, { status: 400 })
+    }
+    if (telefone.trim().length > FIELD_LIMITS.telefone) {
+      return NextResponse.json({ error: 'Telefone muito longo.' }, { status: 400 })
+    }
+    if (email.trim().length > FIELD_LIMITS.email) {
+      return NextResponse.json({ error: 'E-mail muito longo.' }, { status: 400 })
+    }
+    if (mensagem.trim().length > FIELD_LIMITS.mensagem) {
+      return NextResponse.json({ error: 'Mensagem muito longa (máx. 2000 caracteres).' }, { status: 400 })
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
