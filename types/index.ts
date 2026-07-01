@@ -98,6 +98,8 @@ export type Testimonial = {
   company: string
   initials: string
   color: string
+  logo?: string
+  logoBg?: string
 }
 
 // ─── Estatísticas ──────────────────────────────────────────────────────────────

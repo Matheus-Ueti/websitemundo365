@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import type { Testimonial } from '@/types'
 
@@ -43,9 +44,19 @@ export function TestimonialsSection() {
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 whitespace-nowrap md:whitespace-normal w-full ${styles.button}`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${styles.avatar}`}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold overflow-hidden ${item.logo ? (item.logoBg ?? 'bg-white') : styles.avatar}`}
                   >
-                    {item.initials}
+                    {item.logo ? (
+                      <Image
+                        src={item.logo}
+                        alt={item.company}
+                        width={40}
+                        height={40}
+                        className="w-full h-full object-contain p-1"
+                      />
+                    ) : (
+                      item.initials
+                    )}
                   </div>
                   <span className={`text-sm font-semibold leading-tight ${styles.company}`}>
                     {item.company}
@@ -65,9 +76,19 @@ export function TestimonialsSection() {
 
             <div className="flex items-center justify-end gap-2 mb-4 pt-2">
               <div
-                className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${current.color} flex items-center justify-center shadow-md flex-shrink-0`}
+                className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 overflow-hidden ${current.logo ? (current.logoBg ?? 'bg-white') : `bg-gradient-to-br ${current.color}`}`}
               >
-                <span className="text-white font-bold text-sm">{current.initials}</span>
+                {current.logo ? (
+                  <Image
+                    src={current.logo}
+                    alt={current.company}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain p-1.5"
+                  />
+                ) : (
+                  <span className="text-white font-bold text-sm">{current.initials}</span>
+                )}
               </div>
               <span className="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider text-right max-w-[140px] leading-tight">
                 {current.company}
