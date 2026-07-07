@@ -326,27 +326,13 @@
     "successSubtitle": "Recebemos seu contato. Nossa equipe vai responder em breve.",
     "sendAnother": "Enviar outra mensagem",
     "errorGeneric": "Erro ao enviar mensagem. Tente novamente.",
-    "leftEyebrow": "Mundo365 de Cascavel",
-    "leftTitle": "Cloud que conecta. Segurança que protege. Tecnologia que impulsiona.",
-    "leftSubtitle": "Soluções completas em nuvem, cibersegurança e tecnologia para sua empresa crescer com segurança, performance e inovação.",
+    "leftEyebrow": "Mundo 365",
+    "leftTitle": "Vamos Conversar?",
+    "leftSubtitle": "Conte para a gente o seu desafio. Nossa equipe entra em contato para entender o seu cenário e mostrar como a tecnologia pode se tornar uma vantagem para o seu negócio.",
     "pillars": [
-      { "title": "Cloud", "description": "Infraestrutura escalável, segura e disponível" },
-      { "title": "Cibersegurança", "description": "Proteção avançada para seus dados e sistemas" },
-      { "title": "Mundo365 de Cascavel", "description": "Atendimento local com visão global" }
-    ],
-    "locationCity": "Cascavel/PR",
-    "locationDescription": "Atendendo toda a região Oeste e o Brasil",
-    "rightTitle": "Somos especialistas em soluções que geram resultados",
-    "services": [
-      { "title": "Cloud", "description": "Migração, gestão e otimização de ambientes em nuvem com alta disponibilidade." },
-      { "title": "Cibersegurança", "description": "Defesa inteligente para proteger sua empresa contra ameaças e vulnerabilidades." },
-      { "title": "Gestão e Monitoramento", "description": "Monitoramento 24/7, performance, backup e suporte especializado para manter tudo funcionando." }
-    ],
-    "seals": [
-      "Profissionais Certificados",
-      "Atendimento Rápido",
-      "Suporte Especializado",
-      "Soluções Personalizadas"
+      { "title": "Produtividade com segurança" },
+      { "title": "Criatividade sem limites" },
+      { "title": "Produtividade que impulsiona" }
     ]
   }
 }

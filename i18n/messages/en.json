@@ -326,27 +326,13 @@
     "successSubtitle": "We received your message. Our team will get back to you soon.",
     "sendAnother": "Send another message",
     "errorGeneric": "Failed to send message. Please try again.",
-    "leftEyebrow": "Mundo365 of Cascavel",
-    "leftTitle": "Cloud that connects. Security that protects. Technology that drives you forward.",
-    "leftSubtitle": "Complete cloud, cybersecurity and technology solutions so your company can grow with security, performance and innovation.",
+    "leftEyebrow": "Mundo 365",
+    "leftTitle": "Let's Talk?",
+    "leftSubtitle": "Tell us about your challenge. Our team will reach out to understand your scenario and show how technology can become an advantage for your business.",
     "pillars": [
-      { "title": "Cloud", "description": "Scalable, secure and always-available infrastructure" },
-      { "title": "Cybersecurity", "description": "Advanced protection for your data and systems" },
-      { "title": "Mundo365 of Cascavel", "description": "Local service with a global vision" }
-    ],
-    "locationCity": "Cascavel/PR — Brazil",
-    "locationDescription": "Serving the entire western region and all of Brazil",
-    "rightTitle": "We are specialists in solutions that deliver results",
-    "services": [
-      { "title": "Cloud", "description": "Migration, management and optimization of cloud environments with high availability." },
-      { "title": "Cybersecurity", "description": "Intelligent defense to protect your company against threats and vulnerabilities." },
-      { "title": "Management & Monitoring", "description": "24/7 monitoring, performance, backup and specialized support to keep everything running." }
-    ],
-    "seals": [
-      "Certified Professionals",
-      "Fast Response",
-      "Specialized Support",
-      "Tailored Solutions"
+      { "title": "Productivity with security" },
+      { "title": "Creativity without limits" },
+      { "title": "Productivity that drives you" }
     ]
   }
 }

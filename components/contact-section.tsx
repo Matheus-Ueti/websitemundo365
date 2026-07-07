@@ -7,17 +7,12 @@ import {
   CheckCircle,
   AlertCircle,
   Loader2,
-  Cloud,
   ShieldCheck,
-  Globe,
-  MapPin,
-  MonitorCheck,
-  BadgeCheck,
-  Clock,
-  Headphones,
+  Lightbulb,
+  Rocket,
 } from 'lucide-react'
 import { SECTION_IDS } from '@/lib/constants/sections'
-import type { ContactPillar, ContactService, LucideIcon } from '@/types'
+import type { ContactPillar, LucideIcon } from '@/types'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -33,10 +28,8 @@ const EMPTY_FORM: FormState = { nome: '', telefone: '', email: '', mensagem: '' 
 const inputClass =
   'w-full px-5 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/25 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all text-sm'
 
-// Ícones pareados por índice com os arrays vindos das traduções.
-const PILLAR_ICONS: LucideIcon[] = [Cloud, ShieldCheck, Globe]
-const SERVICE_ICONS: LucideIcon[] = [Cloud, ShieldCheck, MonitorCheck]
-const SEAL_ICONS: LucideIcon[] = [BadgeCheck, Clock, Headphones, ShieldCheck]
+// Ícones pareados por índice com o array de pilares vindo das traduções.
+const PILLAR_ICONS: LucideIcon[] = [ShieldCheck, Lightbulb, Rocket]
 
 export function ContactSection() {
   const t = useTranslations('contactForm')
@@ -45,8 +38,6 @@ export function ContactSection() {
   const [errorMsg, setErrorMsg] = useState('')
 
   const pillars = t.raw('pillars') as ContactPillar[]
-  const services = t.raw('services') as ContactService[]
-  const seals = t.raw('seals') as string[]
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -92,49 +83,40 @@ export function ContactSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,440px)_1fr] gap-10 lg:gap-8 items-center">
-          {/* ─── Coluna esquerda: mensagem + pilares + localização ─── */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,520px)] gap-10 lg:gap-16 items-center">
+          {/* ─── Coluna esquerda: mensagem + pilares ─── */}
           <div className="text-center lg:text-left">
-            <p className="text-cyan-400 font-semibold text-xs uppercase tracking-[0.2em] mb-4">
+            <p className="text-cyan-400 font-semibold text-xs uppercase tracking-[0.25em] mb-4">
               {t('leftEyebrow')}
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance mb-5">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight text-balance mb-6">
               {t('leftTitle')}
             </h2>
-            <span className="block w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-5 mx-auto lg:mx-0" />
             <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
               {t('leftSubtitle')}
             </p>
 
-            <ul className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
+            <span className="block w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-8 mx-auto lg:mx-0" />
+
+            <ul className="flex items-start justify-center lg:justify-start gap-4 sm:gap-6">
               {pillars.map((pillar, i) => {
-                const Icon = PILLAR_ICONS[i] ?? Cloud
+                const Icon = PILLAR_ICONS[i] ?? ShieldCheck
                 return (
-                  <li key={pillar.title} className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2.5">
-                      <Icon className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <p className="text-white font-semibold text-xs uppercase tracking-wide leading-tight mb-1">
+                  <li
+                    key={pillar.title}
+                    className="flex items-center gap-2.5 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-white/15 [&:not(:first-child)]:pl-4 sm:[&:not(:first-child)]:pl-6"
+                  >
+                    <Icon className="w-7 h-7 text-cyan-400 flex-shrink-0" />
+                    <span className="text-white/85 text-[11px] sm:text-xs font-medium leading-snug max-w-[6.5rem] text-left">
                       {pillar.title}
-                    </p>
-                    <p className="text-white/45 text-[11px] leading-snug">{pillar.description}</p>
+                    </span>
                   </li>
                 )
               })}
             </ul>
-
-            <div className="inline-flex items-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-left">
-              <div className="w-9 h-9 rounded-full bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-4.5 h-4.5 text-cyan-400 w-[18px] h-[18px]" />
-              </div>
-              <div>
-                <p className="text-white font-semibold text-sm leading-tight">{t('locationCity')}</p>
-                <p className="text-white/50 text-xs leading-tight">{t('locationDescription')}</p>
-              </div>
-            </div>
           </div>
 
-          {/* ─── Coluna central: formulário ─── */}
+          {/* ─── Coluna direita: formulário ─── */}
           <div className="rounded-3xl bg-gradient-to-br from-[#0d1f3c] via-[#0f2a4a] to-[#0a1628] border border-blue-900/40 p-6 sm:p-8 shadow-2xl shadow-blue-900/40">
             {status === 'success' ? (
               <div className="flex flex-col items-center gap-4 py-10 text-center">
@@ -228,48 +210,6 @@ export function ContactSection() {
                 </button>
               </form>
             )}
-          </div>
-
-          {/* ─── Coluna direita: serviços + selos ─── */}
-          <div className="text-center lg:text-left">
-            <p className="text-white/70 font-semibold text-xs uppercase tracking-[0.15em] leading-relaxed mb-5">
-              {t('rightTitle')}
-            </p>
-
-            <ul className="flex flex-col gap-3 mb-6">
-              {services.map((service, i) => {
-                const Icon = SERVICE_ICONS[i] ?? Cloud
-                return (
-                  <li
-                    key={service.title}
-                    className="relative flex items-start gap-3.5 rounded-2xl bg-white/5 border border-white/10 p-4 text-left overflow-hidden"
-                  >
-                    <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
-                    <div className="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-bold text-sm mb-0.5">{service.title}</p>
-                      <p className="text-white/50 text-xs leading-relaxed">{service.description}</p>
-                    </div>
-                  </li>
-                )
-              })}
-            </ul>
-
-            <ul className="grid grid-cols-4 gap-2 border-t border-white/10 pt-5">
-              {seals.map((seal, i) => {
-                const Icon = SEAL_ICONS[i] ?? BadgeCheck
-                return (
-                  <li key={seal} className="flex flex-col items-center text-center gap-1.5">
-                    <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                      <Icon className="w-4 h-4 text-cyan-400" />
-                    </div>
-                    <p className="text-white/55 text-[10px] leading-tight">{seal}</p>
-                  </li>
-                )
-              })}
-            </ul>
           </div>
         </div>
       </div>

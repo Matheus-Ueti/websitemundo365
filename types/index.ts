@@ -168,12 +168,6 @@ export type PartnerBadgeProps = {
 
 export type ContactPillar = {
   title: string
-  description: string
-}
-
-export type ContactService = {
-  title: string
-  description: string
 }
 
 // ─── Marketplace ───────────────────────────────────────────────────────────────
