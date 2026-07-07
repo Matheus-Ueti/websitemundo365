@@ -6,9 +6,9 @@ resources:
 
 variables:
   # Nome da Service Connection que você vai criar no Azure DevOps (ver passo a passo abaixo)
-  dockerRegistryServiceConnection: 'mundo365-acr-service-connection'
-  imageRepository: 'mundo365-landing'
-  containerRegistry: 'mundo365-bhcsfuayc7dfbme4.azurecr.io'
+  dockerRegistryServiceConnection: 'acr-mundo365'
+  imageRepository: 'ws-mundo365'
+  containerRegistry: 'acrmundo365.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
