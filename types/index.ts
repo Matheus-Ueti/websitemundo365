@@ -164,6 +164,18 @@ export type PartnerBadgeProps = {
   label: string
 }
 
+// ─── Contato (colunas laterais) ────────────────────────────────────────────────
+
+export type ContactPillar = {
+  title: string
+  description: string
+}
+
+export type ContactService = {
+  title: string
+  description: string
+}
+
 // ─── Marketplace ───────────────────────────────────────────────────────────────
 
 export type MarketplaceFeature = {
