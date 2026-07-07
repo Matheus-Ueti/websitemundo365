@@ -98,16 +98,16 @@ export function ContactSection() {
 
             <span className="block w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-8 mx-auto lg:mx-0" />
 
-            <ul className="flex items-start justify-center lg:justify-start gap-4 sm:gap-6">
+            <ul className="grid grid-cols-3 gap-3">
               {pillars.map((pillar, i) => {
                 const Icon = PILLAR_ICONS[i] ?? ShieldCheck
                 return (
                   <li
                     key={pillar.title}
-                    className="flex items-center gap-2.5 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-white/15 [&:not(:first-child)]:pl-4 sm:[&:not(:first-child)]:pl-6"
+                    className="flex items-center gap-2 min-w-0 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-white/15 [&:not(:first-child)]:pl-3"
                   >
-                    <Icon className="w-7 h-7 text-cyan-400 flex-shrink-0" />
-                    <span className="text-white/85 text-[11px] sm:text-xs font-medium leading-snug max-w-[6.5rem] text-left">
+                    <Icon className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                    <span className="text-white/85 text-[11px] sm:text-xs font-medium leading-snug text-left break-words min-w-0">
                       {pillar.title}
                     </span>
                   </li>

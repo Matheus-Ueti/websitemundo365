@@ -34,17 +34,12 @@ export async function CertificationsSection() {
             <AwardVisual alt={t('awardImageAlt')} />
           </div>
 
-          <div className="min-w-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="min-w-0 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {competencies.map((item, index) => (
               <CompetencyCard
                 key={item.label}
                 {...item}
                 medalIndex={index}
-                className={
-                  index === competencies.length - 1 && competencies.length % 3 === 1
-                    ? 'lg:col-start-2'
-                    : undefined
-                }
               />
             ))}
           </div>

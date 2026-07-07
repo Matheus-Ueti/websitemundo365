@@ -29,9 +29,9 @@ export function CompetencyCard({
         <MedalIcon className="h-6 w-6 sm:h-7 sm:w-7" />
       </div>
 
-      <div className="min-w-0 flex-1">
-        <p className="text-[13px] sm:text-sm font-semibold text-gray-900 leading-snug">{label}</p>
-        <p className={`text-[11px] sm:text-xs font-medium mt-0.5 ${labelClass}`}>
+      <div className="min-w-0 flex-1 overflow-hidden">
+        <p className="text-[13px] sm:text-sm font-semibold text-gray-900 leading-snug break-words">{label}</p>
+        <p className={`text-[11px] sm:text-xs font-medium mt-0.5 break-words ${labelClass}`}>
           Solutions Partner
         </p>
       </div>
