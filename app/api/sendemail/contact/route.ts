@@ -1,9 +1,8 @@
-import { google } from 'googleapis'
 import { NextResponse } from 'next/server'
 
 const FIELD_LIMITS = { nome: 100, telefone: 30, email: 254, mensagem: 2000 }
 
-// Removes CR/LF to prevent MIME header injection
+// Removes CR/LF to prevent header injection
 function sanitizeHeader(value: string): string {
   return value.replace(/[\r\n\0]/g, '')
 }
@@ -18,10 +17,8 @@ function escapeHtml(value: string): string {
     .replace(/'/g, '&#x27;')
 }
 
-function buildEmailRaw(from: string, to: string, nome: string, telefone: string, email: string, mensagem: string): string {
-  const subject = `Novo contato pelo site — ${nome}`
-
-  const html = `
+function buildEmailHtml(nome: string, telefone: string, email: string, mensagem: string): string {
+  return `
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head><meta charset="UTF-8" /></head>
@@ -56,23 +53,31 @@ function buildEmailRaw(from: string, to: string, nome: string, telefone: string,
   </div>
 </body>
 </html>`
+}
 
-  const messageParts = [
-    `From: Mundo365 Site <${from}>`,
-    `To: ${to}`,
-    `Reply-To: ${sanitizeHeader(email)}`,
-    `Subject: =?UTF-8?B?${Buffer.from(subject).toString('base64')}?=`,
-    'MIME-Version: 1.0',
-    'Content-Type: text/html; charset=UTF-8',
-    '',
-    html,
-  ]
+// Obtains an app-only access token via the OAuth2 client credentials flow
+async function getAccessToken(): Promise<string> {
+  const tenantId = process.env.GRAPH_TENANT_ID!
+  const params = new URLSearchParams({
+    client_id: process.env.GRAPH_CLIENT_ID!,
+    client_secret: process.env.GRAPH_CLIENT_SECRET!,
+    scope: 'https://graph.microsoft.com/.default',
+    grant_type: 'client_credentials',
+  })
 
-  return Buffer.from(messageParts.join('\r\n'))
-    .toString('base64')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '')
+  const res = await fetch(`https://login.microsoftonline.com/${tenantId}/oauth2/v2.0/token`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: params.toString(),
+  })
+
+  if (!res.ok) {
+    const detail = await res.text()
+    throw new Error(`Falha ao obter token da Microsoft (${res.status}): ${detail}`)
+  }
+
+  const data = await res.json()
+  return data.access_token as string
 }
 
 export async function POST(req: Request) {
@@ -101,35 +106,42 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'E-mail inválido.' }, { status: 400 })
     }
 
-    const oauth2Client = new google.auth.OAuth2(
-      process.env.GMAIL_CLIENT_ID,
-      process.env.GMAIL_CLIENT_SECRET,
-      'https://developers.google.com/oauthplayground',
-    )
+    const accessToken = await getAccessToken()
 
-    oauth2Client.setCredentials({
-      refresh_token: process.env.GMAIL_REFRESH_TOKEN,
+    const from = process.env.GRAPH_FROM!
+    const to = process.env.GRAPH_TO!
+
+    const message = {
+      message: {
+        subject: `Novo contato pelo site — ${sanitizeHeader(nome.trim())}`,
+        body: {
+          contentType: 'HTML',
+          content: buildEmailHtml(nome.trim(), telefone.trim(), email.trim(), mensagem.trim()),
+        },
+        toRecipients: [{ emailAddress: { address: to } }],
+        replyTo: [{ emailAddress: { address: sanitizeHeader(email.trim()) } }],
+      },
+      saveToSentItems: true,
+    }
+
+    const res = await fetch(`https://graph.microsoft.com/v1.0/users/${encodeURIComponent(from)}/sendMail`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(message),
     })
 
-    const gmail = google.gmail({ version: 'v1', auth: oauth2Client })
-
-    const raw = buildEmailRaw(
-      process.env.GMAIL_FROM!,
-      process.env.GMAIL_TO!,
-      nome.trim(),
-      telefone.trim(),
-      email.trim(),
-      mensagem.trim(),
-    )
-
-    await gmail.users.messages.send({
-      userId: 'me',
-      requestBody: { raw },
-    })
+    // Graph sendMail returns 202 Accepted on success (empty body)
+    if (!res.ok) {
+      const detail = await res.text()
+      throw new Error(`Graph sendMail falhou (${res.status}): ${detail}`)
+    }
 
     return NextResponse.json({ ok: true })
   } catch (err) {
-    console.error('[contact/route] Gmail API error:', err)
+    console.error('[contact/route] Microsoft Graph API error:', err)
     return NextResponse.json({ error: 'Erro ao enviar mensagem. Tente novamente.' }, { status: 500 })
   }
 }
