@@ -137,7 +137,7 @@ export function SolutionsSection() {
           </div>
 
           <div className="hidden sm:flex justify-center">
-            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1 flex-wrap justify-center max-w-4xl">
+            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1 flex-wrap justify-center max-w-full">
               {solutions.map((solution) => {
                 const isActive = activeTab === solution.id
                 const tabClass = isActive
