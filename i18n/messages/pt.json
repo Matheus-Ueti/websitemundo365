@@ -167,6 +167,16 @@
         "subDescription": "Segurança, conformidade e gestão em um único ecossistema — tecnologia alinhada aos objetivos estratégicos do negócio.",
         "buttonText": "Fale com um especialista",
         "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "licensing",
+        "tabTitle": "Licenciamento",
+        "title": "Licenciamento",
+        "headline": "Licenciamento Microsoft sob medida para o seu negócio.",
+        "description": "As soluções de licenciamento Microsoft ajudam sua empresa a aumentar a produtividade, fortalecer a segurança dos dados e aproveitar o potencial da Inteligência Artificial.",
+        "subDescription": "Com a licença ideal, sua equipe trabalha de forma mais eficiente, colaborativa e protegida, acelerando resultados e a transformação digital do negócio.",
+        "buttonText": "Fale sobre licenciamento",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=700&fit=crop"
       }
     ]
   },
