@@ -187,7 +187,7 @@
       { "value": 25, "label": "horas trabalhadas em projetos", "prefix": "+", "suffix": " mil" },
       { "value": 250, "label": "Caixas Migradas para Microsoft", "prefix": "+", "suffix": " mil" },
       { "value": 500, "label": "Projetos Executados", "prefix": "+", "suffix": "" },
-      { "value": 2500, "label": "clientes ativos", "prefix": "", "suffix": "" }
+      { "value": 2500, "label": "clientes ativos", "prefix": "+", "suffix": "" }
     ]
   },
   "partnerBanner": {

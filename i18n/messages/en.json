@@ -173,7 +173,7 @@
       { "value": 25, "label": "hours worked on projects", "prefix": "+", "suffix": "k" },
       { "value": 250, "label": "mailboxes migrated to Microsoft", "prefix": "+", "suffix": "k" },
       { "value": 500, "label": "projects delivered", "prefix": "+", "suffix": "" },
-      { "value": 2500, "label": "active clients", "prefix": "", "suffix": "" }
+      { "value": 2500, "label": "active clients", "prefix": "+", "suffix": "" }
     ]
   },
   "partnerBanner": {
