@@ -54,6 +54,10 @@
       {
         "headline": "Da infraestrutura à inteligência artificial.",
         "subline": "Soluções completas para acelerar o crescimento do seu negócio."
+      },
+      {
+        "headline": "Licenciamento Microsoft sob medida para o seu negócio.",
+        "subline": "Mais produtividade, segurança de dados e todo o potencial da Inteligência Artificial."
       }
     ]
   },
@@ -173,7 +177,7 @@
       { "value": 25, "label": "horas trabalhadas em projetos", "prefix": "+", "suffix": " mil" },
       { "value": 250, "label": "Caixas Migradas para Microsoft", "prefix": "+", "suffix": " mil" },
       { "value": 500, "label": "Projetos Executados", "prefix": "+", "suffix": "" },
-      { "value": 250, "label": "clientes ativos", "prefix": "", "suffix": "" }
+      { "value": 2500, "label": "clientes ativos", "prefix": "", "suffix": "" }
     ]
   },
   "partnerBanner": {
