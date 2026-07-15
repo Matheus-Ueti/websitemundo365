@@ -2,11 +2,13 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Instagram, Linkedin, Menu, X } from 'lucide-react'
+import { Instagram, Linkedin, Menu, Newspaper, X } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/i18n/components/language-switcher'
-import { SECTION_IDS, sectionHref } from '@/lib/constants/sections'
+import { SECTION_IDS, homeSectionHref } from '@/lib/constants/sections'
+import { ROUTES } from '@/lib/constants/routes'
+import type { LucideIcon } from '@/types'
 
 const MOBILE_MENU_ID = 'mobile-nav-menu'
 
@@ -15,12 +17,13 @@ export function Header() {
   const t = useTranslations('nav')
   const tCommon = useTranslations('common')
 
-  const mainNavItems = [
-    { label: t('home'), href: sectionHref(SECTION_IDS.home) },
-    { label: t('about'), href: sectionHref(SECTION_IDS.about) },
-    { label: t('solutions'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t('marketplace'), href: sectionHref(SECTION_IDS.marketplace) },
-    { label: t('contact'), href: sectionHref(SECTION_IDS.contact) },
+  const mainNavItems: { label: string; href: string; icon?: LucideIcon }[] = [
+    { label: t('home'), href: homeSectionHref(SECTION_IDS.home) },
+    { label: t('about'), href: homeSectionHref(SECTION_IDS.about) },
+    { label: t('solutions'), href: homeSectionHref(SECTION_IDS.solutions) },
+    { label: t('marketplace'), href: homeSectionHref(SECTION_IDS.marketplace) },
+    { label: t('contact'), href: homeSectionHref(SECTION_IDS.contact) },
+    { label: t('news'), href: ROUTES.news, icon: Newspaper },
   ]
 
   return (
@@ -40,13 +43,14 @@ export function Header() {
 
           <nav className="hidden md:flex items-center" aria-label={tCommon('navMain')}>
             <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm rounded-full px-2 py-1.5 border border-white/20">
-              {mainNavItems.map((item) => (
+              {mainNavItems.map(({ label, href, icon: Icon }) => (
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-white hover:bg-white/10 transition-colors text-sm font-medium px-4 py-1.5 rounded-full"
+                  key={href}
+                  href={href}
+                  className="inline-flex items-center gap-1.5 text-white hover:bg-white/10 transition-colors text-sm font-medium px-4 py-1.5 rounded-full"
                 >
-                  {item.label}
+                  {Icon && <Icon className="h-4 w-4" />}
+                  {label}
                 </Link>
               ))}
             </div>
@@ -95,14 +99,15 @@ export function Header() {
             className="md:hidden py-4 border-t border-white/20 bg-purple-900/90 backdrop-blur-md rounded-b-2xl"
           >
             <nav className="flex flex-col gap-2" aria-label={tCommon('navMain')}>
-              {mainNavItems.map((item) => (
+              {mainNavItems.map(({ label, href, icon: Icon }) => (
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-white hover:bg-white/10 transition-colors text-sm font-medium py-3 px-4 rounded-lg"
+                  key={href}
+                  href={href}
+                  className="inline-flex items-center gap-2 text-white hover:bg-white/10 transition-colors text-sm font-medium py-3 px-4 rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
+                  {Icon && <Icon className="h-4 w-4" />}
+                  {label}
                 </Link>
               ))}
             </nav>

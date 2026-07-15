@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Estados Unidos">
+  <rect width="640" height="480" fill="#ffffff" />
+  <g fill="#b22234">
+    <rect y="0" width="640" height="36.9" />
+    <rect y="73.8" width="640" height="36.9" />
+    <rect y="147.7" width="640" height="36.9" />
+    <rect y="221.5" width="640" height="36.9" />
+    <rect y="295.4" width="640" height="36.9" />
+    <rect y="369.2" width="640" height="36.9" />
+    <rect y="443.1" width="640" height="36.9" />
+  </g>
+  <rect width="272" height="258.5" fill="#3c3b6e" />
+  <g fill="#ffffff">
+    <g id="us-row">
+      <circle cx="26" cy="24" r="9" />
+      <circle cx="76" cy="24" r="9" />
+      <circle cx="126" cy="24" r="9" />
+      <circle cx="176" cy="24" r="9" />
+      <circle cx="226" cy="24" r="9" />
+    </g>
+    <use href="#us-row" y="52" x="25" />
+    <use href="#us-row" y="104" />
+    <use href="#us-row" y="156" x="25" />
+    <use href="#us-row" y="208" />
+  </g>
+</svg>

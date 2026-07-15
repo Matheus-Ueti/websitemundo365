@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Brasil">
+  <defs>
+    <clipPath id="br-globe">
+      <circle cx="320" cy="240" r="92" />
+    </clipPath>
+  </defs>
+  <rect width="640" height="480" fill="#009b3a" />
+  <polygon points="320,58 602,240 320,422 38,240" fill="#fedf00" />
+  <circle cx="320" cy="240" r="92" fill="#002776" />
+  <g clip-path="url(#br-globe)">
+    <path d="M214 276 Q320 196 428 252" fill="none" stroke="#ffffff" stroke-width="26" />
+  </g>
+  <g fill="#ffffff">
+    <circle cx="288" cy="198" r="4" />
+    <circle cx="330" cy="188" r="3" />
+    <circle cx="360" cy="210" r="3.5" />
+    <circle cx="272" cy="228" r="3" />
+    <circle cx="300" cy="298" r="3.5" />
+    <circle cx="356" cy="286" r="3" />
+    <circle cx="390" cy="264" r="2.5" />
+  </g>
+</svg>

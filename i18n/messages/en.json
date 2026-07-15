@@ -18,7 +18,219 @@
     "about": "About us",
     "solutions": "Solutions",
     "marketplace": "Marketplace",
-    "contact": "Contact"
+    "contact": "Contact",
+    "news": "News"
+  },
+  "news": {
+    "metaTitle": "News",
+    "metaDescription": "Mundo365 news, Microsoft ecosystem events and the team's award trips around the world.",
+    "pageTitle": "Mundo365 news",
+    "featuredTitle": "Highlights",
+    "featured": [
+      {
+        "id": "phishing-ia-m365",
+        "category": "Cybersecurity",
+        "date": "Jul 12, 2026",
+        "title": "New phishing scam uses AI to steal Microsoft 365 tokens",
+        "excerpt": "The malware targets corporate finance teams, intercepts messages about transactions and reuses valid sessions to bypass MFA."
+      },
+      {
+        "id": "mundo-conecta-2026",
+        "category": "Event",
+        "date": "Jun 28, 2026",
+        "title": "Mundo Conecta Microsoft Day | 2026",
+        "excerpt": "A full day on AI, Cybersecurity and Data with customers and partners, live from the Mundo365 stage."
+      },
+      {
+        "id": "copilot-empresas",
+        "category": "Artificial Intelligence",
+        "date": "Jun 15, 2026",
+        "title": "Copilot day to day: what changes for your teams",
+        "excerpt": "How companies are adopting Microsoft 365 Copilot without giving up governance and data protection."
+      }
+    ],
+    "movements": {
+      "title": "Latest moves",
+      "subtitle": "Take a look at some of the latest moves from Mundo365",
+      "countries": [
+        {
+          "id": "br",
+          "name": "Brazil",
+          "eyebrow": "São Paulo · Brazil",
+          "title": "Where it all starts",
+          "description": "The Mundo365 headquarters is the starting point of our achievements: this is where the Cloud, Cybersecurity and AI teams build the results that take us around the world.",
+          "entries": [
+            {
+              "id": "br-1",
+              "category": "Team",
+              "date": "May 2026",
+              "title": "Mundo365 annual convention",
+              "excerpt": "Replace this text with the story of the event in Brazil and add the matching photos."
+            },
+            {
+              "id": "br-2",
+              "category": "Recognition",
+              "date": "Apr 2026",
+              "title": "Quarterly targets exceeded",
+              "excerpt": "Placeholder to describe the award and the highlights of the period."
+            },
+            {
+              "id": "br-3",
+              "category": "Behind the scenes",
+              "date": "Mar 2026",
+              "title": "Our people",
+              "excerpt": "Placeholder for behind-the-scenes moments and team pictures."
+            }
+          ]
+        },
+        {
+          "id": "us",
+          "name": "USA",
+          "eyebrow": "United States",
+          "title": "Award trip · United States",
+          "description": "Tell here what happened on the trip to the United States: who was awarded, what the team visited and the best moments.",
+          "entries": [
+            {
+              "id": "us-1",
+              "category": "Trip",
+              "date": "Feb 2026",
+              "title": "Arrival and first days",
+              "excerpt": "Replace this text with the story of the trip and add the matching photos."
+            },
+            {
+              "id": "us-2",
+              "category": "Microsoft ecosystem",
+              "date": "Feb 2026",
+              "title": "Visit to the Microsoft campus",
+              "excerpt": "Placeholder to describe the visit and what the team learned."
+            },
+            {
+              "id": "us-3",
+              "category": "Awards",
+              "date": "Feb 2026",
+              "title": "Awards night",
+              "excerpt": "Placeholder for the celebration and pictures of the winners."
+            }
+          ]
+        },
+        {
+          "id": "es",
+          "name": "Spain",
+          "eyebrow": "Spain",
+          "title": "Award trip · Spain",
+          "description": "Tell here what happened on the trip to Spain: who was awarded, what the team visited and the best moments.",
+          "entries": [
+            {
+              "id": "es-1",
+              "category": "Trip",
+              "date": "Nov 2025",
+              "title": "Madrid and Barcelona",
+              "excerpt": "Replace this text with the story of the trip and add the matching photos."
+            },
+            {
+              "id": "es-2",
+              "category": "Culture",
+              "date": "Nov 2025",
+              "title": "The team's itinerary",
+              "excerpt": "Placeholder for the tours and the team's experience."
+            },
+            {
+              "id": "es-3",
+              "category": "Awards",
+              "date": "Nov 2025",
+              "title": "Celebrating the results",
+              "excerpt": "Placeholder for the celebration and pictures of the winners."
+            }
+          ]
+        },
+        {
+          "id": "pe",
+          "name": "Peru",
+          "eyebrow": "Peru",
+          "title": "Award trip · Peru",
+          "description": "Tell here what happened on the trip to Peru: who was awarded, what the team visited and the best moments.",
+          "entries": [
+            {
+              "id": "pe-1",
+              "category": "Trip",
+              "date": "Aug 2025",
+              "title": "Lima and Machu Picchu",
+              "excerpt": "Replace this text with the story of the trip and add the matching photos."
+            },
+            {
+              "id": "pe-2",
+              "category": "Culture",
+              "date": "Aug 2025",
+              "title": "The team's itinerary",
+              "excerpt": "Placeholder for the tours and the team's experience."
+            },
+            {
+              "id": "pe-3",
+              "category": "Awards",
+              "date": "Aug 2025",
+              "title": "Celebrating the results",
+              "excerpt": "Placeholder for the celebration and pictures of the winners."
+            }
+          ]
+        },
+        {
+          "id": "mx",
+          "name": "Mexico",
+          "eyebrow": "Mexico",
+          "title": "Award trip · Mexico",
+          "description": "Tell here what happened on the trip to Mexico: who was awarded, what the team visited and the best moments.",
+          "entries": [
+            {
+              "id": "mx-1",
+              "category": "Trip",
+              "date": "May 2025",
+              "title": "Mexico City and Cancún",
+              "excerpt": "Replace this text with the story of the trip and add the matching photos."
+            },
+            {
+              "id": "mx-2",
+              "category": "Culture",
+              "date": "May 2025",
+              "title": "The team's itinerary",
+              "excerpt": "Placeholder for the tours and the team's experience."
+            },
+            {
+              "id": "mx-3",
+              "category": "Awards",
+              "date": "May 2025",
+              "title": "Celebrating the results",
+              "excerpt": "Placeholder for the celebration and pictures of the winners."
+            }
+          ]
+        }
+      ]
+    },
+    "more": {
+      "title": "More news",
+      "items": [
+        {
+          "id": "more-1",
+          "category": "Cloud",
+          "date": "Jun 2, 2026",
+          "title": "Migrating to Azure without stopping operations",
+          "excerpt": "Placeholder for the article teaser. Replace it with the real content and add the image."
+        },
+        {
+          "id": "more-2",
+          "category": "Cybersecurity",
+          "date": "May 20, 2026",
+          "title": "MFA best practices for distributed teams",
+          "excerpt": "Placeholder for the article teaser. Replace it with the real content and add the image."
+        },
+        {
+          "id": "more-3",
+          "category": "Licensing",
+          "date": "May 8, 2026",
+          "title": "How to review your Microsoft licensing and cut costs",
+          "excerpt": "Placeholder for the article teaser. Replace it with the real content and add the image."
+        }
+      ]
+    }
   },
   "footer": {
     "contactTitle": "Contact us",

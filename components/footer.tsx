@@ -2,7 +2,8 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Phone, Mail, MapPin } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
-import { SECTION_IDS, sectionHref } from '@/lib/constants/sections'
+import { SECTION_IDS, homeSectionHref } from '@/lib/constants/sections'
+import { ROUTES } from '@/lib/constants/routes'
 import { socialLinks } from '@/lib/constants/social'
 import { siteConfig } from '@/lib/site'
 
@@ -14,19 +15,20 @@ export async function Footer() {
   const { contact } = siteConfig
 
   const mainNavItems = [
-    { label: tNav('home'), href: sectionHref(SECTION_IDS.home) },
-    { label: tNav('about'), href: sectionHref(SECTION_IDS.about) },
-    { label: tNav('solutions'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: tNav('marketplace'), href: sectionHref(SECTION_IDS.marketplace) },
-    { label: tNav('contact'), href: sectionHref(SECTION_IDS.contact) },
+    { label: tNav('home'), href: homeSectionHref(SECTION_IDS.home) },
+    { label: tNav('about'), href: homeSectionHref(SECTION_IDS.about) },
+    { label: tNav('solutions'), href: homeSectionHref(SECTION_IDS.solutions) },
+    { label: tNav('marketplace'), href: homeSectionHref(SECTION_IDS.marketplace) },
+    { label: tNav('contact'), href: homeSectionHref(SECTION_IDS.contact) },
+    { label: tNav('news'), href: ROUTES.news },
   ]
 
   const serviceLinks = [
-    { label: t('services.cybersecurity'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t('services.cloud'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t('services.ai'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t('services.modernWorkplace'), href: sectionHref(SECTION_IDS.solutions) },
-    { label: t('services.governance'), href: sectionHref(SECTION_IDS.solutions) },
+    { label: t('services.cybersecurity'), href: homeSectionHref(SECTION_IDS.solutions) },
+    { label: t('services.cloud'), href: homeSectionHref(SECTION_IDS.solutions) },
+    { label: t('services.ai'), href: homeSectionHref(SECTION_IDS.solutions) },
+    { label: t('services.modernWorkplace'), href: homeSectionHref(SECTION_IDS.solutions) },
+    { label: t('services.governance'), href: homeSectionHref(SECTION_IDS.solutions) },
   ]
 
   return (
@@ -133,13 +135,13 @@ export async function Footer() {
             </p>
             <div className="flex gap-6">
               <Link
-                href={sectionHref(SECTION_IDS.contact)}
+                href={homeSectionHref(SECTION_IDS.contact)}
                 className="hover:text-slate-300 transition-colors"
               >
                 {t('privacy')}
               </Link>
               <Link
-                href={sectionHref(SECTION_IDS.contact)}
+                href={homeSectionHref(SECTION_IDS.contact)}
                 className="hover:text-slate-300 transition-colors"
               >
                 {t('terms')}

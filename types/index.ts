@@ -24,6 +24,15 @@ export const SECTION_IDS = {
 
 export type SectionId = (typeof SECTION_IDS)[keyof typeof SECTION_IDS]
 
+// ─── Navegação (páginas) ───────────────────────────────────────────────────────
+
+export const ROUTES = {
+  home: '/',
+  news: '/noticias',
+} as const
+
+export type Route = (typeof ROUTES)[keyof typeof ROUTES]
+
 // ─── Primitivos compartilhados ─────────────────────────────────────────────────
 
 export type LucideIcon = React.ComponentType<{ className?: string }>
@@ -188,6 +197,51 @@ export type MarketplaceFeatureItem = MarketplaceFeature
 export type MarketplaceFeatureGroup = {
   label: string
   items: MarketplaceFeatureItem[]
+}
+
+// ─── Notícias ──────────────────────────────────────────────────────────────────
+
+export type NewsArticle = {
+  id: string
+  category: string
+  date: string
+  title: string
+  excerpt: string
+  /** Ausente enquanto a arte não existe: o card renderiza um placeholder. */
+  image?: string
+  imageAlt?: string
+  href?: string
+}
+
+export const COUNTRY_CODES = ['br', 'us', 'es', 'pe', 'mx'] as const
+export type CountryCode = (typeof COUNTRY_CODES)[number]
+
+/** Uma viagem de premiação: o que aconteceu no país. */
+export type CountryMovement = {
+  id: CountryCode
+  name: string
+  eyebrow: string
+  title: string
+  description: string
+  entries: NewsArticle[]
+}
+
+export type FlagIconProps = {
+  code: CountryCode
+  alt: string
+  className?: string
+}
+
+export type NewsHeadingProps = {
+  title: string
+  subtitle?: string
+  className?: string
+}
+
+export type NewsCardProps = {
+  article: NewsArticle
+  /** `featured` ocupa a coluna alta do grid e usa tipografia maior. */
+  variant?: 'featured' | 'compact'
 }
 
 // ─── Hooks ─────────────────────────────────────────────────────────────────────

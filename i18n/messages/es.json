@@ -18,7 +18,219 @@
     "about": "Sobre nosotros",
     "solutions": "Soluciones",
     "marketplace": "Marketplace",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "news": "Noticias"
+  },
+  "news": {
+    "metaTitle": "Noticias",
+    "metaDescription": "Novedades de Mundo365, eventos del ecosistema Microsoft y los viajes de premiación del equipo por el mundo.",
+    "pageTitle": "Noticias de Mundo365",
+    "featuredTitle": "Destacados",
+    "featured": [
+      {
+        "id": "phishing-ia-m365",
+        "category": "Cybersecurity",
+        "date": "12 Jul 2026",
+        "title": "Nueva estafa de phishing usa IA para robar tokens de Microsoft 365",
+        "excerpt": "El software malicioso apunta al área financiera de las empresas, intercepta mensajes sobre transacciones y reutiliza sesiones válidas para sortear el MFA."
+      },
+      {
+        "id": "mundo-conecta-2026",
+        "category": "Evento",
+        "date": "28 Jun 2026",
+        "title": "Mundo Conecta Microsoft Day | 2026",
+        "excerpt": "Un día completo sobre IA, Cybersecurity y Datos con clientes y socios, en vivo desde el escenario de Mundo365."
+      },
+      {
+        "id": "copilot-empresas",
+        "category": "Inteligencia Artificial",
+        "date": "15 Jun 2026",
+        "title": "Copilot en el día a día: qué cambia para los equipos",
+        "excerpt": "Cómo las empresas están adoptando Microsoft 365 Copilot sin renunciar a la gobernanza y la protección de datos."
+      }
+    ],
+    "movements": {
+      "title": "Ultimos movimientos",
+      "subtitle": "Conozca algunos de los ultimos movimientos de Mundo365",
+      "countries": [
+        {
+          "id": "br",
+          "name": "Brasil",
+          "eyebrow": "São Paulo · Brasil",
+          "title": "Donde todo empieza",
+          "description": "La sede de Mundo365 es el punto de partida de nuestros logros: aquí los equipos de Cloud, Cybersecurity e IA construyen los resultados que nos llevan por el mundo.",
+          "entries": [
+            {
+              "id": "br-1",
+              "category": "Equipo",
+              "date": "May 2026",
+              "title": "Convención anual de Mundo365",
+              "excerpt": "Reemplace este texto por el relato del evento en Brasil y agregue las fotos correspondientes."
+            },
+            {
+              "id": "br-2",
+              "category": "Reconocimiento",
+              "date": "Abr 2026",
+              "title": "Metas del trimestre superadas",
+              "excerpt": "Espacio reservado para describir la premiación y los destacados del período."
+            },
+            {
+              "id": "br-3",
+              "category": "Detrás de escena",
+              "date": "Mar 2026",
+              "title": "Nuestra gente",
+              "excerpt": "Espacio reservado para el detrás de escena del equipo y las imágenes."
+            }
+          ]
+        },
+        {
+          "id": "us",
+          "name": "USA",
+          "eyebrow": "Estados Unidos",
+          "title": "Viaje de premiación · Estados Unidos",
+          "description": "Cuente aquí lo que pasó en el viaje a Estados Unidos: quién fue premiado, qué visitó el equipo y los mejores momentos.",
+          "entries": [
+            {
+              "id": "us-1",
+              "category": "Viaje",
+              "date": "Feb 2026",
+              "title": "Llegada y primeros días",
+              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
+            },
+            {
+              "id": "us-2",
+              "category": "Ecosistema Microsoft",
+              "date": "Feb 2026",
+              "title": "Visita al campus de Microsoft",
+              "excerpt": "Espacio reservado para describir la visita y los aprendizajes del equipo."
+            },
+            {
+              "id": "us-3",
+              "category": "Premiación",
+              "date": "Feb 2026",
+              "title": "Noche de premiación",
+              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
+            }
+          ]
+        },
+        {
+          "id": "es",
+          "name": "España",
+          "eyebrow": "España",
+          "title": "Viaje de premiación · España",
+          "description": "Cuente aquí lo que pasó en el viaje a España: quién fue premiado, qué visitó el equipo y los mejores momentos.",
+          "entries": [
+            {
+              "id": "es-1",
+              "category": "Viaje",
+              "date": "Nov 2025",
+              "title": "Madrid y Barcelona",
+              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
+            },
+            {
+              "id": "es-2",
+              "category": "Cultura",
+              "date": "Nov 2025",
+              "title": "El itinerario del equipo",
+              "excerpt": "Espacio reservado para los paseos y la experiencia del equipo."
+            },
+            {
+              "id": "es-3",
+              "category": "Premiación",
+              "date": "Nov 2025",
+              "title": "Celebración de los resultados",
+              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
+            }
+          ]
+        },
+        {
+          "id": "pe",
+          "name": "Perú",
+          "eyebrow": "Perú",
+          "title": "Viaje de premiación · Perú",
+          "description": "Cuente aquí lo que pasó en el viaje a Perú: quién fue premiado, qué visitó el equipo y los mejores momentos.",
+          "entries": [
+            {
+              "id": "pe-1",
+              "category": "Viaje",
+              "date": "Ago 2025",
+              "title": "Lima y Machu Picchu",
+              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
+            },
+            {
+              "id": "pe-2",
+              "category": "Cultura",
+              "date": "Ago 2025",
+              "title": "El itinerario del equipo",
+              "excerpt": "Espacio reservado para los paseos y la experiencia del equipo."
+            },
+            {
+              "id": "pe-3",
+              "category": "Premiación",
+              "date": "Ago 2025",
+              "title": "Celebración de los resultados",
+              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
+            }
+          ]
+        },
+        {
+          "id": "mx",
+          "name": "México",
+          "eyebrow": "México",
+          "title": "Viaje de premiación · México",
+          "description": "Cuente aquí lo que pasó en el viaje a México: quién fue premiado, qué visitó el equipo y los mejores momentos.",
+          "entries": [
+            {
+              "id": "mx-1",
+              "category": "Viaje",
+              "date": "May 2025",
+              "title": "Ciudad de México y Cancún",
+              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
+            },
+            {
+              "id": "mx-2",
+              "category": "Cultura",
+              "date": "May 2025",
+              "title": "El itinerario del equipo",
+              "excerpt": "Espacio reservado para los paseos y la experiencia del equipo."
+            },
+            {
+              "id": "mx-3",
+              "category": "Premiación",
+              "date": "May 2025",
+              "title": "Celebración de los resultados",
+              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
+            }
+          ]
+        }
+      ]
+    },
+    "more": {
+      "title": "Más noticias",
+      "items": [
+        {
+          "id": "more-1",
+          "category": "Cloud",
+          "date": "02 Jun 2026",
+          "title": "Migración a Azure sin detener la operación",
+          "excerpt": "Espacio reservado para el resumen de la noticia. Reemplácelo por el contenido real y agregue la imagen."
+        },
+        {
+          "id": "more-2",
+          "category": "Cybersecurity",
+          "date": "20 May 2026",
+          "title": "Buenas prácticas de MFA para equipos distribuidos",
+          "excerpt": "Espacio reservado para el resumen de la noticia. Reemplácelo por el contenido real y agregue la imagen."
+        },
+        {
+          "id": "more-3",
+          "category": "Licenciamiento",
+          "date": "08 May 2026",
+          "title": "Cómo revisar su licenciamiento Microsoft y reducir costos",
+          "excerpt": "Espacio reservado para el resumen de la noticia. Reemplácelo por el contenido real y agregue la imagen."
+        }
+      ]
+    }
   },
   "footer": {
     "contactTitle": "Contáctenos",
