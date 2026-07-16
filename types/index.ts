@@ -93,9 +93,21 @@ export type Solution = {
   image: string
 }
 
-export type HeroSlide = {
-  headline: string
-  subline?: string
+// ─── Hero (carrossel de banners) ───────────────────────────────────────────────
+
+export const HERO_BANNER_IDS = ['awards', 'copilot', 'trophy'] as const
+export type HeroBannerId = (typeof HERO_BANNER_IDS)[number]
+
+export type HeroBanner = {
+  id: HeroBannerId
+  alt: string
+}
+
+export type HeroBannerCarouselProps = {
+  banners: HeroBanner[]
+  /** Rótulo acessível do grupo de indicadores (bolinhas). */
+  carouselLabel: string
+  slideLabel: string
 }
 
 // ─── Depoimentos ───────────────────────────────────────────────────────────────

@@ -1,19 +1,16 @@
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import { HeroHeadlines } from '@/components/hero-headlines'
-import { HeroVisualDesktop } from '@/components/hero-visual-desktop'
-import { heroLottieLayout } from '@/lib/constants/hero-lottie'
+import { HeroBannerCarousel } from '@/components/hero-banner-carousel'
 import { SECTION_IDS } from '@/lib/constants/sections'
-import type { HeroSlide } from '@/types'
+import type { HeroBanner } from '@/types'
 
 export async function HeroSection() {
   const t = await getTranslations('hero')
-  const slides = t.raw('slides') as HeroSlide[]
+  const banners = t.raw('banners') as HeroBanner[]
 
   return (
     <section
       id={SECTION_IDS.home}
-      className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#6b21a8] via-[#7c3aed] to-[#06b6d4] pt-20 pb-8 lg:pb-0"
+      className="relative overflow-hidden bg-gradient-to-br from-[#6b21a8] via-[#7c3aed] to-[#06b6d4] pt-20"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -25,35 +22,14 @@ export async function HeroSection() {
         />
         <div className="absolute top-20 left-20 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-40 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-pink-500/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div className={heroLottieLayout.desktopWrapper}>
-            <div className={heroLottieLayout.desktopInner}>
-              <HeroVisualDesktop />
-            </div>
-          </div>
-
-          <div className="text-center lg:text-right flex flex-col items-center lg:items-end lg:col-start-2">
-            <div className="relative mb-6">
-              <Image
-                src="/azure-logo.svg"
-                alt="Microsoft Azure"
-                width={200}
-                height={200}
-                className="drop-shadow-2xl w-32 h-32 sm:w-40 sm:h-40 lg:w-[180px] lg:h-[180px]"
-              />
-            </div>
-
-            <p className="text-sm sm:text-base font-medium text-cyan-200/90 mb-4 tracking-wide uppercase">
-              {t('brandLine')}
-            </p>
-
-            <HeroHeadlines slides={slides} />
-          </div>
-        </div>
+      <div className="relative w-full">
+        <HeroBannerCarousel
+          banners={banners}
+          carouselLabel={t('carouselLabel')}
+          slideLabel={t('slideLabel')}
+        />
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 z-10 leading-[0] pointer-events-none">

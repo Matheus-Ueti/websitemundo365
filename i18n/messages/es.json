@@ -207,29 +207,8 @@
     },
     "more": {
       "title": "Más noticias",
-      "items": [
-        {
-          "id": "more-1",
-          "category": "Cloud",
-          "date": "02 Jun 2026",
-          "title": "Migración a Azure sin detener la operación",
-          "excerpt": "Espacio reservado para el resumen de la noticia. Reemplácelo por el contenido real y agregue la imagen."
-        },
-        {
-          "id": "more-2",
-          "category": "Cybersecurity",
-          "date": "20 May 2026",
-          "title": "Buenas prácticas de MFA para equipos distribuidos",
-          "excerpt": "Espacio reservado para el resumen de la noticia. Reemplácelo por el contenido real y agregue la imagen."
-        },
-        {
-          "id": "more-3",
-          "category": "Licenciamiento",
-          "date": "08 May 2026",
-          "title": "Cómo revisar su licenciamiento Microsoft y reducir costos",
-          "excerpt": "Espacio reservado para el resumen de la noticia. Reemplácelo por el contenido real y agregue la imagen."
-        }
-      ]
+      "subtitle": "Directamente desde Microsoft News Center Brasil",
+      "fallbackCategory": "Seguridad"
     }
   },
   "footer": {
@@ -249,23 +228,20 @@
     }
   },
   "hero": {
-    "brandLine": "Mundo365 · Socio Microsoft",
-    "slides": [
+    "carouselLabel": "Destacados",
+    "slideLabel": "Destacado",
+    "banners": [
       {
-        "headline": "Tecnología que protege. Conecta. Transforma.",
-        "subline": "Impulsamos negocios a través de Cloud, Cybersecurity e Inteligencia Artificial."
+        "id": "awards",
+        "alt": "Top Growth Awards 2026 — Mundo365 conquista 5 premios en una sola noche: Business Growth Excellence, NCA Excellence, Ecosystem Enabler, Azure Scale Partner y Copilot Frontier Excellence."
       },
       {
-        "headline": "Más seguridad. Más productividad. Más resultados.",
-        "subline": "Transformación digital con estrategia, seguridad e innovación."
+        "id": "copilot",
+        "alt": "Microsoft Copilot — la IA dentro de las herramientas que su equipo ya usa. Descubra cómo puede transformar su día a día."
       },
       {
-        "headline": "Conectando personas, datos y negocios para un futuro sin límites.",
-        "subline": "La evolución digital de su empresa comienza aquí."
-      },
-      {
-        "headline": "De la infraestructura a la inteligencia artificial.",
-        "subline": "Soluciones completas para acelerar el crecimiento de su negocio."
+        "id": "trophy",
+        "alt": "Trofeo Mundo365 — reconocimientos y certificaciones Microsoft: Solutions Partner en Modern Work, Datos & AI, Infraestructura Azure, Top 100 Global Security y Top 20 Global Copilot Success Story Challenge."
       }
     ]
   },

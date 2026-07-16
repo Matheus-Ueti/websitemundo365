@@ -207,29 +207,8 @@
     },
     "more": {
       "title": "Mais noticias",
-      "items": [
-        {
-          "id": "more-1",
-          "category": "Cloud",
-          "date": "02 Jun 2026",
-          "title": "Migração para Azure sem parar a operação",
-          "excerpt": "Espaço reservado para a chamada da notícia. Substitua pelo conteúdo real e adicione a imagem."
-        },
-        {
-          "id": "more-2",
-          "category": "Cybersecurity",
-          "date": "20 Mai 2026",
-          "title": "Boas práticas de MFA para times distribuídos",
-          "excerpt": "Espaço reservado para a chamada da notícia. Substitua pelo conteúdo real e adicione a imagem."
-        },
-        {
-          "id": "more-3",
-          "category": "Licenciamento",
-          "date": "08 Mai 2026",
-          "title": "Como revisar seu licenciamento Microsoft e reduzir custos",
-          "excerpt": "Espaço reservado para a chamada da notícia. Substitua pelo conteúdo real e adicione a imagem."
-        }
-      ]
+      "subtitle": "Direto do Microsoft News Center Brasil",
+      "fallbackCategory": "Segurança"
     }
   },
   "footer": {
@@ -249,27 +228,20 @@
     }
   },
   "hero": {
-    "brandLine": "Mundo365 · Parceira Microsoft",
-    "slides": [
+    "carouselLabel": "Destaques",
+    "slideLabel": "Destaque",
+    "banners": [
       {
-        "headline": "Tecnologia que protege. Conecta. Transforma.",
-        "subline": "Impulsionamos negócios através de Cloud, Cybersecurity e Inteligência Artificial."
+        "id": "awards",
+        "alt": "Top Growth Awards 2026 — Mundo365 conquista 5 prêmios em apenas uma noite: Business Growth Excellence, NCA Excellence, Ecosystem Enabler, Azure Scale Partner e Copilot Frontier Excellence."
       },
       {
-        "headline": "Mais segurança. Mais produtividade. Mais resultados.",
-        "subline": "Transformação digital com estratégia, segurança e inovação."
+        "id": "copilot",
+        "alt": "Microsoft Copilot — a IA dentro das ferramentas que sua equipe já usa. Descubra como ela pode transformar o seu dia a dia."
       },
       {
-        "headline": "Conectando pessoas, dados e negócios para um futuro sem limites.",
-        "subline": "A evolução digital da sua empresa começa aqui."
-      },
-      {
-        "headline": "Da infraestrutura à inteligência artificial.",
-        "subline": "Soluções completas para acelerar o crescimento do seu negócio."
-      },
-      {
-        "headline": "Licenciamento Microsoft sob medida para o seu negócio.",
-        "subline": "Mais produtividade, segurança de dados e todo o potencial da Inteligência Artificial."
+        "id": "trophy",
+        "alt": "Troféu Mundo365 — reconhecimentos e certificações Microsoft: Solutions Partner em Modern Work, Dados & AI, Infraestrutura Azure, Top 100 Global Security e Top 20 Global Copilot Success Story Challenge."
       }
     ]
   },

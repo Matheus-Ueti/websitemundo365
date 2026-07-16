@@ -48,6 +48,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Compensa o header fixo (h-20) ao pular para âncoras como #solucoes. */
+  html {
+    scroll-padding-top: 5rem;
+  }
 }
 
 /* ── Animations ─────────────────────────────────────────────────────────────── */
@@ -64,6 +68,25 @@
 }
 .animate-float {
   animation: float 4s ease-in-out infinite;
+}
+
+/* Hero trophy slide: reflexo que varre o troféu */
+@keyframes shine {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  45%,
+  100% {
+    transform: translateX(320%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+.animate-shine {
+  animation: shine 5.5s ease-in-out infinite;
 }
 
 /* Stats section orbit ring */

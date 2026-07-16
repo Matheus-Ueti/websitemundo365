@@ -207,29 +207,8 @@
     },
     "more": {
       "title": "More news",
-      "items": [
-        {
-          "id": "more-1",
-          "category": "Cloud",
-          "date": "Jun 2, 2026",
-          "title": "Migrating to Azure without stopping operations",
-          "excerpt": "Placeholder for the article teaser. Replace it with the real content and add the image."
-        },
-        {
-          "id": "more-2",
-          "category": "Cybersecurity",
-          "date": "May 20, 2026",
-          "title": "MFA best practices for distributed teams",
-          "excerpt": "Placeholder for the article teaser. Replace it with the real content and add the image."
-        },
-        {
-          "id": "more-3",
-          "category": "Licensing",
-          "date": "May 8, 2026",
-          "title": "How to review your Microsoft licensing and cut costs",
-          "excerpt": "Placeholder for the article teaser. Replace it with the real content and add the image."
-        }
-      ]
+      "subtitle": "Straight from Microsoft News Center Brazil",
+      "fallbackCategory": "Security"
     }
   },
   "footer": {
@@ -249,23 +228,20 @@
     }
   },
   "hero": {
-    "brandLine": "Mundo365 · Microsoft Partner",
-    "slides": [
+    "carouselLabel": "Highlights",
+    "slideLabel": "Highlight",
+    "banners": [
       {
-        "headline": "Technology that protects. Connects. Transforms.",
-        "subline": "We drive business through Cloud, Cybersecurity, and Artificial Intelligence."
+        "id": "awards",
+        "alt": "Top Growth Awards 2026 — Mundo365 wins 5 awards in a single night: Business Growth Excellence, NCA Excellence, Ecosystem Enabler, Azure Scale Partner and Copilot Frontier Excellence."
       },
       {
-        "headline": "More security. More productivity. More results.",
-        "subline": "Digital transformation with strategy, security, and innovation."
+        "id": "copilot",
+        "alt": "Microsoft Copilot — the AI inside the tools your team already uses. Find out how it can transform your day to day."
       },
       {
-        "headline": "Connecting people, data, and business for a limitless future.",
-        "subline": "Your company's digital evolution starts here."
-      },
-      {
-        "headline": "From infrastructure to artificial intelligence.",
-        "subline": "Complete solutions to accelerate your business growth."
+        "id": "trophy",
+        "alt": "Mundo365 trophy — Microsoft recognitions and certifications: Solutions Partner in Modern Work, Data & AI, Azure Infrastructure, Top 100 Global Security and Top 20 Global Copilot Success Story Challenge."
       }
     ]
   },
