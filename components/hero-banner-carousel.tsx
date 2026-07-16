@@ -8,7 +8,7 @@ const ROTATE_MS = 6000
 
 const BANNER_SRC: Record<HeroBannerId, string> = {
   awards: '/hero/banner-awards.png',
-  copilot: '/hero/banner-copilot.png',
+  copilot: '/hero/banner-copilot-v2.png',
   trophy: '/hero/trophy-base.png',
 }
 

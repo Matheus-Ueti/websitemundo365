@@ -22,6 +22,7 @@
 @theme inline {
   --font-sans: var(--font-sans);
   --font-space-grotesk: var(--font-space-grotesk);
+  --font-selawik: var(--font-selawik);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

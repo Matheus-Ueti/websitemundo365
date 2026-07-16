@@ -160,7 +160,15 @@ export type Partner = {
 }
 
 export type MicrosoftLogoProps = {
-  size?: number
+  className?: string
+}
+
+/** Selo oficial "Microsoft Solutions Partner" no banner de parceria. */
+export type SolutionsPartnerBadgeProps = {
+  /** Segunda linha do lockup: "Solutions Partner" ou "Partner". */
+  tier: string
+  /** Terceira linha (área de especialização); ausente no selo base. */
+  designation?: string
 }
 
 // ─── Sobre nós / timeline ────────────────────────────────────────────────────────

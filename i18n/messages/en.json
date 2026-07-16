@@ -370,9 +370,10 @@
     "subtitle": "Among the largest Microsoft resellers in Brazil, we deliver the best solutions with confidence.",
     "microsoft": "Microsoft",
     "solutionsPartner": "Solutions Partner",
+    "partner": "Partner",
     "modernWork": "Modern Work",
-    "infrastructure": "Infrastructure — Azure",
-    "goldPartner": "Gold Partner",
+    "dataAi": "Data & AI, Azure",
+    "infrastructure": "Infrastructure, Azure",
     "poweredBy": "Powered by",
     "ai": "Artificial Intelligence"
   },
