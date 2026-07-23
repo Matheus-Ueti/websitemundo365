@@ -236,14 +236,52 @@ export type NewsArticle = {
 export const COUNTRY_CODES = ['br', 'us', 'es', 'pe', 'mx'] as const
 export type CountryCode = (typeof COUNTRY_CODES)[number]
 
-/** Uma viagem de premiação: o que aconteceu no país. */
-export type CountryMovement = {
-  id: CountryCode
-  name: string
-  eyebrow: string
+/** Texto que existe nos três idiomas do site. */
+export type LocalizedText = Record<Locale, string>
+/** Lista de parágrafos que existe nos três idiomas do site. */
+export type LocalizedList = Record<Locale, string[]>
+
+/**
+ * Notícia própria da Mundo365 (conteúdo do marketing) como está armazenada:
+ * campos de texto traduzidos por idioma. Resolvida para o idioma atual via
+ * `localizeArticle` antes de chegar aos componentes.
+ */
+export type CompanyNewsArticleSource = {
+  slug: string
+  country: CountryCode
+  /** Data curta já formatada por idioma, ex.: "Jun 2026". */
+  date: LocalizedText
+  /** Cidade/país do acontecimento, ex.: "Cascavel · Brasil". */
+  place: LocalizedText
+  category: LocalizedText
+  title: LocalizedText
+  /** Linha de apoio (subtítulo/lead). */
+  dek: LocalizedText
+  /** Parágrafos do corpo, em ordem. */
+  body: LocalizedList
+  /** Parágrafo de fechamento. */
+  closing: LocalizedText
+  cover: string
+  gallery: string[]
+}
+
+/**
+ * Notícia já resolvida para um idioma — o que os componentes consomem. `cover`
+ * é a capa; `gallery` são as demais fotos, que giram dentro dos cards e formam a
+ * galeria da página de detalhe.
+ */
+export type CompanyNewsArticle = {
+  slug: string
+  country: CountryCode
+  category: string
+  date: string
+  place: string
   title: string
-  description: string
-  entries: NewsArticle[]
+  dek: string
+  body: string[]
+  closing: string
+  cover: string
+  gallery: string[]
 }
 
 export type FlagIconProps = {
@@ -256,12 +294,6 @@ export type NewsHeadingProps = {
   title: string
   subtitle?: string
   className?: string
-}
-
-export type NewsCardProps = {
-  article: NewsArticle
-  /** `featured` ocupa a coluna alta do grid e usa tipografia maior. */
-  variant?: 'featured' | 'compact'
 }
 
 // ─── Hooks ─────────────────────────────────────────────────────────────────────

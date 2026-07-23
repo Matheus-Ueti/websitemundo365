@@ -26,184 +26,26 @@
     "metaDescription": "Novedades de Mundo365, eventos del ecosistema Microsoft y los viajes de premiación del equipo por el mundo.",
     "pageTitle": "Noticias de Mundo365",
     "featuredTitle": "Destacados",
-    "featured": [
-      {
-        "id": "phishing-ia-m365",
-        "category": "Cybersecurity",
-        "date": "12 Jul 2026",
-        "title": "Nueva estafa de phishing usa IA para robar tokens de Microsoft 365",
-        "excerpt": "El software malicioso apunta al área financiera de las empresas, intercepta mensajes sobre transacciones y reutiliza sesiones válidas para sortear el MFA."
-      },
-      {
-        "id": "mundo-conecta-2026",
-        "category": "Evento",
-        "date": "28 Jun 2026",
-        "title": "Mundo Conecta Microsoft Day | 2026",
-        "excerpt": "Un día completo sobre IA, Cybersecurity y Datos con clientes y socios, en vivo desde el escenario de Mundo365."
-      },
-      {
-        "id": "copilot-empresas",
-        "category": "Inteligencia Artificial",
-        "date": "15 Jun 2026",
-        "title": "Copilot en el día a día: qué cambia para los equipos",
-        "excerpt": "Cómo las empresas están adoptando Microsoft 365 Copilot sin renunciar a la gobernanza y la protección de datos."
-      }
-    ],
+    "readMore": "Leer noticia",
     "movements": {
-      "title": "Ultimos movimientos",
-      "subtitle": "Conozca algunos de los ultimos movimientos de Mundo365",
-      "countries": [
-        {
-          "id": "br",
-          "name": "Brasil",
-          "eyebrow": "São Paulo · Brasil",
-          "title": "Donde todo empieza",
-          "description": "La sede de Mundo365 es el punto de partida de nuestros logros: aquí los equipos de Cloud, Cybersecurity e IA construyen los resultados que nos llevan por el mundo.",
-          "entries": [
-            {
-              "id": "br-1",
-              "category": "Equipo",
-              "date": "May 2026",
-              "title": "Convención anual de Mundo365",
-              "excerpt": "Reemplace este texto por el relato del evento en Brasil y agregue las fotos correspondientes."
-            },
-            {
-              "id": "br-2",
-              "category": "Reconocimiento",
-              "date": "Abr 2026",
-              "title": "Metas del trimestre superadas",
-              "excerpt": "Espacio reservado para describir la premiación y los destacados del período."
-            },
-            {
-              "id": "br-3",
-              "category": "Detrás de escena",
-              "date": "Mar 2026",
-              "title": "Nuestra gente",
-              "excerpt": "Espacio reservado para el detrás de escena del equipo y las imágenes."
-            }
-          ]
-        },
-        {
-          "id": "us",
-          "name": "USA",
-          "eyebrow": "Estados Unidos",
-          "title": "Viaje de premiación · Estados Unidos",
-          "description": "Cuente aquí lo que pasó en el viaje a Estados Unidos: quién fue premiado, qué visitó el equipo y los mejores momentos.",
-          "entries": [
-            {
-              "id": "us-1",
-              "category": "Viaje",
-              "date": "Feb 2026",
-              "title": "Llegada y primeros días",
-              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
-            },
-            {
-              "id": "us-2",
-              "category": "Ecosistema Microsoft",
-              "date": "Feb 2026",
-              "title": "Visita al campus de Microsoft",
-              "excerpt": "Espacio reservado para describir la visita y los aprendizajes del equipo."
-            },
-            {
-              "id": "us-3",
-              "category": "Premiación",
-              "date": "Feb 2026",
-              "title": "Noche de premiación",
-              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
-            }
-          ]
-        },
-        {
-          "id": "es",
-          "name": "España",
-          "eyebrow": "España",
-          "title": "Viaje de premiación · España",
-          "description": "Cuente aquí lo que pasó en el viaje a España: quién fue premiado, qué visitó el equipo y los mejores momentos.",
-          "entries": [
-            {
-              "id": "es-1",
-              "category": "Viaje",
-              "date": "Nov 2025",
-              "title": "Madrid y Barcelona",
-              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
-            },
-            {
-              "id": "es-2",
-              "category": "Cultura",
-              "date": "Nov 2025",
-              "title": "El itinerario del equipo",
-              "excerpt": "Espacio reservado para los paseos y la experiencia del equipo."
-            },
-            {
-              "id": "es-3",
-              "category": "Premiación",
-              "date": "Nov 2025",
-              "title": "Celebración de los resultados",
-              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
-            }
-          ]
-        },
-        {
-          "id": "pe",
-          "name": "Perú",
-          "eyebrow": "Perú",
-          "title": "Viaje de premiación · Perú",
-          "description": "Cuente aquí lo que pasó en el viaje a Perú: quién fue premiado, qué visitó el equipo y los mejores momentos.",
-          "entries": [
-            {
-              "id": "pe-1",
-              "category": "Viaje",
-              "date": "Ago 2025",
-              "title": "Lima y Machu Picchu",
-              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
-            },
-            {
-              "id": "pe-2",
-              "category": "Cultura",
-              "date": "Ago 2025",
-              "title": "El itinerario del equipo",
-              "excerpt": "Espacio reservado para los paseos y la experiencia del equipo."
-            },
-            {
-              "id": "pe-3",
-              "category": "Premiación",
-              "date": "Ago 2025",
-              "title": "Celebración de los resultados",
-              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
-            }
-          ]
-        },
-        {
-          "id": "mx",
-          "name": "México",
-          "eyebrow": "México",
-          "title": "Viaje de premiación · México",
-          "description": "Cuente aquí lo que pasó en el viaje a México: quién fue premiado, qué visitó el equipo y los mejores momentos.",
-          "entries": [
-            {
-              "id": "mx-1",
-              "category": "Viaje",
-              "date": "May 2025",
-              "title": "Ciudad de México y Cancún",
-              "excerpt": "Reemplace este texto por el relato del viaje y agregue las fotos correspondientes."
-            },
-            {
-              "id": "mx-2",
-              "category": "Cultura",
-              "date": "May 2025",
-              "title": "El itinerario del equipo",
-              "excerpt": "Espacio reservado para los paseos y la experiencia del equipo."
-            },
-            {
-              "id": "mx-3",
-              "category": "Premiación",
-              "date": "May 2025",
-              "title": "Celebración de los resultados",
-              "excerpt": "Espacio reservado para la celebración y las imágenes de los premiados."
-            }
-          ]
-        }
-      ]
+      "title": "Últimos movimientos",
+      "subtitle": "Descubre algunos de los últimos movimientos de Mundo365"
+    },
+    "countryLabels": {
+      "br": "Brasil",
+      "us": "EE. UU.",
+      "es": "España",
+      "pe": "Perú",
+      "mx": "México"
+    },
+    "article": {
+      "back": "Volver a Noticias",
+      "gallery": "Galería",
+      "related": "Otras noticias",
+      "place": "Lugar",
+      "close": "Cerrar",
+      "prev": "Foto anterior",
+      "next": "Foto siguiente"
     },
     "more": {
       "title": "Más noticias",
@@ -358,10 +200,30 @@
     "eyebrow": "Nuestra historia",
     "title": "Por qué Mundo365 es la mejor opción",
     "items": [
-      { "value": 25, "label": "horas trabajadas en proyectos", "prefix": "+", "suffix": " mil" },
-      { "value": 250, "label": "buzones migrados a Microsoft", "prefix": "+", "suffix": " mil" },
-      { "value": 500, "label": "proyectos ejecutados", "prefix": "+", "suffix": "" },
-      { "value": 2500, "label": "clientes activos", "prefix": "+", "suffix": "" }
+      {
+        "value": 25,
+        "label": "horas trabajadas en proyectos",
+        "prefix": "+",
+        "suffix": " mil"
+      },
+      {
+        "value": 250,
+        "label": "buzones migrados a Microsoft",
+        "prefix": "+",
+        "suffix": " mil"
+      },
+      {
+        "value": 500,
+        "label": "proyectos ejecutados",
+        "prefix": "+",
+        "suffix": ""
+      },
+      {
+        "value": 2500,
+        "label": "clientes activos",
+        "prefix": "+",
+        "suffix": ""
+      }
     ]
   },
   "partnerBanner": {
@@ -385,19 +247,53 @@
     "awardImageAlt": "Representante de Mundo365 con premios Microsoft Top Growth Awards",
     "teamCerts": "Certificaciones del equipo",
     "competencies": [
-      { "label": "Windows and Devices", "achieved": true },
-      { "label": "Small and Midmarket Cloud Solutions", "achieved": true },
-      { "label": "Cloud Productivity", "achieved": true },
-      { "label": "Datacenter", "achieved": true },
-      { "label": "Security", "achieved": true },
-      { "label": "Cloud Platform", "achieved": false },
-      { "label": "Data Analytics", "achieved": false },
-      { "label": "Enterprise Mobility Management", "achieved": false },
-      { "label": "Communications", "achieved": false },
-      { "label": "Data Platform", "achieved": false }
+      {
+        "label": "Windows and Devices",
+        "achieved": true
+      },
+      {
+        "label": "Small and Midmarket Cloud Solutions",
+        "achieved": true
+      },
+      {
+        "label": "Cloud Productivity",
+        "achieved": true
+      },
+      {
+        "label": "Datacenter",
+        "achieved": true
+      },
+      {
+        "label": "Security",
+        "achieved": true
+      },
+      {
+        "label": "Cloud Platform",
+        "achieved": false
+      },
+      {
+        "label": "Data Analytics",
+        "achieved": false
+      },
+      {
+        "label": "Enterprise Mobility Management",
+        "achieved": false
+      },
+      {
+        "label": "Communications",
+        "achieved": false
+      },
+      {
+        "label": "Data Platform",
+        "achieved": false
+      }
     ],
     "badges": [
-      { "acronym": "MCT", "title": "Microsoft Certified Trainer", "image": "/badge-mct.png" },
+      {
+        "acronym": "MCT",
+        "title": "Microsoft Certified Trainer",
+        "image": "/badge-mct.png"
+      },
       {
         "acronym": "MCSE",
         "title": "Microsoft Certified Solutions Expert",
@@ -408,8 +304,16 @@
         "title": "Microsoft Certified Solutions Associate",
         "image": "/badge-mcsa.png"
       },
-      { "acronym": "ASA", "title": "Azure Solutions Architect Expert", "image": "/badge-asa.png" },
-      { "acronym": "MVP", "title": "Most Valuable Professional", "image": "/badge-mvp.png" }
+      {
+        "acronym": "ASA",
+        "title": "Azure Solutions Architect Expert",
+        "image": "/badge-asa.png"
+      },
+      {
+        "acronym": "MVP",
+        "title": "Most Valuable Professional",
+        "image": "/badge-mvp.png"
+      }
     ]
   },
   "testimonials": {
@@ -490,11 +394,21 @@
       }
     ],
     "trust": [
-      { "label": "Soluciones Microsoft Certificadas" },
-      { "label": "Conformidad y LGPD" },
-      { "label": "Infraestructura Segura" },
-      { "label": "Especialistas Certificados" },
-      { "label": "Soporte 24/7" }
+      {
+        "label": "Soluciones Microsoft Certificadas"
+      },
+      {
+        "label": "Conformidad y LGPD"
+      },
+      {
+        "label": "Infraestructura Segura"
+      },
+      {
+        "label": "Especialistas Certificados"
+      },
+      {
+        "label": "Soporte 24/7"
+      }
     ]
   },
   "contactForm": {
@@ -519,9 +433,15 @@
     "leftTitle": "¿Hablamos?",
     "leftSubtitle": "Cuéntenos su desafío. Nuestro equipo se pondrá en contacto para entender su escenario y mostrarle cómo la tecnología puede convertirse en una ventaja para su negocio.",
     "pillars": [
-      { "title": "Productividad con seguridad" },
-      { "title": "Creatividad sin límites" },
-      { "title": "Productividad que impulsa" }
+      {
+        "title": "Productividad con seguridad"
+      },
+      {
+        "title": "Creatividad sin límites"
+      },
+      {
+        "title": "Productividad que impulsa"
+      }
     ]
   }
 }

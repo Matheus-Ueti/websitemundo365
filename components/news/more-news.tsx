@@ -20,10 +20,7 @@ export async function MoreNews() {
 
         <ul>
           {articles.map((article, index) => (
-            <li
-              key={article.id}
-              className={`py-8 ${index > 0 ? 'border-t border-gray-200' : ''}`}
-            >
+            <li key={article.id} className={`py-8 ${index > 0 ? 'border-t border-gray-200' : ''}`}>
               <Link
                 href={article.href ?? '#'}
                 target="_blank"
