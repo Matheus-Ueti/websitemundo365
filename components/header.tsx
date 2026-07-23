@@ -2,7 +2,18 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Instagram, Linkedin, Menu, Newspaper, X } from 'lucide-react'
+import {
+  Home,
+  Instagram,
+  Layers,
+  Linkedin,
+  Mail,
+  Menu,
+  Newspaper,
+  ShoppingBag,
+  Users,
+  X,
+} from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/i18n/components/language-switcher'
@@ -18,11 +29,11 @@ export function Header() {
   const tCommon = useTranslations('common')
 
   const mainNavItems: { label: string; href: string; icon?: LucideIcon }[] = [
-    { label: t('home'), href: homeSectionHref(SECTION_IDS.home) },
-    { label: t('about'), href: homeSectionHref(SECTION_IDS.about) },
-    { label: t('solutions'), href: homeSectionHref(SECTION_IDS.solutions) },
-    { label: t('marketplace'), href: homeSectionHref(SECTION_IDS.marketplace) },
-    { label: t('contact'), href: homeSectionHref(SECTION_IDS.contact) },
+    { label: t('home'), href: homeSectionHref(SECTION_IDS.home), icon: Home },
+    { label: t('about'), href: homeSectionHref(SECTION_IDS.about), icon: Users },
+    { label: t('solutions'), href: homeSectionHref(SECTION_IDS.solutions), icon: Layers },
+    { label: t('marketplace'), href: homeSectionHref(SECTION_IDS.marketplace), icon: ShoppingBag },
+    { label: t('contact'), href: homeSectionHref(SECTION_IDS.contact), icon: Mail },
     { label: t('news'), href: ROUTES.news, icon: Newspaper },
   ]
 
