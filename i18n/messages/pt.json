@@ -203,6 +203,16 @@
         "subDescription": "Com a licença ideal, sua equipe trabalha de forma mais eficiente, colaborativa e protegida, acelerando resultados e a transformação digital do negócio.",
         "buttonText": "Fale sobre licenciamento",
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=700&fit=crop"
+      },
+      {
+        "id": "portfolio",
+        "tabTitle": "Portfólio",
+        "title": "Portfólio",
+        "headline": "O ecossistema completo de tecnologia para sua empresa.",
+        "description": "A Mundo365 conta com um portfólio completo de soluções em tecnologia, apoiado por parcerias estratégicas com os principais fabricantes do mercado, como Microsoft, Azure, Copilot, Adobe, Acronis, Veeam, Kaspersky, Bitdefender, Fortinet, Ubiquiti, Cisco, Dell, HP, Lenovo, Oracle, Databricks, GoTo, Apple, Corel e AutoCAD.",
+        "subDescription": "Atuamos de forma consultiva para oferecer soluções em licenciamento, cibersegurança, infraestrutura, cloud, inteligência artificial, backup, conectividade, hardware e produtividade, acompanhando nossos clientes desde a escolha da tecnologia até a implantação e o suporte contínuo.",
+        "buttonText": "Conheça nosso portfólio",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=700&fit=crop&crop=face"
       }
     ]
   },

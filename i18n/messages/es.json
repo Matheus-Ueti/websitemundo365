@@ -193,6 +193,26 @@
         "subDescription": "Seguridad, conformidad y gestión en un único ecosistema — tecnología alineada a los objetivos estratégicos del negocio.",
         "buttonText": "Hable con un especialista",
         "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "licensing",
+        "tabTitle": "Licenciamiento",
+        "title": "Licenciamiento",
+        "headline": "Licenciamiento Microsoft a la medida de su negocio.",
+        "description": "Las soluciones de licenciamiento Microsoft ayudan a su empresa a aumentar la productividad, fortalecer la seguridad de los datos y aprovechar el potencial de la Inteligencia Artificial.",
+        "subDescription": "Con la licencia ideal, su equipo trabaja de forma más eficiente, colaborativa y protegida, acelerando resultados y la transformación digital del negocio.",
+        "buttonText": "Hable sobre licenciamiento",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=700&fit=crop"
+      },
+      {
+        "id": "portfolio",
+        "tabTitle": "Portafolio",
+        "title": "Portafolio",
+        "headline": "Un ecosistema tecnológico completo para su empresa.",
+        "description": "Mundo365 cuenta con un portafolio completo de soluciones en tecnología, respaldado por alianzas estratégicas con los principales fabricantes del mercado, como Microsoft, Azure, Copilot, Adobe, Acronis, Veeam, Kaspersky, Bitdefender, Fortinet, Ubiquiti, Cisco, Dell, HP, Lenovo, Oracle, Databricks, GoTo, Apple, Corel y AutoCAD.",
+        "subDescription": "Actuamos de forma consultiva para ofrecer soluciones en licenciamiento, ciberseguridad, infraestructura, cloud, inteligencia artificial, backup, conectividad, hardware y productividad, acompañando a nuestros clientes desde la elección de la tecnología hasta la implementación y el soporte continuo.",
+        "buttonText": "Conozca nuestro portafolio",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=700&fit=crop&crop=face"
       }
     ]
   },

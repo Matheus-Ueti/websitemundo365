@@ -193,6 +193,26 @@
         "subDescription": "Security, compliance, and management in a single ecosystem — technology aligned with your strategic business goals.",
         "buttonText": "Talk to an expert",
         "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face"
+      },
+      {
+        "id": "licensing",
+        "tabTitle": "Licensing",
+        "title": "Licensing",
+        "headline": "Microsoft licensing tailored to your business.",
+        "description": "Microsoft licensing solutions help your company boost productivity, strengthen data security, and tap into the full potential of Artificial Intelligence.",
+        "subDescription": "With the right license, your team works more efficiently, collaboratively, and securely — accelerating results and your business's digital transformation.",
+        "buttonText": "Talk about licensing",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=700&fit=crop"
+      },
+      {
+        "id": "portfolio",
+        "tabTitle": "Portfolio",
+        "title": "Portfolio",
+        "headline": "A complete technology ecosystem for your business.",
+        "description": "Mundo365 offers a complete technology portfolio, backed by strategic partnerships with the market's leading manufacturers — including Microsoft, Azure, Copilot, Adobe, Acronis, Veeam, Kaspersky, Bitdefender, Fortinet, Ubiquiti, Cisco, Dell, HP, Lenovo, Oracle, Databricks, GoTo, Apple, Corel, and AutoCAD.",
+        "subDescription": "We work in a consultative way to deliver solutions in licensing, cybersecurity, infrastructure, cloud, artificial intelligence, backup, connectivity, hardware, and productivity — supporting our clients from technology selection through deployment and ongoing support.",
+        "buttonText": "Explore our portfolio",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=700&fit=crop&crop=face"
       }
     ]
   },
