@@ -7,4 +7,5 @@ export const partners: Partner[] = [
   { name: 'Adobe', src: '/logo-adobe.png' },
   { name: 'Veeam', src: '/logo-veeam.png' },
   { name: 'Fortinet', src: '/logo-fortinet.png' },
+  { name: 'Databricks', src: '/logo-databricks.png' },
 ]
