@@ -77,10 +77,15 @@ export async function PartnerBanner() {
 
           <div className="hidden lg:block w-px h-20 bg-white/20 mx-8" />
 
-          <div className="grid grid-cols-2 gap-3 lg:flex-1 place-items-stretch">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 lg:flex-1 place-items-stretch">
             <SolutionsPartnerBadge tier={t('solutionsPartner')} designation={t('modernWork')} />
             <SolutionsPartnerBadge tier={t('solutionsPartner')} designation={t('dataAi')} />
             <SolutionsPartnerBadge tier={t('solutionsPartner')} designation={t('infrastructure')} />
+            <SolutionsPartnerBadge
+              tier={t('solutionsPartner')}
+              designation={t('digitalAppInnovation')}
+            />
+            <SolutionsPartnerBadge tier={t('solutionsPartner')} designation={t('security')} />
             <SolutionsPartnerBadge tier={t('partner')} />
           </div>
 
